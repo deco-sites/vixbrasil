@@ -12,8 +12,6 @@ export default defineApp(async (_req, ctx) => {
     <>
       {/* Include Icons and manifest */}
       <Head>
-        <script src="https://store.deco.cx/live/invoke/site/loaders/abTestScript.ts">
-        </script>
         {/* Sizebay  */}
         <script
           defer
