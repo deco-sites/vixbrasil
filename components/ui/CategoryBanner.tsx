@@ -5,7 +5,7 @@ import { type SectionProps } from "@deco/deco";
  * @titleBy matcher
  */
 export interface Banner {
-  /** @description RegExp to enable this banner on the current URL. Use /feminino/* to display this banner on feminino category  */
+  /** @description URL de renderização do banner */
   matcher: string;
   /** @description text to be rendered on top of the image */
   title?: string;
@@ -48,13 +48,13 @@ function Banner(props: SectionProps<ReturnType<typeof loader>>) {
         <Source
           src={image.mobile}
           width={360}
-          height={120}
+          height={140}
           media="(max-width: 767px)"
         />
         <Source
           src={image.desktop}
           width={1440}
-          height={200}
+          height={450}
           media="(min-width: 767px)"
         />
         <img class="w-full" src={image.desktop} alt={image.alt ?? title} />

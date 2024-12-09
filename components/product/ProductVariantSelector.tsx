@@ -2,7 +2,10 @@ import type { Product } from "apps/commerce/types.ts";
 import { clx } from "../../sdk/clx.ts";
 import { relative } from "../../sdk/url.ts";
 import { useId } from "../../sdk/useId.ts";
-import { useVariantPossibilities } from "../../sdk/useVariantPossiblities.ts";
+import {
+  useVariantPossibilities,
+  variantAvailability,
+} from "../../sdk/useVariantPossiblities.ts";
 import { useSection } from "@deco/deco/hooks";
 interface Props {
   product: Product;
@@ -25,16 +28,16 @@ const useStyles = (value: string, checked: boolean) => {
   if (colors[value]) {
     return clx(
       "border border-base-300 rounded-full",
-      "w-12 h-12 block",
-      "border border-[#C9CFCF] rounded-full",
-      "ring-2 ring-offset-2",
-      checked ? "ring-primary" : "ring-transparent",
+      "w-[34px] h-[34px] block",
+      "border border-[#bea669] rounded-full",
+      checked ? "bg-[#bea669] text-white" : "bg-white text-[#bea669]",
     );
   }
   return clx(
-    "btn btn-ghost border-[#C9CFCF] hover:bg-base-200 hover:border-[#C9CFCF] w-12 h-12",
-    "ring-2 ring-offset-2",
-    checked ? "ring-primary" : "ring-transparent border-[#C9CFCF]",
+    "flex items-center justify-center hover:opacity-80 w-[34px] min-h-[34px] max-h-[34px] h-full",
+    "border border-[#bea669] rounded-full",
+    "font-source-sans tracking-[0.07em] text-sm font-normal",
+    checked ? "bg-[#bea669] text-white" : "bg-white text-[#bea669]",
   );
 };
 export const Ring = ({ value, checked = false, class: _class }: {
@@ -59,6 +62,14 @@ function VariantSelector({ product }: Props) {
   const filteredNames = Object.keys(possibilities).filter((name) =>
     name.toLowerCase() !== "title" && name.toLowerCase() !== "default title"
   );
+  const sizeAndLinks = possibilities.Tamanho || {};
+  const variantsInStock = isVariantOf && variantAvailability(isVariantOf);
+  const variants = variantsInStock?.map(({ size, inStock }) => ({
+    size,
+    inStock,
+    link: sizeAndLinks[size ?? ""],
+  }));
+
   if (filteredNames.length === 0) {
     return null;
   }
@@ -73,13 +84,21 @@ function VariantSelector({ product }: Props) {
         <li class="flex flex-col gap-2">
           <span class="text-sm">{name}</span>
           <ul class="flex flex-row gap-4">
-            {Object.entries(possibilities[name])
-              .filter(([value]) => value)
-              .map(([value, link]) => {
-                const relativeLink = relative(link);
+            {variants
+              ?.map((item) => {
+                const relativeLink = relative(item.link);
                 const checked = relativeLink === relativeUrl;
+
+                if (item.size === "KIT") {
+                  return null;
+                }
                 return (
-                  <li>
+                  <li
+                    class={`relative overflow-hidden ${
+                      !item.inStock &&
+                      "after:absolute after:left-0 after:top-1/2 after:h-[1px] after:bg-red-800 after:w-full after:block after:rotate-45 after:content-[&quot;&quot;] after:bg-black after:opacity-30"
+                    }`}
+                  >
                     <label
                       class="cursor-pointer grid grid-cols-1 grid-rows-1 place-items-center"
                       hx-get={useSection({ href: relativeLink })}
@@ -97,7 +116,10 @@ function VariantSelector({ product }: Props) {
                           "[.htmx-request_&]:opacity-0 transition-opacity",
                         )}
                       >
-                        <Ring value={value} checked={checked} />
+                        <Ring
+                          value={item.size ?? ""}
+                          checked={checked}
+                        />
                       </div>
                       {/* Loading spinner */}
                       <div

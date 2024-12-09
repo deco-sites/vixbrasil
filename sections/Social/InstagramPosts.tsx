@@ -4,8 +4,7 @@ import Section, {
 } from "../../components/ui/Section.tsx";
 import Slider from "../../components/ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
-import { type SectionProps } from "@deco/deco";
-import { type LoadingFallbackProps } from "@deco/deco";
+import { type LoadingFallbackProps, type SectionProps } from "@deco/deco";
 export interface Data {
   id: string;
   permalink: string;

@@ -3,7 +3,6 @@ import { JSX } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { usePlatform } from "../../sdk/usePlatform.tsx";
-import QuantitySelector from "../ui/QuantitySelector.tsx";
 import { useScript } from "@deco/deco/hooks";
 export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
   product: Product;
@@ -19,17 +18,7 @@ const onClick = () => {
   );
   window.STOREFRONT.CART.addToCart(item, platformProps);
 };
-const onChange = () => {
-  const input = event!.currentTarget as HTMLInputElement;
-  const productID = input!
-    .closest("div[data-cart-item]")!
-    .getAttribute("data-item-id")!;
-  const quantity = Number(input.value);
-  if (!input.validity.valid) {
-    return;
-  }
-  window.STOREFRONT.CART.setQuantity(productID, quantity);
-};
+
 // Copy cart form values into AddToCartButton
 const onLoad = (id: string) => {
   window.STOREFRONT.CART.subscribe((sdk) => {
@@ -116,25 +105,13 @@ function AddToCartButton(props: Props) {
         JSON.stringify({ item, platformProps }),
       )}
     >
-      <input type="checkbox" class="hidden peer" />
-
       <button
         disabled
-        class={clx("flex-grow peer-checked:hidden", _class?.toString())}
+        class={clx("flex-grow cursor-pointer", _class?.toString())}
         hx-on:click={useScript(onClick)}
       >
-        Add to Cart
+        Adicionar à sacola
       </button>
-
-      {/* Quantity Input */}
-      <div class="flex-grow hidden peer-checked:flex">
-        <QuantitySelector
-          disabled
-          min={0}
-          max={100}
-          hx-on:change={useScript(onChange)}
-        />
-      </div>
 
       <script
         type="module"

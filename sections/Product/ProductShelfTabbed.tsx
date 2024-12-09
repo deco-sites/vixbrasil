@@ -1,12 +1,13 @@
 import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
-import ProductSlider from "../../components/product/ProductSlider.tsx";
+
 import Section, {
   Props as SectionHeaderProps,
 } from "../../components/ui/Section.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
+import ProductSlider from "../../components/product/shelf/ProductSlider.tsx";
 /** @titleBy title */
 interface Tab {
   title: string;
@@ -23,7 +24,7 @@ export default function TabbedProductShelf(
   const ti = typeof tabIndex === "number"
     ? Math.min(Math.max(tabIndex, 0), tabs.length)
     : 0;
-  const { products } = tabs[ti];
+  const { products } = tabs?.[ti];
   const viewItemListEvent = useSendEvent({
     on: "view",
     event: {

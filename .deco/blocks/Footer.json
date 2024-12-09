@@ -2,80 +2,92 @@
   "__resolveType": "site/sections/Footer/Footer.tsx",
   "links": [
     {
-      "title": "Our Company",
+      "title": "Institucional",
       "children": [
         {
-          "title": "About us",
+          "title": "Baixe nosso APP",
           "href": "#"
         },
         {
-          "title": "Our blog",
+          "title": "A Marca",
           "href": "#"
         },
         {
-          "title": "Stores",
+          "title": "Nosso compromisso",
           "href": "#"
         },
         {
-          "title": "Work with us",
+          "title": "Casa Vix",
+          "href": "#"
+        },
+        {
+          "title": "Trabalhe Conosco",
           "href": "#"
         }
       ],
       "href": "#"
     },
     {
-      "title": "Orders & Purchases",
+      "title": "Informações",
       "href": "#",
       "children": [
         {
-          "title": "Check order status",
+          "title": "Políticas de devoluções",
           "href": "#"
         },
         {
-          "title": "Return and exchanges",
+          "title": "Políticas de privacidade",
           "href": "#"
         },
         {
-          "title": "Product retail",
+          "title": "Dúvidas frequentes",
           "href": "#"
         },
         {
-          "title": "Gift cards",
+          "title": "Retire em casa",
+          "href": "#"
+        },
+        {
+          "title": "Termos de uso",
+          "href": "#"
+        },
+        {
+          "title": "Tabela de medidas",
           "href": "#"
         }
       ]
     },
     {
-      "title": "Support & Services",
+      "title": "Atendimento",
       "href": "#",
       "children": [
         {
-          "title": "Support Center",
+          "title": "Fale com a Vix",
           "href": "#"
         },
         {
-          "title": "Schedule a service",
+          "title": "Personal Shopper",
           "href": "#"
         },
         {
-          "title": "Contact us",
+          "title": "ViX Club",
           "href": "#"
         }
       ]
     },
     {
-      "title": "Support & Services",
+      "title": "Lojas",
       "children": [
         {
-          "title": "Support Center",
+          "title": "Confira nossos endereços",
           "href": "#"
         },
         {
-          "title": "Schedule a service",
+          "title": "Internacional",
           "href": "#"
         },
         {
-          "title": "Contact us",
+          "title": "Multimarcas",
           "href": "#"
         }
       ],
@@ -84,84 +96,48 @@
   ],
   "social": [
     {
-      "alt": "facebook",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/66137259-6bdb-4322-bed1-a2593560934c"
-    },
-    {
       "alt": "Instagram",
       "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/e71ae7f3-0f51-4185-af0a-fca08ebe4451"
+      "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/icon-footer-instagram___c674dc98b28e8c89841e7522d051a1ec.svg"
     },
     {
-      "alt": "Pinterest",
+      "alt": "Whatsapp",
       "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/4becba39-fc08-4df2-bb5d-5e843f375deb"
+      "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.147/img/footer/icon-footer-whatsapp___4ef2cd618124749d57b83da10df912e3.svg"
     },
     {
-      "alt": "X",
+      "alt": "Youtube",
       "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/179a9ee9-3813-47b8-96eb-11e0c5558ede"
+      "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/icon-footer-youtube___d0c0e5ecc7888ece3f08eba40a591d21.svg"
+    },
+    {
+      "alt": "Spotfy",
+      "href": "#",
+      "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/icon-footer-spotify___7bd6c0748447a05e0fb8570c3ae25c21.svg"
+    },
+
+    {
+      "alt": "Linkedin",
+      "href": "#",
+      "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.147/img/footer/icon-footer-linkedin___190868a2043148956b3d2d5eb12bdc40.svg"
+    },
+    {
+      "alt": "Facebook",
+      "href": "#",
+      "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/icon-footer-facebook___456b1aa4d67c3ed8ee306475a2b8f4a2.svg"
     }
   ],
   "paymentMethods": [
     {
-      "alt": "Paypal",
+      "alt": "Cards",
       "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/7d858621-469e-4528-91b5-8c79fc413162"
+      "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/footer__payment-visa-elo___d356f76dfc767c9b06e70e2c824a1f86.svg"
     },
     {
-      "alt": "Mastercard",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/88ab870c-4256-44b4-8da3-3cefe0436e87"
-    },
-    {
-      "alt": "Maestro",
+      "alt": "Cards 1",
       "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/e94aaf80-25f5-4e23-8708-14d78ffdebbb"
-    },
-    {
-      "alt": "Google Pay",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/ccddc66e-baa8-4b44-a52c-ea48d8e111b5"
-    },
-    {
-      "alt": "Elo",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/11f90dd4-91b5-4b60-9304-f8a7a9be84eb"
-    },
-    {
-      "alt": "Diners",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/20bb8e66-5495-4f92-a6d0-4967a66f3a44"
-    },
-    {
-      "alt": "Apple Pay",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d4227ed7-333d-49b8-b3e2-35719f606640"
-    },
-    {
-      "alt": "Amex",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/023472cf-782d-4a22-82d9-ecdf18466d96"
-    },
-    {
-      "alt": "Visa",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/2d213fd6-2754-4e92-a6f1-03825f71c7af"
+      "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/footer__payment-hiper-boleto___6e7ace093d34d2a49b1aabbfba621ed0.svg"
     }
   ],
-  "policies": [
-    {
-      "title": "Privacy Policy",
-      "href": "#"
-    },
-    {
-      "title": "Terms and Conditions",
-      "href": "#"
-    },
-    {
-      "title": "Cookies Policy",
-      "href": "#"
-    }
-  ],
-  "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/f1faab73-e4ff-4037-b7c4-5d02bd0b1209",
-  "trademark": "TM & © 2023 Deco Storefront, Inc."
+  "logo": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/qd-logo___db9d306eda076eb72d86e12a479a7d51.svg"
 }

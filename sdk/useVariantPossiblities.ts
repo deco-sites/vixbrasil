@@ -1,4 +1,9 @@
-import type { ProductLeaf, PropertyValue } from "apps/commerce/types.ts";
+import type {
+  ProductGroup,
+  ProductLeaf,
+  PropertyValue,
+} from "apps/commerce/types.ts";
+import { useOffer } from "./useOffer.ts";
 
 export type Possibilities = Record<string, Record<string, string | undefined>>;
 
@@ -42,3 +47,48 @@ export const useVariantPossibilities = (
 
   return possibilities;
 };
+
+export interface VariantAvailability {
+  size?: string;
+  id: string;
+  inStock: boolean;
+}
+
+export function variantAvailability(
+  { hasVariant }: ProductGroup,
+) {
+  const arrayVariants: VariantAvailability[] = [];
+
+  if (hasVariant) {
+    hasVariant.map((item) => {
+      const { offers, productID, additionalProperty } = item;
+      const { availability } = useOffer(offers);
+      const index = additionalProperty?.find((prop) => prop.name === "Tamanho");
+
+      if (index) {
+        if (availability === "https://schema.org/InStock") {
+          arrayVariants.push({
+            size: index.value,
+            inStock: true,
+            id: productID,
+          });
+        } else {
+          arrayVariants.push({
+            size: index.value,
+            inStock: false,
+            id: productID,
+          });
+        }
+      } else {
+        if (availability === "https://schema.org/InStock") {
+          arrayVariants.push({ inStock: true, id: productID });
+        } else {
+          arrayVariants.push({ inStock: false, id: productID });
+        }
+      }
+    });
+  } else {
+    return null;
+  }
+  return arrayVariants;
+}

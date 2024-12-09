@@ -3,8 +3,10 @@ import { MINICART_DRAWER_ID, MINICART_FORM_ID } from "../../constants.ts";
 import { clx } from "../../sdk/clx.ts";
 import { formatPrice } from "../../sdk/format.ts";
 import { useComponent } from "../../sections/Component.tsx";
+import Icon from "../ui/Icon.tsx";
+
 import Coupon from "./Coupon.tsx";
-import FreeShippingProgressBar from "./FreeShippingProgressBar.tsx";
+import VendorCode from "./VendorCode.tsx";
 import CartItem, { Item } from "./Item.tsx";
 import { useScript } from "@deco/deco/hooks";
 export interface Minicart {
@@ -13,10 +15,12 @@ export interface Minicart {
   /** Cart from storefront. This can be changed at your will */
   storefront: {
     items: Item[];
+    refId?: string;
     total: number;
     subtotal: number;
     discounts: number;
     coupon?: string;
+    vendor?: string;
     locale: string;
     currency: string;
     enableCoupon?: boolean;
@@ -100,11 +104,11 @@ export default function Cart(
         total,
         subtotal,
         coupon,
+        vendor,
         discounts,
         locale,
         currency,
         enableCoupon = true,
-        freeShippingTarget,
         checkoutHref,
       },
     },
@@ -150,6 +154,7 @@ export default function Cart(
         />
 
         <div
+          style={{ height: "calc(100vh - 72px)" }}
           class={clx(
             "flex flex-col flex-grow justify-center items-center overflow-hidden w-full",
             "[.htmx-request_&]:pointer-events-none [.htmx-request_&]:opacity-60 [.htmx-request_&]:cursor-wait transition-opacity duration-300",
@@ -157,32 +162,27 @@ export default function Cart(
         >
           {count === 0
             ? (
-              <div class="flex flex-col gap-6">
-                <span class="font-medium text-2xl">Your bag is empty</span>
-                <label
+              <div class="flex flex-col gap-6 items-center">
+                <Icon id="shopping_bag" size={64} />
+                <span class="font-source-sans font-normal text-base ">
+                  Seu carrinho está vazio
+                </span>
+                {
+                  /* <label
                   for={MINICART_DRAWER_ID}
                   class="btn btn-outline no-animation"
                 >
                   Choose products
-                </label>
+                </label> */
+                }
               </div>
             )
             : (
               <>
-                {/* Free Shipping Bar */}
-                <div class="px-2 py-4 w-full">
-                  <FreeShippingProgressBar
-                    total={total}
-                    locale={locale}
-                    currency={currency}
-                    target={freeShippingTarget}
-                  />
-                </div>
-
                 {/* Cart Items */}
                 <ul
                   role="list"
-                  class="mt-6 px-2 flex-grow overflow-y-auto flex flex-col gap-6 w-full"
+                  class="footer-items px-2 flex-grow overflow-y-auto flex flex-col gap-6 w-full"
                 >
                   {items.map((item, index) => (
                     <li>
@@ -197,50 +197,87 @@ export default function Cart(
                 </ul>
 
                 {/* Cart Footer */}
-                <footer class="w-full">
-                  {/* Subtotal */}
-                  <div class="border-t border-base-200 py-2 flex flex-col">
-                    {discounts > 0 && (
-                      <div class="flex justify-between items-center px-4">
-                        <span class="text-sm">Discounts</span>
-                        <span class="text-sm">
-                          {formatPrice(discounts, currency, locale)}
-                        </span>
-                      </div>
-                    )}
-                    <div class="w-full flex justify-between px-4 text-sm">
-                      <span>Subtotal</span>
-                      <output form={MINICART_FORM_ID}>
-                        {formatPrice(subtotal, currency, locale)}
-                      </output>
+                <footer class="w-full shadow-[0px_-10px_20px_0px_#00000024]">
+                  <details class="collapse group/footer-minicart border-t border-base-200 p-2 flex flex-col bg-white pt-0 rounded-none">
+                    <summary class="collapse-title p-0 !flex justify-center botder-t-[2px] border-[#f7f4ed] h-10 min-h-5">
+                      <Icon
+                        id="footer-minicart-open"
+                        width={48}
+                        height={20}
+                        class="group-open/footer-minicart:hidden block"
+                      />
+                      <Icon
+                        id="footer-minicart-close"
+                        width={48}
+                        height={20}
+                        class="group-open/footer-minicart:block hidden"
+                      />
+                    </summary>
+                    <div class="collapse-content w-full flex flex-col gap-4 p-0 px-2">
+                      {enableCoupon && (
+                        <Coupon
+                          coupon={coupon}
+                          discount={formatPrice(discounts, currency, locale) ??
+                            ""}
+                        />
+                      )}
+
+                      <VendorCode
+                        vendor={vendor}
+                      />
                     </div>
-                    {enableCoupon && <Coupon coupon={coupon} />}
-                  </div>
+                  </details>
 
                   {/* Total */}
                   <div class="border-t border-base-200 pt-4 flex flex-col justify-end items-end gap-2 mx-4">
-                    <div class="flex justify-between items-center w-full">
-                      <span>Total</span>
+                    <div class="w-full flex justify-between gap-2 border-b border-[#e0e0e0] font-source-sans">
+                      <span class="font-normal text-[#4d4d4d] text-xs tracking-[0.07em]">
+                        Subtotal
+                      </span>
                       <output
                         form={MINICART_FORM_ID}
-                        class="font-medium text-xl"
+                        class="font-normal text-[#4d4d4d] text-xs tracking-[0.07em]"
+                      >
+                        {formatPrice(subtotal, currency, locale)}
+                      </output>
+                    </div>
+                    {discounts > 0 && (
+                      <div class="w-full flex justify-between items-center gap-2 border-b border-[#e0e0e0] font-source-sans">
+                        <span class="font-normal text-[#4d4d4d] text-xs tracking-[0.07em]">
+                          Descontos
+                        </span>
+                        <span class="font-source-sansfont-normal text-[#4d4d4d] text-xs tracking-[0.07em]">
+                          - {formatPrice(discounts, currency, locale)}
+                        </span>
+                      </div>
+                    )}
+                    <div class="flex justify-between items-center w-full font-source-sans">
+                      <span class="font-semibold text-black text-sm tracking-[0.07em]">
+                        Total
+                      </span>
+                      <output
+                        form={MINICART_FORM_ID}
+                        class="font-semibold text-black text-sm tracking-[0.07em]"
                       >
                         {formatPrice(total, currency, locale)}
                       </output>
                     </div>
-                    <span class="text-sm text-base-300">
-                      Fees and shipping will be calculated at checkout
-                    </span>
                   </div>
 
-                  <div class="p-4">
+                  <div class="p-4 flex items-center justify-between lg:gap-3 gap-1.5 lg:flex-row flex-col-reverse ">
+                    <label
+                      for={MINICART_DRAWER_ID}
+                      class="flex items-center justify-center w-full text-sm font-semibold font-source-sans text-black bg-transparent h-9 hover:bg-[#bea669] duration-200 border border-black hover:border-[#bea669] hover:text-white"
+                    >
+                      Continuar comprando
+                    </label>
                     <a
-                      class="btn btn-primary w-full no-animation"
+                      class="flex items-center justify-center w-full text-base font-semibold font-source-sans text-white bg-black h-9 uppercase hover:bg-[#bea669] duration-200 border border-black hover:border-[#bea669]"
                       href={checkoutHref}
                       hx-on:click={useScript(sendBeginCheckoutEvent)}
                     >
                       <span class="[.htmx-request_&]:hidden">
-                        Begin Checkout
+                        Finalizar Compra
                       </span>
                       <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
                     </a>

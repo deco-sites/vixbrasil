@@ -14,6 +14,7 @@ export default function ProductDetails({ page }: Props) {
   /**
    * Rendered when a not found is returned by any of the loaders run on this page
    */
+
   if (!page) {
     return (
       <div class="w-full flex justify-center items-center py-28">
@@ -28,22 +29,26 @@ export default function ProductDetails({ page }: Props) {
   }
 
   return (
-    <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
+    <div>
       <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
-
-      <div
-        class={clx(
-          "container grid",
-          "grid-cols-1 gap-2 py-0",
-          "sm:grid-cols-5 sm:gap-6",
-        )}
-      >
-        <div class="sm:col-span-3">
-          <ImageGallerySlider page={page} />
+      <div class="container flex flex-col gap-4 2xl:max-w-[1300px] max-w-[1230px] sm:gap-5 w-full pt-4 sm:pt-5 px-5 sm:px-0">
+        <div
+          class={clx(
+            "grid",
+            "grid-cols-1 gap-2 py-0",
+            "sm:grid-cols-5 sm:gap-6",
+          )}
+        >
+          <div class="sm:col-span-3">
+            <ImageGallerySlider page={page} />
+          </div>
+          <div class="sm:col-span-2">
+            <ProductInfo page={page} />
+          </div>
         </div>
-        <div class="sm:col-span-2">
-          <ProductInfo page={page} />
-        </div>
+      </div>
+      <div class="lg:my-[100px] my-[50px]">
+        <hr class="w-full text-[#e8e8e8]" />
       </div>
     </div>
   );

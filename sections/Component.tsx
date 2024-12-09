@@ -1,3 +1,4 @@
+// @babel/plugin-transform-react-jsx-source
 // deno-lint-ignore-file no-explicit-any
 import { Component, type ComponentType } from "preact";
 import { toFileUrl } from "std/path/mod.ts";
@@ -20,8 +21,8 @@ export class ErrorBoundary extends Component<{
 }, {
   error: Error | null;
 }> {
-  state = { error: null };
-  static getDerivedStateFromError(error: Error) {
+  override state = { error: null };
+  static override getDerivedStateFromError(error: Error) {
     return { error };
   }
   render() {

@@ -1,12 +1,12 @@
 import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
-import ProductSlider from "../../components/product/ProductSlider.tsx";
 import Section, {
   Props as SectionHeaderProps,
 } from "../../components/ui/Section.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
+import ProductSlider from "../../components/product/shelf/ProductSlider.tsx";
 export interface Props extends SectionHeaderProps {
   products: Product[] | null;
 }
@@ -33,7 +33,6 @@ export default function ProductShelf({ products, title, cta }: Props) {
   return (
     <Section.Container {...viewItemListEvent}>
       <Section.Header title={title} cta={cta} />
-
       <ProductSlider products={products} itemListName={title} />
     </Section.Container>
   );

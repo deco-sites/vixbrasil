@@ -1,17 +1,18 @@
 @tailwind base;
 @tailwind components;
+
+
 @tailwind utilities;
 
 @layer base {
-
   /* Allow changing font family via CMS */
   html {
     font-family: var(--font-family);
   }
 
   /** Remove default styles from input[type=number] */
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
@@ -25,15 +26,146 @@
 }
 
 .group:disabled .group-disabled\:animate-progress {
-  animation: progress-frame ease normal
+  animation: progress-frame ease normal;
+}
+
+.banner-video__slider--arrow, .shop-now__slider--arrow {
+  position: absolute;
+  top: 42%;
+  display: block;
+  z-index: 1;
+  padding: 1.5rem;
+}
+
+.shop-now__slider--arrow {
+  background: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  top: 47%;
+
+
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  stroke-width: 2px;
+}
+
+.banner-video__slider--arrow:after {
+  width: 12px;
+  height: 18px;
+  content: "";
+  display: block;
+  background: transparent;
+  position: absolute;
+}
+
+.banner-video__slider--arrow:hover:after {
+  content: url("data:image/svg+xml;charset=utf-8,<svg width='25' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M11 17L1 9l10-8' stroke='%23000'/><path fill='%23000' d='M1 8.5h24v1H1z'/></svg>");
+  right: 1.5rem;
+  bottom: 1.5rem;
+  filter: invert(1);
+}
+
+.banner-video__slider--arrow--prev:hover:after {
+  transform: rotate(180deg);
+}
+
+.shop-now__slider--arrow--prev,
+.banner-video__slider--arrow--prev {
+  left: 80px; 
+  transform: rotate(180deg);
+}
+.shop-now__slider--arrow--prev {
+  left: 5px; 
+}
+
+.banner-video__slider--arrow--next:after {
+     transform: rotate(180deg);
+}
+.shop-now__slider--arrow--next {
+  right: 5px; 
+}
+.banner-video__slider--arrow--next {
+  right: 80px; 
+}
+
+.slick-dots.shop-now-shelf__dots {
+  bottom: -5px;
+}
+
+.slick-dots.shop-now-shelf__dots li {
+  margin: 0;
+}
+.slick-dots.shop-now-shelf__dots li button:before {
+  font-size: 12px;
+  color: #cacbcc;
+  opacity: 1;
+}
+
+.slick-dots.shop-now-shelf__dots li.slick-active button:before {
+  color: #bea669;
+}
+
+.ImageZoom__container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subMenu_bold:last-child {
+  margin-bottom: 26px;
+}
+
+.footer-items::selection {
+  background: #bea669;
+  color: #fff;
+}
+
+.footer-items::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+.footer-items::-webkit-scrollbar-thumb {
+  background-color: #bea669;
+}
+
+.footer-items::-webkit-scrollbar {
+  width: 5px;
+}
+
+@media all and (max-width: 1024px) {
+  .banner-video__slider--arrow--prev {
+    left:20px; 
+  }
+  .banner-video__slider--arrow--next {
+    right:20px; 
+  }
+}
+
+
+#imageZoom--image {
+  width: 508px;
+  height: 768px;
+  object-fit: cover;
+  transition: background-size 0.3s, background-position 0.3s; 
+  cursor: zoom-in;
+}
+
+#imageZoom--image.zoom-active {
+  cursor: zoom-out;
+  background-size: 200%
 }
 
 @keyframes progress-frame {
   0% {
-    --dot-progress: 0%
+    --dot-progress: 0%;
   }
 
   to {
-    --dot-progress: 100%
+    --dot-progress: 100%;
   }
 }

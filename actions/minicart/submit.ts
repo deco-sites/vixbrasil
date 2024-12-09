@@ -21,6 +21,7 @@ const actions: Record<string, CartSubmitActions> = {
 interface CartForm {
   items: number[];
   coupon: string | null;
+  vendor: string | null;
   action: string | null;
   platformCart: unknown;
   addToCart: unknown;
@@ -30,6 +31,8 @@ export interface CartSubmitActions<AC = unknown> {
   addToCart?: (props: CartForm, req: Request, ctx: AC) => Promise<Minicart>;
   setQuantity?: (props: CartForm, req: Request, ctx: AC) => Promise<Minicart>;
   setCoupon?: (props: CartForm, req: Request, ctx: AC) => Promise<Minicart>;
+  removeCoupon?: (props: CartForm, req: Request, ctx: AC) => Promise<Minicart>;
+  setVendorCode?: (props: CartForm, req: Request, ctx: AC) => Promise<Minicart>;
 }
 
 const safeParse = (payload: string | null) => {
@@ -45,16 +48,21 @@ const cartFrom = (form: FormData) => {
   const cart: CartForm = {
     items: [],
     coupon: null,
+    vendor: null,
     platformCart: null,
     action: null,
     addToCart: null,
   };
 
-  for (const [name, value] of form.entries()) {
+  form.forEach((value, name) => {
     if (name === "coupon") {
       cart.coupon = value.toString();
     } else if (name === "action") {
       cart.action = value.toString();
+    } else if (name === "remove-coupon") {
+      cart.coupon = value.toString();
+    } else if (name === "set-vendor") {
+      cart.vendor = value.toString();
     } else if (name === "platform-cart") {
       cart.platformCart = safeParse(decodeURIComponent(value.toString()));
     } else if (name.startsWith("item::")) {
@@ -63,7 +71,7 @@ const cartFrom = (form: FormData) => {
     } else if (name === "add-to-cart") {
       cart.addToCart = safeParse(decodeURIComponent(value.toString()));
     }
-  }
+  });
 
   return cart;
 };
@@ -73,12 +81,17 @@ async function action(
   req: Request,
   ctx: AppContext,
 ): Promise<Minicart> {
-  const { setQuantity, setCoupon, addToCart } = actions[usePlatform()];
+  const { setQuantity, setCoupon, addToCart, removeCoupon, setVendorCode } =
+    actions[usePlatform()];
 
   const form = cartFrom(await req.formData());
 
   const handler = form.action === "set-coupon"
     ? setCoupon
+    : form.action === "remove-coupon"
+    ? removeCoupon
+    : form.action === "set-vendor"
+    ? setVendorCode
     : form.action === "add-to-cart"
     ? addToCart
     : setQuantity;

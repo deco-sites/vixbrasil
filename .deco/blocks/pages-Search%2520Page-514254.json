@@ -1,5 +1,5 @@
 {
-  "name": "Search Page",
+  "name": "Busca",
   "path": "/s",
   "sections": [
     {
@@ -33,12 +33,6 @@
           "pagination": "show-more"
         },
         "startingPage": 1
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Newsletter/Newsletter.tsx"
       }
     },
     {

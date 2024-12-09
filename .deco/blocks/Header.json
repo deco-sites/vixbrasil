@@ -1,68 +1,591 @@
 {
   "__resolveType": "site/sections/Header/Header.tsx",
   "searchbar": {
-    "placeholder": "What are you looking for?",
+    "name": "q",
+    "action": "/s",
     "loader": {
-      "__resolveType": "resolved",
-      "data": null
-    }
+      "data": {
+        "__resolveType": "vtex/loaders/intelligentSearch/suggestions.ts"
+      },
+      "__resolveType": "resolved"
+    },
+    "placeholder": "O que você está buscando?"
   },
-  "alerts": [
-    "<p>Get 10% off today: <strong>NEW10</strong></p>"
-  ],
+  "suggestions": {
+    "products": [],
+    "searches": []
+  },
+  "alerts": ["<p>Get 10% off today: <strong>NEW10</strong></p>"],
   "logo": {
-    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/ed9f7e80-86a8-4b72-9809-2e4e2e5f0e53",
-    "alt": "Deco Storefront",
-    "width": 160,
-    "height": 40
+    "src": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.128/img/header/icon-logo-color___89754752d03a11168a5440e6da2b721b.svg",
+    "width": 257,
+    "height": 57,
+    "alt": "Logo Vix Brasil"
   },
   "navItems": [
     {
+      "@type": "NavItemProps",
+      "url": "#",
+      "name": "Shop",
       "children": [
         {
-          "image": [],
-          "children": [],
-          "name": "Hello"
+          "children": [
+            {
+              "bold": true,
+              "name": "Novidades",
+              "url": "/novidades"
+            },
+            {
+              "bold": true,
+              "name": "Verão 25",
+              "url": "/altoverao25"
+            },
+            {
+              "bold": true,
+              "name": "Personal Shopper",
+              "url": "/e-shoppers"
+            }
+          ]
         },
         {
-          "image": [],
-          "children": [],
-          "name": "World"
+          "name": "Praia",
+          "url": "#",
+          "bold": true,
+          "children": [
+            {
+              "name": "biquínis",
+              "url": "/praia/biquinis?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "maiôs",
+              "url": "/praia/maios?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Saídas de Praia",
+              "url": "/praia/saidas-de-praia?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "cangas",
+              "url": "/praia/cangas?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "ver todos",
+              "url": "/praia?order=OrderByReleaseDateDESC"
+            }
+          ]
+        },
+        {
+          "name": "Roupas",
+          "url": "#",
+          "bold": true,
+          "children": [
+            {
+              "name": "Vestido",
+              "url": "/roupas/vestidos",
+              "children": [
+                {
+                  "name": "Mini",
+                  "url": "/roupas/vestidos/mini"
+                },
+                {
+                  "name": "Curto",
+                  "url": "/roupas/vestidos/curto"
+                },
+                {
+                  "name": "Midi",
+                  "url": "/roupas/vestidos/midi"
+                },
+                {
+                  "name": "Longo",
+                  "url": "/roupas/vestidos/longo"
+                }
+              ]
+            },
+            {
+              "name": "Top",
+              "url": "/roupas/top?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Blusas",
+              "url": "/roupas/blusas?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Camisas",
+              "url": "/roupas/camisas?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Casacos",
+              "url": "/roupas/casacos?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Calças",
+              "url": "/roupas/calcas?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Macacões",
+              "url": "/roupas/macacoes?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Saia",
+              "url": "/roupas/saias?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Short",
+              "url": "/roupas/shorts?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "ver todos",
+              "url": "/roupas?order=OrderByReleaseDateDESC"
+            }
+          ]
+        },
+        {
+          "name": "Acessórios",
+          "url": "#",
+          "bold": true,
+          "children": [
+            {
+              "name": "Bolsa",
+              "url": "/bolsas?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Chapéu",
+              "url": "/chapeus?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Sandálias",
+              "url": "/sandalias?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Brincos/colares",
+              "url": "/brincos/colares?_q=bijoux&map=ft"
+            },
+            {
+              "name": "cintos",
+              "url": "/cintos?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "ver todos",
+              "url": "/acessorios?order=OrderByReleaseDateDESC"
+            }
+          ]
+        },
+        {
+          "name": "Linhas",
+          "url": "#",
+          "bold": true,
+          "children": [
+            {
+              "name": "Bianca Brandolini",
+              "url": "/biancabrandolini"
+            },
+            {
+              "name": "Care",
+              "url": "/care"
+            },
+            {
+              "name": "Ana Vilhanas",
+              "url": "/anavilhanas"
+            },
+            {
+              "name": "Signature",
+              "url": "/signature"
+            }
+          ]
+        },
+        {
+          "name": "Destaques",
+          "url": "#",
+          "bold": true,
+          "children": [
+            {
+              "name": "All Black",
+              "url": "/allblack"
+            },
+            {
+              "name": "White",
+              "url": "/white"
+            },
+            {
+              "name": "Best Sellers",
+              "url": "/bestseller"
+            },
+            {
+              "name": "Beads",
+              "url": "/beads"
+            },
+            {
+              "name": "Laise",
+              "url": "/laise"
+            },
+            {
+              "name": "Linho",
+              "url": "/linho"
+            },
+            {
+              "name": "Tricot",
+              "url": "/tricot"
+            }
+          ]
+        },
+        {
+          "name": "Modelagens",
+          "url": "#",
+          "bold": true,
+          "children": [
+            {
+              "name": "Cheeky",
+              "url": "/cheeky?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "BR",
+              "url": "/praia/biquinis/calcinhas/br?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Hot Pants",
+              "url": "/hot-pant?order=OrderByReleaseDateDESC"
+            },
+            {
+              "name": "Ver todos",
+              "url": "/praia/biquinis/calcinhas?order=OrderByReleaseDateDESC"
+            }
+          ]
         }
-      ],
-      "@type": "SiteNavigationElement",
-      "url": "/deals",
-      "name": "Deals"
+      ]
     },
     {
       "@type": "SiteNavigationElement",
-      "url": "/valentines-day",
-      "name": "Valentine's Day",
-      "children": []
+      "url": "#",
+      "name": "A Marca",
+      "children": [
+        {
+          "name": "Sobre a Vix",
+          "url": "/institucional/sobre-a-empresa-vix",
+          "bold": true,
+          "children": [
+            {
+              "name": "A Marca",
+              "url": "/institucional/sobre-a-empresa-vix"
+            },
+            {
+              "name": "nosso compromisso",
+              "url": "/nossocompromisso"
+            },
+            {
+              "name": "paula hermanny",
+              "url": "/institucional/paula-hermany"
+            },
+            {
+              "name": "Casa Vix",
+              "url": "/casa-vix"
+            },
+            {
+              "name": "Linha Care",
+              "url": "/care"
+            },
+            {
+              "name": "parceria anavilhanas",
+              "url": "/anavilhanas"
+            }
+          ]
+        },
+        {
+          "name": "Nossas Lojas",
+          "url": "/institucional/lojas-vix",
+          "bold": true,
+          "children": [
+            {
+              "bold": true,
+
+              "name": "Internacional",
+              "url": "https://www.vixpaulahermanny.com/"
+            }
+          ]
+        }
+      ]
     },
     {
       "@type": "SiteNavigationElement",
-      "url": "/women",
-      "name": "Women",
-      "children": []
+      "url": "/e-shoppers",
+      "name": "Personal Shopper"
+    }
+  ],
+  "mobileItems": [
+    {
+      "item": [
+        {
+          "title": "Novidades",
+          "url": "/novidades",
+          "target": "_self",
+          "bold": true
+        },
+        {
+          "title": "Verão 25",
+          "url": "/altoverao25",
+          "target": "_self",
+          "bold": true
+        },
+        {
+          "title": "Praia",
+          "url": "/praia?order=OrderByReleaseDateDESC",
+          "target": "_self",
+          "children": [
+            {
+              "title": "Biquínis",
+              "url": "/praia/biquinis?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Maiô",
+              "url": "/praia/maios?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Saída de Praia",
+              "url": "/praia/saidas-de-praia?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Canga",
+              "url": "/praia/cangas?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Roupas",
+          "url": "/roupas?order=OrderByReleaseDateDESC",
+          "target": "_self",
+          "children": [
+            {
+              "title": "Vestido",
+              "url": "/roupas/vestidos",
+              "target": "_self",
+              "children": [
+                {
+                  "title": "Mini",
+                  "url": "/roupas/vestidos/mini"
+                },
+                {
+                  "title": "Curto",
+                  "url": "/roupas/vestidos/curto"
+                },
+                {
+                  "title": "Midi",
+                  "url": "/roupas/vestidos/midi"
+                },
+                {
+                  "title": "Longo",
+                  "url": "/roupas/vestidos/longo"
+                }
+              ]
+            },
+            {
+              "title": "Top",
+              "url": "/roupas/top?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Blusas",
+              "url": "/roupas/blusas?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Camisas",
+              "url": "/roupas/camisas?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Casacos",
+              "url": "/roupas/casacos?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Calças",
+              "url": "/roupas/calcas?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Macacões",
+              "url": "/roupas/macacoes?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Saia",
+              "url": "/roupas/saias?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Short",
+              "url": "/roupas/shorts?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Acessórios",
+          "url": "/acessorios?order=OrderByReleaseDateDESC",
+          "target": "_self",
+          "children": [
+            {
+              "title": "Bolsa",
+              "url": "/bolsas?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Chapéu",
+              "url": "/chapeus?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Sandálias",
+              "url": "/sandalias?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "Brincos/colares",
+              "url": "/brincos/colares?_q=bijoux&map=ft",
+              "target": "_self"
+            },
+            {
+              "title": "Cintos",
+              "url": "/cintos?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Linhas",
+          "url": "#",
+          "target": "_self",
+          "children": [
+            {
+              "title": "Bianca Brandolini",
+              "url": "/biancabrandolini",
+              "target": "_self"
+            },
+            {
+              "title": "Care",
+              "url": "/care",
+              "target": "_self"
+            },
+            {
+              "title": "Ana Vilhanas",
+              "url": "/anavilhanas",
+              "target": "_self"
+            },
+            {
+              "title": "Signature",
+              "url": "/signature",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Destaques",
+          "url": "",
+          "target": "_self",
+          "children": [
+            {
+              "title": "All Black",
+              "url": "/allblack",
+              "target": "_self"
+            },
+            {
+              "title": "White",
+              "url": "/white",
+              "target": "_self"
+            },
+            {
+              "title": "Best Sellers",
+              "url": "/bestseller",
+              "target": "_self"
+            },
+            {
+              "title": "All Black",
+              "url": "",
+              "target": "_self"
+            },
+            {
+              "title": "Beads",
+              "url": "/beads",
+              "target": "_self"
+            },
+            {
+              "title": "Laise",
+              "url": "/laise",
+              "target": "_self"
+            },
+            {
+              "title": "Linho",
+              "url": "/linho",
+              "target": "_self"
+            },
+            {
+              "title": "Tricot",
+              "url": "/tricot",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Modelagens",
+          "url": "/praia/biquinis/calcinhas?order=OrderByReleaseDateDESC",
+          "target": "_self",
+          "children": [
+            {
+              "title": "Cheeky",
+              "url": "/cheeky?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "BR",
+              "url": "/praia/biquinis/calcinhas/br?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            },
+            {
+              "title": "HOT PANTS",
+              "url": "/hot-pant?order=OrderByReleaseDateDESC",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
     },
     {
-      "@type": "SiteNavigationElement",
-      "url": "/men",
-      "name": "Men",
-      "children": []
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/clearance",
-      "name": "Clearance",
-      "children": []
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/activities",
-      "name": "Activities",
-      "children": []
+      "item": [
+        {
+          "title": "Personal Shopper",
+          "url": "/e-shoppers",
+          "target": "_self",
+          "bold": true
+        },
+        {
+          "title": "Sobre a vix",
+          "url": "/institucional/sobre-a-empresa-vix",
+          "target": "_self"
+        },
+        {
+          "title": "Lojas",
+          "url": "/institucional/lojas-vix",
+          "target": "_self"
+        },
+        {
+          "title": "Paula Hermanny",
+          "url": "/institucional/paula-hermany",
+          "target": "_self"
+        },
+        {
+          "title": "Internacional",
+          "url": "https://www.vixpaulahermanny.com/",
+          "target": "_self"
+        },
+        {
+          "title": "Fale conosco",
+          "url": "/atendimento/e-store",
+          "target": "_self"
+        }
+      ]
     }
   ],
   "loading": "eager"

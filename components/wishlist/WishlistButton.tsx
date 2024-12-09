@@ -1,5 +1,4 @@
 import { AnalyticsItem } from "apps/commerce/types.ts";
-import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import Icon from "../ui/Icon.tsx";
@@ -16,12 +15,8 @@ const onLoad = (id: string, productID: string) =>
     button.classList.remove("htmx-request");
     button.querySelector("svg")?.setAttribute(
       "fill",
-      inWishlist ? "black" : "none",
+      inWishlist ? "#bea669" : "none",
     );
-    const span = button.querySelector("span");
-    if (span) {
-      span.innerHTML = inWishlist ? "Remove from wishlist" : "Add to wishlist";
-    }
   });
 const onClick = (productID: string, productGroupID: string) => {
   const button = event?.currentTarget as HTMLButtonElement;
@@ -30,10 +25,10 @@ const onClick = (productID: string, productGroupID: string) => {
     button.classList.add("htmx-request");
     window.STOREFRONT.WISHLIST.toggle(productID, productGroupID);
   } else {
-    window.alert(`Please login to add the product to your wishlist`);
+    window.alert(`Faça o Login para adicionar o item a sua Wishlist`);
   }
 };
-function WishlistButton({ item, variant = "full" }: Props) {
+function WishlistButton({ item }: Props) {
   // deno-lint-ignore no-explicit-any
   const productID = (item as any).item_id;
   const productGroupID = item.item_group_id ?? "";
@@ -54,17 +49,13 @@ function WishlistButton({ item, variant = "full" }: Props) {
         {...addToWishlistEvent}
         aria-label="Add to wishlist"
         hx-on:click={useScript(onClick, productID, productGroupID)}
-        class={clx(
-          "btn no-animation",
-          variant === "icon"
-            ? "btn-circle btn-ghost btn-sm"
-            : "btn-primary btn-outline gap-2 w-full",
-        )}
+        class="group/wishlist-button"
       >
-        <Icon id="favorite" class="[.htmx-request_&]:hidden" fill="none" />
-        {variant === "full" && (
-          <span class="[.htmx-request_&]:hidden">Add to wishlist</span>
-        )}
+        <Icon
+          id="favorite-button"
+          class="[.htmx-request_&]:hidden text-transparent group-hover/wishlist-button:text-[#bea669] duration-200"
+          fill="currentColor"
+        />
         <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
       </button>
       <script

@@ -1,6 +1,6 @@
 {
-  "name": "Product Page",
-  "path": "/products/:slug",
+  "name": "Produto",
+  "path": "/:slug/p",
   "default": {
     "possiblePaths": []
   },
@@ -24,39 +24,25 @@
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductDetails.tsx",
-        "page": {
-          "__resolveType": "PDP Loader"
-        }
+      "__resolveType": "site/sections/Product/ProductDetails.tsx",
+      "page": {
+        "__resolveType": "PDP Loader"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "You may also like",
         "products": {
-          "__resolveType": "shopify/loaders/ProductList.ts",
+          "__resolveType": "vtex/loaders/legacy/productList.ts",
           "props": {
-            "sort": "",
-            "query": "a",
-            "count": 9
-          },
-          "filters": {
-            "tags": [],
-            "productTypes": [],
-            "productVendors": [],
-            "variantOptions": []
+            "sort": "OrderByPriceDESC",
+            "collection": "384",
+            "count": 12,
+            "similars": true
           }
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Newsletter/Newsletter.tsx"
+        },
+        "title": "VOCÊ TAMBÉM PODE GOSTAR"
       }
     },
     {

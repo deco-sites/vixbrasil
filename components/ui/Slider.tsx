@@ -25,7 +25,7 @@ function NextButton(props: JSX.IntrinsicElements["button"]) {
   return (
     <button
       disabled
-      data-slide="next"
+      data-slide={`next--${props.id}`}
       aria-label="Next item"
       {...props}
     />
@@ -33,7 +33,12 @@ function NextButton(props: JSX.IntrinsicElements["button"]) {
 }
 function PrevButton(props: JSX.IntrinsicElements["button"]) {
   return (
-    <button disabled data-slide="prev" aria-label="Previous item" {...props} />
+    <button
+      disabled
+      data-slide={`prev--${props.id}`}
+      aria-label="Previous item"
+      {...props}
+    />
   );
 }
 export interface Props {
@@ -47,7 +52,10 @@ const onLoad = ({ rootId, scroll, interval, infinite }: Props) => {
     // Percentage of the item that has to be inside the container
     // for it it be considered as inside the container
     const THRESHOLD = 0.6;
-    const intersectionX = (element: DOMRect, container: DOMRect): number => {
+    const intersectionX = (
+      element: DOMRect,
+      container: DOMRect,
+    ): number => {
       const delta = container.width / 1000;
       if (element.right < container.left - delta) {
         return 0.0;
@@ -70,8 +78,12 @@ const onLoad = ({ rootId, scroll, interval, infinite }: Props) => {
     const root = document.getElementById(rootId);
     const slider = root?.querySelector<HTMLElement>("[data-slider]");
     const items = root?.querySelectorAll<HTMLElement>("[data-slider-item]");
-    const prev = root?.querySelector<HTMLElement>('[data-slide="prev"]');
-    const next = root?.querySelector<HTMLElement>('[data-slide="next"]');
+    const prev = root?.querySelector<HTMLElement>(
+      `[data-slide="prev--${rootId}"]`,
+    );
+    const next = root?.querySelector<HTMLElement>(
+      `[data-slide="next--${rootId}"]`,
+    );
     const dots = root?.querySelectorAll<HTMLElement>("[data-dot]");
     if (!root || !slider || !items || items.length === 0) {
       console.warn(
@@ -113,7 +125,9 @@ const onLoad = ({ rootId, scroll, interval, infinite }: Props) => {
       // Wow! items per page is how many elements are being displayed inside the container!!
       const itemsPerPage = indices.length;
       const isShowingFirst = indices[0] === 0;
-      const pageIndex = Math.floor(indices[indices.length - 1] / itemsPerPage);
+      const pageIndex = Math.floor(
+        indices[indices.length - 1] / itemsPerPage,
+      );
       goToItem(
         isShowingFirst ? items.length - 1 : (pageIndex - 1) * itemsPerPage,
       );
@@ -135,8 +149,12 @@ const onLoad = ({ rootId, scroll, interval, infinite }: Props) => {
           const dot = dots?.item(index);
           if (e.isIntersecting) {
             dot?.setAttribute("disabled", "");
+            dot?.classList.add("border-[#bea669]");
+            dot?.classList.remove("border-transparent");
           } else {
             dot?.removeAttribute("disabled");
+            dot?.classList.add("border-transparent");
+            dot?.classList.remove("border-[#bea669]");
           }
           if (!infinite) {
             if (index === 0) {
@@ -178,7 +196,12 @@ function JS({ rootId, scroll = "smooth", interval, infinite = false }: Props) {
     <script
       type="module"
       dangerouslySetInnerHTML={{
-        __html: useScript(onLoad, { rootId, scroll, interval, infinite }),
+        __html: useScript(onLoad, {
+          rootId,
+          scroll,
+          interval,
+          infinite,
+        }),
       }}
     />
   );

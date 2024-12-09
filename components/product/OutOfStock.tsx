@@ -31,16 +31,31 @@ export default function Notify({ productID }: Props) {
       hx-swap="none"
       hx-post={useComponent<Props>(import.meta.url, { productID })}
     >
-      <span class="text-base">Este produto está indisponivel no momento</span>
-      <span class="text-sm">Avise-me quando estiver disponivel</span>
+      <span class="text-base font-source-sans">
+        Este produto está indisponivel no momento
+      </span>
+      <span class="text-sm font-source-sans font-light">
+        Quero saber quando estiver disponível
+      </span>
 
-      <input placeholder="Nome" class="input input-bordered" name="name" />
-      <input placeholder="Email" class="input input-bordered" name="email" />
+      <div class="flex items-center justify-between gap-4
+      ">
+        <input
+          placeholder="Nome"
+          class="border rounded-lg h-10 pl-2 w-full border-[#e3e4e6]"
+          name="name"
+        />
+        <input
+          placeholder="Email"
+          class="border rounded-lg h-10 pl-2 w-full border-[#e3e4e6]"
+          name="email"
+        />
 
-      <button class="btn btn-primary no-animation">
-        <span class="[.htmx-request_&]:hidden inline">Enviar</span>
-        <span class="[.htmx-request_&]:inline hidden loading loading-spinner loading-xs" />
-      </button>
+        <button class="font-source-sans font-medium text-sm uppercase text-white w-20 h-8 bg-[#bea669] px-4 rounded-lg">
+          <span class="[.htmx-request_&]:hidden inline">Enviar</span>
+          <span class="[.htmx-request_&]:inline hidden loading loading-spinner loading-xs" />
+        </button>
+      </div>
     </form>
   );
 }

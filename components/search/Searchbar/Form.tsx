@@ -18,8 +18,7 @@ import { useComponent } from "../../../sections/Component.tsx";
 import Icon from "../../ui/Icon.tsx";
 import { Props as SuggestionProps } from "./Suggestions.tsx";
 import { useScript } from "@deco/deco/hooks";
-import { asResolved } from "@deco/deco";
-import { type Resolved } from "@deco/deco";
+import { asResolved, type Resolved } from "@deco/deco";
 // When user clicks on the search button, navigate it to
 export const ACTION = "/s";
 // Querystring param used when navigating the user
@@ -61,29 +60,30 @@ const script = (formId: string, name: string, popupId: string) => {
 };
 const Suggestions = import.meta.resolve("./Suggestions.tsx");
 export default function Searchbar(
-  { placeholder = "What are you looking for?", loader }: SearchbarProps,
+  { placeholder = "O que você está buscando?", loader }: SearchbarProps,
 ) {
   const slot = useId();
   return (
     <div
-      class="w-full grid gap-8 px-4 py-6"
+      id={"vix-brasil__search-bar"}
+      class="w-full overflow-hidden max-w-0 grid gap-0 duration-200 relative lg:left-[50px] left-0 hidden"
       style={{ gridTemplateRows: "min-content auto" }}
     >
       <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="join">
-        <button
-          type="submit"
-          class="btn join-item btn-square no-animation"
-          aria-label="Search"
-          for={SEARCHBAR_INPUT_FORM_ID}
-          tabIndex={-1}
+        <label
+          id="vix-brasil__search-bar--close"
+          type="button"
+          class="bg-transparent border-0 cursor-pointer items-center px-3 lg:flex hidden"
+          for={SEARCHBAR_POPUP_ID}
+          aria-label="Toggle searchbar"
         >
-          <span class="loading loading-spinner loading-xs hidden [.htmx-request_&]:inline" />
-          <Icon id="search" class="inline [.htmx-request_&]:hidden" />
-        </button>
+          <Icon id="close" size={20} />
+        </label>
         <input
+          id="vix-brasil__search-bar--input"
           autoFocus
           tabIndex={0}
-          class="input input-bordered join-item flex-grow"
+          class="focus-visible:outline-none bg-transparent border-b border-white duration-200 h-10 pr-4 font-source-sans text-base text-white placeholder:font-source-sans placeholder:text-white placeholder:text-sm group-hover/header:border-black group-hover/header:text-black group-hover/header:placeholder:text-black w-full "
           name={NAME}
           placeholder={placeholder}
           autocomplete="off"
@@ -95,15 +95,21 @@ export default function Searchbar(
           hx-indicator={`#${SEARCHBAR_INPUT_FORM_ID}`}
           hx-swap="innerHTML"
         />
-        <label
-          type="button"
-          class="join-item btn btn-ghost btn-square hidden sm:inline-flex no-animation"
-          for={SEARCHBAR_POPUP_ID}
-          aria-label="Toggle searchbar"
+        <button
+          type="submit"
+          class="btn join-item btn-square no-animation hidden"
+          aria-label="Search"
+          for={SEARCHBAR_INPUT_FORM_ID}
+          tabIndex={-1}
         >
-          <Icon id="close" />
-        </label>
+          <span class="loading loading-spinner loading-xs hidden [.htmx-request_&]:inline" />
+          <Icon id="search" class="inline [.htmx-request_&]:hidden" size={18} />
+        </button>
       </form>
+      <div
+        id="vix-brasil__search-blur"
+        class="hidden w-full bg-black opacity-50 fixed left-0 top-[100%] h-dvh"
+      />
 
       {/* Suggestions slot */}
       <div id={slot} />

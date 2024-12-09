@@ -1,82 +1,178 @@
-import Icon from "../../components/ui/Icon.tsx";
-import type { SiteNavigationElement } from "apps/commerce/types.ts";
+import Drawer from "../ui/Drawer.tsx";
+import Icon from "../ui/Icon.tsx";
 
-export interface Props {
-  navItems?: SiteNavigationElement[];
+interface MobileMenu {
+  /**  @title Mobile items */
+  mobileItems?: MobileMenuItem[];
 }
 
-function MenuItem({ item }: { item: SiteNavigationElement }) {
+export interface MobileMenuItem {
+  /**  @title Mobile items */
+  item: MobileMenuItems[];
+}
+/** @titleBy title */
+interface MobileMenuItems {
+  title: string;
+  url: string;
+  target: "_blank" | "_self";
+  bold?: boolean;
+  children?: MobileSubMenuItem[];
+}
+/** @titleBy title */
+interface MobileSubMenuItem {
+  title: string;
+  url: string;
+  target: "_blank" | "_self";
+  children?: MobileSubMenuItem[];
+}
+
+function SubMenuItem(subItem: MobileMenuItems) {
   return (
-    <div class="collapse collapse-plus">
-      <input type="checkbox" />
-      <div class="collapse-title">{item.name}</div>
-      <div class="collapse-content">
+    <>
+      <Drawer
+        id={`${subItem.title}--drawer`}
+        aside={
+          <Drawer.Aside
+            class="bg-white h-full w-full"
+            titleClass="font-source-sans text-[#030303] text-sm font-medium uppercase"
+            headerClass="bg-[#f7f4ed] p-1.5"
+            title="Voltar"
+            drawer={`${subItem.title}--drawer`}
+          >
+            <div class="py-10 mx-4">
+              <p class="font-source-sans text-left text-sm tracking-[0.98px] uppercase font-medium">
+                {subItem.title}
+              </p>
+              <ul>
+                {subItem.children?.map((node) => (
+                  node.children
+                    ? (
+                      <li class="p-2">
+                        <details class="dropdown group/submenu-mobile">
+                          <summary class="list-none flex items-center gap-2 font-source-sans text-left text-sm tracking-[0.98px] uppercase font-light">
+                            {node.title}
+
+                            <span>
+                              <Icon
+                                id="sm-arrow"
+                                size={10}
+                                class="group-open/submenu-mobile:rotate-[-90deg] rotate-90 duration-200"
+                              />
+                            </span>
+                          </summary>
+                          <ul class="menu dropdown-content z-10 !relative">
+                            {node.children.map((item) => (
+                              <li class="p-2">
+                                <a
+                                  href={item.url}
+                                  class="font-source-sans text-left text-sm tracking-[0.98px] uppercase font-light p-0 text-[#a18c60]"
+                                >
+                                  {item.title}
+                                </a>
+                              </li>
+                            ))}
+                            <li class="p-2">
+                              <a
+                                href={node.url}
+                                class="font-source-sans text-left text-sm tracking-[0.98px] uppercase font-light p-0 text-[#a18c60]"
+                              >
+                                Ver tudo
+                              </a>
+                            </li>
+                          </ul>
+                        </details>
+                      </li>
+                    )
+                    : (
+                      <li class="p-2">
+                        <a
+                          href={node.url}
+                          class="font-source-sans text-left text-sm tracking-[0.98px] uppercase font-light"
+                        >
+                          {node.title}
+                        </a>
+                      </li>
+                    )
+                ))}
+                <li class="p-2">
+                  <a
+                    href={subItem.url}
+                    class="font-source-sans text-left text-sm tracking-[0.98px] uppercase font-light"
+                  >
+                    ver tudo
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </Drawer.Aside>
+        }
+      />
+      <div>
+        <div>
+          <label
+            for={`${subItem.title}--drawer`}
+            class={`flex justify-between items-center mb-2 font-source-sans text-left text-sm font-medium tracking-[0.98px] uppercase ${
+              subItem.bold
+                ? "subMenu_bold font-medium text-[#bea669]"
+                : "font-medium"
+            }`}
+            aria-label="open submenu"
+          >
+            {subItem.title}
+            <Icon id="sm-arrow" width={7} height={11} />
+          </label>
+        </div>
+      </div>
+    </>
+  );
+}
+function MenuItem({ item }: MobileMenuItem) {
+  return (
+    <div>
+      <div>
         <ul>
-          <li>
-            <a class="underline text-sm" href={item.url}>Ver todos</a>
-          </li>
-          {item.children?.map((node) => (
-            <li>
-              <MenuItem item={node} />
-            </li>
-          ))}
+          {item.map((node) => {
+            const boldItems = item.filter((n) => n.bold);
+            const isLastBold = boldItems[boldItems.length - 1] === node;
+            return (
+              <li
+                class={`${
+                  node.bold
+                    ? `subMenu_bold block ${isLastBold ? "mb-[26px]" : ""}`
+                    : ""
+                }`}
+              >
+                {node.children ? <SubMenuItem {...node} /> : (
+                  <a
+                    href={node.url}
+                    class={`block mb-2 font-source-sans text-left text-sm font-medium tracking-[0.98px] uppercase ${
+                      node.bold ? "font-medium text-[#bea669]" : "font-medium"
+                    }`}
+                  >
+                    {node.title}
+                  </a>
+                )}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
   );
 }
 
-function Menu({ navItems = [] }: Props) {
+function Menu({ mobileItems }: MobileMenu) {
   return (
     <div
-      class="flex flex-col h-full overflow-y-auto"
-      style={{ minWidth: "100vw" }}
+      class="flex flex-col h-screen overflow-y-auto"
+      style={{ minWidth: "90vw" }}
     >
       <ul class="px-4 flex-grow flex flex-col divide-y divide-base-200 overflow-y-auto">
-        {navItems.map((item) => (
-          <li>
+        {mobileItems?.map(({ item }) => (
+          <li class="py-10 border-b border-[#cbb887]">
             <MenuItem item={item} />
           </li>
         ))}
-      </ul>
-
-      <ul class="flex flex-col py-2 bg-base-200">
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="/wishlist"
-          >
-            <Icon id="favorite" />
-            <span class="text-sm">Lista de desejos</span>
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="https://www.deco.cx"
-          >
-            <Icon id="home_pin" />
-            <span class="text-sm">Nossas lojas</span>
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="https://www.deco.cx"
-          >
-            <Icon id="call" />
-            <span class="text-sm">Fale conosco</span>
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="https://www.deco.cx"
-          >
-            <Icon id="account_circle" />
-            <span class="text-sm">Minha conta</span>
-          </a>
-        </li>
       </ul>
     </div>
   );

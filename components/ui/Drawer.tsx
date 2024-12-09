@@ -1,7 +1,7 @@
 import { type ComponentChildren } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
-import Icon from "./Icon.tsx";
+import Icon, { AvailableIcons } from "./Icon.tsx";
 import { useScript } from "@deco/deco/hooks";
 export interface Props {
   open?: boolean;
@@ -45,7 +45,7 @@ function Drawer(
         <aside
           data-aside
           class={clx(
-            "drawer-side h-full z-40 overflow-hidden",
+            "drawer-side h-screen z-40 overflow-hidden",
             "[[data-aside]&_section]:contents",
           )}
         >
@@ -60,23 +60,37 @@ function Drawer(
     </>
   );
 }
-function Aside({ title, drawer, children }: {
-  title: string;
-  drawer: string;
-  children: ComponentChildren;
-}) {
+function Aside(
+  {
+    title,
+    drawer,
+    children,
+    class: _class = "",
+    titleClass: _titleClass = "",
+    headerClass: _headerClass = "",
+    icon = "close",
+  }: {
+    title: string;
+    drawer: string;
+    children: ComponentChildren;
+    class?: string;
+    titleClass?: string;
+    headerClass?: string;
+    icon?: AvailableIcons;
+  },
+) {
   return (
     <div
       data-aside
-      class="bg-base-100 grid grid-rows-[auto_1fr] h-full divide-y"
+      class={_class}
       style={{ maxWidth: "100vw" }}
     >
-      <div class="flex justify-between items-center">
+      <div class={`${_headerClass} flex justify-between items-center`}>
         <h1 class="px-4 py-3">
-          <span class="font-medium text-2xl">{title}</span>
+          <span class={_titleClass}>{title}</span>
         </h1>
-        <label for={drawer} aria-label="X" class="btn btn-ghost">
-          <Icon id="close" />
+        <label for={drawer} aria-label="X">
+          <Icon id={icon} />
         </label>
       </div>
       {children}

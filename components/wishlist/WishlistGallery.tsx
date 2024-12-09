@@ -20,10 +20,25 @@ function WishlistGallery(props: SectionProps<typeof loader>) {
   }
   return <SearchResult {...props} />;
 }
+
+const DEFAULT_PROPS = {
+  seo: [
+    {
+      matcher: "/*",
+      text: "Texto SEO menor",
+      seoText: "Texto SEO footer",
+    },
+  ],
+};
 export const loader = (props: Props, req: Request) => {
+  const { seo } = { ...DEFAULT_PROPS, ...props };
+  const texts = seo.find(({ matcher }) =>
+    new URLPattern({ pathname: matcher }).test(req.url)
+  );
   return {
     ...props,
     url: req.url,
+    texts,
   };
 };
 export default WishlistGallery;

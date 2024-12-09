@@ -28,6 +28,29 @@ const actions: CartSubmitActions<AppContext> = {
       "vtex/actions/cart/updateCoupons.ts",
       { text: coupon ?? undefined },
     );
+    return cartFrom(response, req.url);
+  },
+  removeCoupon: async ({ coupon }, req, ctx) => {
+    console.log("Cupom:", coupon);
+    const response = await ctx.invoke(
+      "vtex/actions/cart/updateCoupons.ts",
+      { text: undefined },
+    );
+    return cartFrom(response, req.url);
+  },
+  setVendorCode: async ({ vendor }, req, ctx) => {
+    const cookieHeader = req.headers.get("cookie") || "";
+    const cookies = Object.fromEntries(
+      cookieHeader.split("; ").map((c) => c.split("=")),
+    );
+    const coupon = cookies.couponCode || "";
+    const response = await ctx.invoke(
+      "vtex/actions/cart/updateAttachment.ts",
+      {
+        attachment: "marketingData",
+        body: { utmiPart: vendor, coupon },
+      },
+    );
 
     return cartFrom(response, req.url);
   },

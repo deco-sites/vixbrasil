@@ -1,0 +1,15 @@
+.category-seo p, .category-seo h1 {
+  display: block;
+  margin: 12px 0;
+}
+
+.category-seo a {
+color: #bea669;
+text-decoration: underline;
+cursor: pointer;
+}
+
+.filters-department {
+  scrollbar-width: thin;
+  scrollbar-color: #eee #fff;
+}

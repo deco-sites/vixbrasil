@@ -19,6 +19,7 @@ export const cartFrom = (cart: Cart): Minicart => {
     platformCart: cart as unknown as Record<string, unknown>,
     storefront: {
       items: items.map((item, index) => ({
+        refId: "",
         image: item.ImagePath,
         listPrice: item.ListPrice,
         ...itemToAnalyticsItem(item, coupon, index),

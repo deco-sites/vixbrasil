@@ -1,0 +1,12 @@
+{
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "plaintext": "html",
+    "typescriptreact": "html"
+  },
+  "deno.enable": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.defaultFormatter": "denoland.vscode-deno"
+}

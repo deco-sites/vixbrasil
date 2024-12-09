@@ -12,6 +12,17 @@ export default defineApp(async (_req, ctx) => {
     <>
       {/* Include Icons and manifest */}
       <Head>
+        <script src="https://store.deco.cx/live/invoke/site/loaders/abTestScript.ts">
+        </script>
+        {/* Sizebay  */}
+        <script
+          defer
+          id="sizebay-vfr-v4"
+          src="https://static.sizebay.technology/1165/prescript.js"
+        >
+        </script>
+        {/* End Sizebay  */}
+
         {/* Enable View Transitions API */}
         <style
           dangerouslySetInnerHTML={{
@@ -24,14 +35,62 @@ export default defineApp(async (_req, ctx) => {
           href={asset(`/styles.css?revision=${revision}`)}
           rel="stylesheet"
         />
+        <link
+          href={asset(`/category.css`)}
+          rel="stylesheet"
+        />
 
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
-      </Head>
 
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200..900&display=swap"
+          rel="stylesheet"
+        />
+
+        {/* Slick CSS */}
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+        />
+      </Head>
+      {/* <!-- Google Tag Manager (noscript) --> */}
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PRD9CF2N"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"
+        >
+        </iframe>
+      </noscript>
+      {/* <!-- End Google Tag Manager (noscript) --> */}
       {/* Rest of Preact tree */}
       <ctx.Component />
 
+      {/* jQuery */}
+      <script
+        type="text/javascript"
+        src="//code.jquery.com/jquery-1.11.0.min.js"
+      />
+      <script
+        type="text/javascript"
+        src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+      />
+
+      {/* Slick JS */}
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      />
+
+      {/* Service Worker */}
       <script
         type="module"
         dangerouslySetInnerHTML={{ __html: useScript(serviceWorkerScript) }}

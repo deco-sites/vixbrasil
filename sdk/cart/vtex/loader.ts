@@ -13,6 +13,7 @@ export const cartFrom = (form: Cart, url: string): Minicart => {
   const locale = form?.clientPreferencesData.locale ?? "pt-BR";
   const currency = form?.storePreferencesData.currencyCode ?? "BRL";
   const coupon = form?.marketingData?.coupon ?? undefined;
+  const vendor = form?.marketingData?.utmiPart ?? undefined;
 
   return {
     platformCart: form as unknown as Record<string, unknown>,
@@ -22,6 +23,7 @@ export const cartFrom = (form: Cart, url: string): Minicart => {
 
         return {
           ...itemToAnalyticsItem({ ...item, detailUrl, coupon }, index),
+          refId: item.refId,
           image: item.imageUrl,
           listPrice: item.listPrice / 100,
         };
@@ -31,10 +33,12 @@ export const cartFrom = (form: Cart, url: string): Minicart => {
       subtotal: total / 100,
       discounts: discounts / 100,
       coupon: coupon,
+      vendor: vendor,
       locale,
       currency,
       freeShippingTarget: 1000,
       checkoutHref: "/checkout",
+      refId: "",
     },
   };
 };

@@ -8,6 +8,8 @@ import { parseRange } from "apps/commerce/utils/filters.ts";
 import Avatar from "../../components/ui/Avatar.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { formatPrice } from "../../sdk/format.ts";
+import Icon from "../ui/Icon.tsx";
+import { useDevice } from "@deco/deco/hooks";
 
 interface Props {
   filters: ProductListingPage["filters"];
@@ -21,19 +23,35 @@ function ValueItem(
 ) {
   return (
     <a href={url} rel="nofollow" class="flex items-center gap-2">
-      <div aria-checked={selected} class="checkbox" />
-      <span class="text-sm">{label}</span>
-      {quantity > 0 && <span class="text-sm text-base-400">({quantity})</span>}
+      <div
+        aria-checked={selected}
+        class="checkbox border-orange-400 [--chkbg:#bea669] checked:border-[#bea669] w-4 h-4 rounded"
+      />
+      <span class="font-source-sans text-sm text-black">{label}</span>
+      {quantity > 0 && (
+        <span class="font-source-sans text-sm text-black">({quantity})</span>
+      )}
     </a>
   );
 }
 
 function FilterValues({ key, values }: FilterToggle) {
+  const device = useDevice();
+
   const avatars = key === "tamanho" || key === "cor";
   const flexDirection = avatars ? "flex-row items-center" : "flex-col";
 
   return (
-    <ul class={clx(`flex flex-wrap gap-2`, flexDirection)}>
+    <ul
+      tabIndex={0}
+      class={clx(
+        `filters-department menu flex gap-2 z-20 sm:py-8 py-4 !flex-nowrap`,
+        "sm:max-h-[200px] sm:min-w-[345px] bg-white overflow-auto",
+        device === "desktop" &&
+          "dropdown-content px-10 mt-8 shadow-custom-light ",
+        flexDirection,
+      )}
+    >
       {values.map((item) => {
         const { url, selected, value } = item;
 
@@ -67,17 +85,71 @@ function FilterValues({ key, values }: FilterToggle) {
 
 function Filters({ filters }: Props) {
   return (
-    <ul class="flex flex-col gap-6 p-4 sm:p-0">
+    <ul class="flex gap-6 p-4 sm:p-0 sm:flex-row flex-col">
       {filters
         .filter(isToggle)
-        .map((filter) => (
-          <li class="flex flex-col gap-4">
-            <span>{filter.label}</span>
-            <FilterValues {...filter} />
-          </li>
-        ))}
+        .map((filter) => {
+          if (!["Cor", "Tamanho"].includes(filter.label)) {
+            return null;
+          }
+          return (
+            <li>
+              <div class="dropdown group/filters flex flex-col gap-4">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  class="list-none flex items-center gap-4 font-source-sans text-left text-sm tracking-[0.98px] uppercase font-normal cursor-pointer"
+                >
+                  {filter.label}
+
+                  <span>
+                    <Icon
+                      id="sm-arrow"
+                      size={10}
+                      class="group-open/filters:rotate-[-90deg] rotate-90 duration-200"
+                    />
+                  </span>
+                </div>
+                <FilterValues {...filter} />
+              </div>
+            </li>
+          );
+        })}
+    </ul>
+  );
+}
+function FiltersMobile({ filters }: Props) {
+  return (
+    <ul class="flex p-4 sm:p-0 sm:flex-row flex-col">
+      {filters
+        .filter(isToggle)
+        .map((filter) => {
+          if (!["Cor", "Tamanho"].includes(filter.label)) {
+            return null;
+          }
+          return (
+            <li>
+              <details class="collapse group/filters flex flex-col gap-4">
+                <summary class="collapse-title list-none !flex items-center justify-between gap-4 font-source-sans text-left text-sm tracking-[0.98px] uppercase font-normal cursor-pointer p-4">
+                  {filter.label}
+
+                  <span>
+                    <Icon
+                      id="sm-arrow"
+                      size={10}
+                      class="group-open/filters:rotate-[-90deg] rotate-90 duration-200"
+                    />
+                  </span>
+                </summary>
+                <div class="collapse-content">
+                  <FilterValues {...filter} />
+                </div>
+              </details>
+            </li>
+          );
+        })}
     </ul>
   );
 }
 
-export default Filters;
+export { Filters, FiltersMobile };

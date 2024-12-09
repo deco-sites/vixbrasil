@@ -1,11 +1,24 @@
 {
   "data": {
+    "__resolveType": "vtex/loaders/legacy/productDetailsPage.ts",
     "slug": {
-      "param": "slug",
-      "__resolveType": "website/functions/requestToParam.ts"
+      "__resolveType": "website/functions/requestToParam.ts",
+      "param": "slug"
     },
-    "__resolveType": "shopify/loaders/ProductDetailsPage.ts"
+    "similars": true,
+    "indexingSkus": true
   },
-  "extensions": [],
+  "extensions": [
+    {
+      "__resolveType": "vtex/loaders/product/extensions/detailsPage.ts",
+      "kitItems": true,
+      "variants": false,
+      "inventory": false,
+      "simulate": false,
+      "similars": false,
+      "reviews": false,
+      "brands": false
+    }
+  ],
   "__resolveType": "commerce/loaders/product/extensions/detailsPage.ts"
 }

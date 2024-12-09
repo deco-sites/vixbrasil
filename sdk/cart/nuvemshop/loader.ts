@@ -20,6 +20,8 @@ export const cartFrom = (cart: Cart | null): Minicart => {
     platformCart: cart as unknown as Record<string, unknown>,
     storefront: {
       items: items?.map((item, index) => ({
+        refId: "",
+
         image: item.image.src,
         listPrice: Number(item.compare_at_price),
         ...itemToAnalyticsItem(item, index),

@@ -23,6 +23,8 @@ export const cartFrom = (cart: Cart): Minicart => {
     platformCart: cart,
     storefront: {
       items: items.map((item, index) => ({
+        refId: "",
+
         image: normalizeUrl(item.image_url ?? ""),
         listPrice: item.variant_price,
         ...itemToAnalyticsItem(item, index),
