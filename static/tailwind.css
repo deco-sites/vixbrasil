@@ -5416,6 +5416,11 @@ details.collapse summary::-webkit-details-marker {
 }
 
 
+.rounded-\[2px\] {
+  border-radius: 2px;
+}
+
+
 .rounded-\[3px\] {
   border-radius: 3px;
 }
@@ -8320,6 +8325,10 @@ details.collapse summary::-webkit-details-marker {
 
   .lg\:min-w-0 {
     min-width: 0px;
+  }
+
+  .lg\:min-w-\[950px\] {
+    min-width: 950px;
   }
 
   .lg\:max-w-3xl {

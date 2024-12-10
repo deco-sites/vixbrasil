@@ -3,6 +3,7 @@ import Video from "../../islands/Video.tsx";
 import { VideoProps } from "../media/Video.tsx";
 import Slider from "../ui/Slider.tsx";
 import { useId } from "../../sdk/useId.ts";
+import { useDevice } from "@deco/deco/hooks";
 
 export interface BannerVideoProps {
   /** @title Banner de Vídeo ou Imagem */
@@ -15,6 +16,7 @@ export default function BannerVideoComponent(
   { id = useId() },
 ) {
   const container = `${id}-banner-video--home`;
+  const device = useDevice();
 
   return (
     <div>
@@ -58,6 +60,7 @@ export default function BannerVideoComponent(
                   url={item.url}
                   target={item.target}
                   thumbnail={item.thumbnail}
+                  device={device}
                   // classes="lg:w-full !w-[300%] translate-x-[-33%] lg:translate-x-0"
                 />
               </Slider.Item>
