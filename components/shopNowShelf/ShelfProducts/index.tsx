@@ -19,7 +19,7 @@ const ProductPopUp = (
         active ? "flex" : "hidden"
       } fixed z-50 top-0 left-0  items-center justify-center h-screen w-screen`}
     >
-      <div class="absolute z-10 bg-white lg:w-auto w-[98vw]">
+      <div class="absolute z-10 bg-white lg:w-auto lg:min-w-[950px] w-[98vw] rounded-[2px]">
         <div class="relative flex justify-center ">
           <button
             onClick={() => setActive(false)}
@@ -32,7 +32,7 @@ const ProductPopUp = (
             {title}
           </h2>
         </div>
-        <div class="flex items-start m-6">
+        <div class="flex items-start m-6 justify-between">
           {products.map((item, index) => {
             const dataDispatch = index === 0 ? "SET_DATA_1" : "SET_DATA_2";
 

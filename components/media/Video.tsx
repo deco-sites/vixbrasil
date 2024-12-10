@@ -14,10 +14,20 @@ export interface VideoProps {
   classesContainer?: string;
   /** @hide true */
   classes?: string;
+  /** @hide true */
+  device?: "mobile" | "tablet" | "desktop";
 }
 export const Video = (
-  { src, mobileSrc, url, alt, target = "_self", classes = "", thumbnail }:
-    VideoProps,
+  {
+    src,
+    mobileSrc,
+    url,
+    alt,
+    target = "_self",
+    classes = "",
+    thumbnail,
+    device,
+  }: VideoProps,
 ) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
@@ -28,7 +38,7 @@ export const Video = (
   return (
     <div
       style={{
-        height: `${globalThis.window.innerWidth > 1024 ? "52vw" : "148.5vw"}`,
+        height: `${device === "desktop" ? "52vw" : "148.5vw"}`,
       }}
       class="w-full"
     >
