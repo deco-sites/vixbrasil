@@ -60,6 +60,7 @@ export default function BannerVideoComponent(
                   url={item.url}
                   target={item.target}
                   thumbnail={item.thumbnail}
+                  thumbnailMobile={item.thumbnailMobile}
                   device={device}
                   // classes="lg:w-full !w-[300%] translate-x-[-33%] lg:translate-x-0"
                 />
