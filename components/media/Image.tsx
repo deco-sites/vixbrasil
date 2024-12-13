@@ -1,6 +1,6 @@
 import { useDevice } from "@deco/deco/hooks";
 import { ImageWidget } from "apps/admin/widgets.ts";
-/** @titleBy alt */
+/** @title Imagem */
 export interface ImageProps {
   /** @hide true */
   type: "image";

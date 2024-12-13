@@ -9,6 +9,7 @@ export interface BannerVideoProps {
   /** @title Banner de Vídeo ou Imagem */
   bannerVideo: ImageOrVideo[];
 }
+
 /** @titleBy alt */
 type ImageOrVideo = ImageProps | VideoProps;
 export default function BannerVideoComponent(

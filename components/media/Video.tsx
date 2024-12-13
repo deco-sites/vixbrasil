@@ -1,6 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
 import { ImageWidget } from "apps/admin/widgets.ts";
-/** @titleBy alt */
+/** @title Video */
 export interface VideoProps {
   /** @readOnly true */
   type: "video";
