@@ -113,7 +113,7 @@ function Desktop({
               </p>
             </li>
             {paymentMethods.map(({ image, alt }) => (
-              <li class="border border-base-100 rounded flex justify-center items-center">
+              <li class="border border-base-100 rounded flex justify-center items-center flex-wrap sm:flex-nowrap">
                 <Image
                   src={image}
                   alt={alt}
@@ -155,7 +155,7 @@ function Desktop({
                   Loja segura
                 </p>
               </li>
-              <li class="h-5 border border-base-100 rounded flex justify-center items-center">
+              <li class="h-auto sm:h-5 border border-base-100 rounded flex justify-center items-center">
                 <Image
                   src="https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/safe-browsing___f02bb1e55d892823b507b83dc480e65a.png"
                   alt="Safe Browsing Google"
@@ -165,7 +165,7 @@ function Desktop({
                   class="grayscale !object-contain w-auto h-5"
                 />
               </li>
-              <li class="h-5 border border-base-100 rounded flex justify-center items-center">
+              <li class="h-auto sm:h-5 border border-base-100 rounded flex justify-center items-center">
                 <Image
                   src="https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/pci___a68eac43f57b704332213e837d4ff298.png"
                   alt="PCI"
@@ -175,17 +175,17 @@ function Desktop({
                   class="grayscale !object-contain w-auto h-5"
                 />
               </li>
-              <li class="h-5 border border-base-100 rounded flex justify-center items-center">
+              <li class="h-auto sm:h-7 border border-base-100 rounded flex justify-center items-center">
                 <Image
                   src="https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/lets-encrypt___cd1e93ea5b7acece934d5dc2308653b0.png"
                   alt="Let's Encrypt"
                   width={60}
                   height={30}
                   loading="lazy"
-                  class="grayscale !object-contain w-auto h-5"
+                  class="grayscale !object-contain w-auto h-7"
                 />
               </li>
-              <li class="h-5 border border-base-100 rounded flex justify-center items-center">
+              <li class="h-auto sm:h-5 border border-base-100 rounded flex justify-center items-center">
                 <Image
                   src="https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/vtex-certified___420675ab19c0357575babc7204a479ea.png"
                   alt="VTEX PCI"
@@ -294,7 +294,7 @@ function Mobile({
       <div class="p-6">
         <div class="flex flex-col gap-8">
           <ul class="flex gap-2">
-            <li class="border border-base-100 rounded flex justify-center items-center">
+            <li class="border border-base-100 rounded flex justify-start items-center">
               <Image
                 src="https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.127/img/footer/google-store-link___a575e3d1f808ff3484f40bb468bfc7d7.png"
                 alt="App no Google Play"
@@ -321,7 +321,7 @@ function Mobile({
                 Formas de Pagamento
               </p>
             </li>
-            <li class="flex justify-center items-center gap-3 pt-2">
+            <li class="flex justify-start items-center gap-3 pt-2 flex-wrap">
               {paymentMethods.map(({ image, alt }) => (
                 <Image
                   src={image}
@@ -342,7 +342,7 @@ function Mobile({
                   Loja segura
                 </p>
               </li>
-              <li class="h-7 pt-2 border border-base-100 rounded flex justify-start gap-5">
+              <li class="h-auto sm:h-7 pt-2 border border-base-100 rounded flex justify-start gap-5 flex-wrap">
                 <Image
                   src="https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/safe-browsing___f02bb1e55d892823b507b83dc480e65a.png"
                   alt="Safe Browsing Google"

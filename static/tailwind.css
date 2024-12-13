@@ -7956,6 +7956,14 @@ details.collapse summary::-webkit-details-marker {
     display: none;
   }
 
+  .sm\:h-5 {
+    height: 1.25rem;
+  }
+
+  .sm\:h-7 {
+    height: 1.75rem;
+  }
+
   .sm\:h-\[100px\] {
     height: 100px;
   }
@@ -8051,6 +8059,10 @@ details.collapse summary::-webkit-details-marker {
 
   .sm\:flex-wrap {
     flex-wrap: wrap;
+  }
+
+  .sm\:flex-nowrap {
+    flex-wrap: nowrap;
   }
 
   .sm\:items-start {

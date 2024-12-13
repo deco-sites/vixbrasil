@@ -48,7 +48,7 @@ export const Video = (
   return (
     <div
       style={{
-        height: `${device === "desktop" ? "52vw" : "148.5vw"}`,
+        height: `${device === "desktop" ? "52vw" : "149.6vw"}`,
       }}
       class="w-full"
     >
