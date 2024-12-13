@@ -1,17 +1,29 @@
+import { useId } from "../../sdk/useId.ts";
 import { Image, ImageProps } from "../media/Image.tsx";
-import { DepartmentImageFunctions } from "./functions.js";
-import { useScript } from "@deco/deco/hooks";
+import Slider from "../ui/Slider.tsx";
+
 export type DepartmentImagesProps = {
   /** @title Imagens de Departamento */
   items: ImageProps[];
 };
-export const DepartmentImages = ({ items }: DepartmentImagesProps) => {
+export const DepartmentImages = (
+  { items }: DepartmentImagesProps,
+  { id = useId() },
+) => {
+  const container = `${id}-department-images`;
+
   return (
-    <div class="lg:mx-0 mx-[15px] lg:mt-8 mt-4 lg:mb-12 mb-8">
-      <div class="department-images__slider flex items-center justify-between w-full max-w-[1660px] mx-auto object-contain">
-        {items?.map((item) => {
+    <div
+      id={container}
+      class="w-[calc(100% - 8px)] lg:mt-8 mt-4 lg:mb-12 mb-8 relative max-w-[1660px] mx-auto"
+    >
+      <Slider class="carousel carousel-center col-span-full col-start-1 row-start-1 row-span-full h-full w-full gap-4 px-4">
+        {items?.map((item, index) => {
           return (
-            <div class="max-h-[580px] w-full overflow-hidden lg:px-4">
+            <Slider.Item
+              index={index}
+              class="max-h-[580px] lg:w-1/4 w-full overflow-hidden carousel-item"
+            >
               <Image
                 type="image"
                 src={item.src}
@@ -23,16 +35,43 @@ export const DepartmentImages = ({ items }: DepartmentImagesProps) => {
                 target={item.target}
                 classes="hover:scale-[1.05] duration-200 lg:mx-0 mx-1.5 !object-contain"
               />
-            </div>
+            </Slider.Item>
           );
         })}
-      </div>
-      <script
-        type="module"
-        dangerouslySetInnerHTML={{
-          __html: useScript(DepartmentImageFunctions),
-        }}
-      />
+      </Slider>
+      <Slider.PrevButton
+        class="shop-now__slider--arrow shop-now__slider--arrow--prev"
+        disabled={false}
+        id={container}
+      >
+        <svg
+          width="12"
+          height="18"
+          viewBox="0 0 12 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0.999999 17L11 9L0.999999 0.999999" stroke="black"></path>
+        </svg>
+      </Slider.PrevButton>
+
+      <Slider.NextButton
+        class="shop-now__slider--arrow shop-now__slider--arrow--next"
+        disabled={false}
+        id={container}
+      >
+        <svg
+          width="12"
+          height="18"
+          viewBox="0 0 12 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0.999999 17L11 9L0.999999 0.999999" stroke="black"></path>
+        </svg>
+      </Slider.NextButton>
+
+      <Slider.JS rootId={container} infinite />
     </div>
   );
 };

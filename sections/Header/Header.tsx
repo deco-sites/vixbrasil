@@ -20,6 +20,7 @@ import HeaderFunctions from "../../islands/functions/headerFunctions.tsx";
 import { useDevice, useScript } from "@deco/deco/hooks";
 import { type LoadingFallbackProps } from "@deco/deco";
 import { NAVBAR_HEIGHT_DESKTOP } from "../../constants.ts";
+import CookieConsent from "../Miscellaneous/CookieConsent.tsx";
 export interface Logo {
   src: ImageWidget;
   alt: string;
@@ -225,6 +226,8 @@ function Header({
       }}
       class="w-full"
     >
+      <CookieConsent />
+
       <div
         class={`group/header backdrop-blur-xs w-full hover:bg-base-100 hover:backdrop-blur-none ease-in duration-200 z-50 fixed`}
         id="vix-brasil-header"

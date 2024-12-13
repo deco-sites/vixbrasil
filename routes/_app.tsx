@@ -12,6 +12,38 @@ export default defineApp(async (_req, ctx) => {
     <>
       {/* Include Icons and manifest */}
       <Head>
+        <meta
+          name="google-site-verification"
+          content="2MASQ6-EOv6zjgEFDwaIHufYOF1Ngd40UxXeyUzFAUQ"
+        />
+        {/* DNS-prefetch e preconnect */}
+
+        <link rel="preconnect" href="http://www.vixbrasil.com.br" />
+        <link rel="dns-prefetch" href="http://www.vixbrasil.com.br" />
+        <link rel="preconnect" href="http://vixbrasil.vtexassets.com" />
+        <link rel="dns-prefetch" href="http://vixbrasil.vtexassets.com" />
+        {
+          /* <link rel="preconnect" href="http://io.vtex.com.br" />
+      <link rel="dns-prefetch" href="http://io.vtex.com.br" /> */
+        }
+
+        {/* preload */}
+
+        <link
+          rel="preload"
+          as="script"
+          href="https://www.googletagmanager.com/gtm.js?id=GTM-NZ2CC7C"
+        />
+        <link
+          rel="preload"
+          as="script"
+          href="https://www.google-analytics.com/analytics.js"
+        />
+        <link
+          rel="preload"
+          as="script"
+          href="https://connect.facebook.net/en_US/fbevents.js"
+        />
         {/* Sizebay  */}
         <script
           defer

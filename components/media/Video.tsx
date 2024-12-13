@@ -1,4 +1,4 @@
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { ImageWidget } from "apps/admin/widgets.ts";
 /** @titleBy alt */
 export interface VideoProps {
@@ -9,6 +9,7 @@ export interface VideoProps {
   url: string;
   alt: string;
   thumbnail: ImageWidget;
+  thumbnailMobile: ImageWidget;
   target: "_blank" | "_self";
   /** @hide true */
   classesContainer?: string;
@@ -26,6 +27,7 @@ export const Video = (
     target = "_self",
     classes = "",
     thumbnail,
+    thumbnailMobile,
     device,
   }: VideoProps,
 ) => {
@@ -34,6 +36,14 @@ export const Video = (
   const handlePlayClick = () => {
     setIsVideoLoaded(true);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (device !== "desktop") {
+        setIsVideoLoaded(true);
+      }
+    }, 1000);
+  }, []);
 
   return (
     <div
@@ -49,7 +59,7 @@ export const Video = (
             onMouseOver={handlePlayClick}
           >
             <img
-              src={thumbnail}
+              src={device === "desktop" ? thumbnail : thumbnailMobile}
               alt={alt}
               class="w-full h-full object-cover"
               width={globalThis.window.innerWidth > 1024 ? 1920 : 540}
