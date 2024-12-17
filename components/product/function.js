@@ -22,8 +22,8 @@ export default function ProductImageZoom() {
           img.style = "";
         };
 
-        wrapper.addEventListener("mousemove", handleMouseMove);
-        wrapper.addEventListener("mouseleave", handleMouseLeave);
+        wrapper?.addEventListener("mousemove", handleMouseMove);
+        wrapper?.addEventListener("mouseleave", handleMouseLeave);
       });
     },
   };
@@ -46,8 +46,8 @@ export default function ProductImageZoom() {
         });
       };
 
-      myDotsPrev.addEventListener("click", scrollPrev);
-      myDotsNext.addEventListener("click", scrollNext);
+      myDotsPrev?.addEventListener("click", scrollPrev);
+      myDotsNext?.addEventListener("click", scrollNext);
     },
   };
 

@@ -11,9 +11,9 @@ const onLoad = (id: string) =>
     }
     // Set minicart items count on header
     if (count === 0) {
-      counter.classList.add("hidden");
+      counter?.classList.add("hidden");
     } else {
-      counter.classList.remove("hidden");
+      counter?.classList.remove("hidden");
     }
     counter.innerText = count > 9 ? "9+" : count.toString();
   });

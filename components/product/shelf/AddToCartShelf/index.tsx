@@ -5,7 +5,7 @@ import { useUI } from "../../../../sdk/useUI.ts";
 import { MINICART_DRAWER_ID } from "../../../../constants.ts";
 import { useShelfContext } from "../../../../islands/AddToCartShelf/context/index.tsx";
 import ShelfInfo from "./ShelfInfo.tsx";
-import KitShelfInfo from "./KitShelfInfo.tsx";
+import KitShelfInfo from "../../../../islands/KitShelfInfo/index.tsx";
 
 export interface AddToCartShelfProps {
   product: Product;
@@ -103,6 +103,7 @@ export default function AddToCartShelf({ product }: AddToCartShelfProps) {
           <KitShelfInfo
             top={product?.isAccessoryOrSparePartFor?.[0].sku ?? ""}
             bottom={product?.isAccessoryOrSparePartFor?.[1].sku ?? ""}
+            useShelfContext={useShelfContext}
           />
         )
         : <ShelfInfo product={product} />}

@@ -1,0 +1,39 @@
+{
+  "__resolveType": "commerce/sections/Seo/SeoPDPV2.tsx",
+  "jsonLD": {
+    "@type": "ProductDetailsPage",
+    "breadcrumbList": {
+      "@type": "BreadcrumbList"
+    },
+    "product": {
+      "@type": "Product",
+      "additionalProperty": [],
+      "aggregateRating": {
+        "@type": "AggregateRating"
+      },
+      "brand": {
+        "@type": "Brand"
+      },
+      "isRelatedTo": [],
+      "isSimilarTo": [],
+      "isVariantOf": {
+        "@type": "ProductGroup",
+        "hasVariant": [],
+        "additionalProperty": []
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "offers": [],
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnFees": "https://schema.org/FreeReturn",
+          "returnMethod": "https://schema.org/KeepProduct",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow"
+        }
+      },
+      "review": [],
+      "isAccessoryOrSparePartFor": [],
+      "questions": []
+    }
+  }
+}

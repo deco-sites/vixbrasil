@@ -106,7 +106,6 @@ function AddToCartButton(props: Props) {
       )}
     >
       <button
-        disabled
         class={clx("flex-grow cursor-pointer", _class?.toString())}
         hx-on:click={useScript(onClick)}
       >

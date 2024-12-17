@@ -10,11 +10,11 @@ const onLoad = (containerID: string) => {
     const account = nodes?.item(1);
     const user = sdk.getUser();
     if (user?.email) {
-      login.classList.add("hidden");
-      account.classList.remove("hidden");
+      login?.classList.add("hidden");
+      account?.classList.remove("hidden");
     } else {
-      login.classList.remove("hidden");
-      account.classList.add("hidden");
+      login?.classList.remove("hidden");
+      account?.classList.add("hidden");
     }
   });
 };

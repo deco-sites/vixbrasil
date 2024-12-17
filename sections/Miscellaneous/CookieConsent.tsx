@@ -1,5 +1,5 @@
 import { clx } from "../../sdk/clx.ts";
-import { useId } from "../../sdk/useId.ts";
+// import { useId } from "../../sdk/useId.ts";
 import { useScript } from "@deco/deco/hooks";
 const script = (id: string) => {
   const KEY = "store-cookie-consent";
@@ -29,7 +29,7 @@ const script = (id: string) => {
 };
 
 function CookieConsent() {
-  const id = useId();
+  const id = "CookieConsent--teste";
   return (
     <>
       <div

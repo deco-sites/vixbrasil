@@ -4,6 +4,9 @@ import ProductInfo from "../../components/product/ProductInfo.tsx";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
+import { useSendEvent } from "../../sdk/useSendEvent.ts";
+import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
+import { useOffer } from "../../sdk/useOffer.ts";
 
 export interface Props {
   /** @title Integration */
@@ -14,6 +17,43 @@ export default function ProductDetails({ page }: Props) {
   /**
    * Rendered when a not found is returned by any of the loaders run on this page
    */
+
+  if (page === null) {
+    throw new Error("Missing Product Details Page Info");
+  }
+
+  const { breadcrumbList, product } = page;
+  const { offers } = product;
+
+  const {
+    price = 0,
+    listPrice,
+  } = useOffer(offers);
+
+  const breadcrumb = {
+    ...breadcrumbList,
+    itemListElement: breadcrumbList?.itemListElement.slice(0, -1),
+    numberOfItems: breadcrumbList.numberOfItems - 1,
+  };
+
+  const item = mapProductToAnalyticsItem({
+    product,
+    breadcrumbList: breadcrumb,
+    price,
+    listPrice,
+  });
+
+  const viewItemEvent = useSendEvent({
+    on: "view",
+    event: {
+      name: "view_item",
+      params: {
+        item_list_id: "product",
+        item_list_name: "Product",
+        items: [item],
+      },
+    },
+  });
 
   if (!page) {
     return (
@@ -29,7 +69,7 @@ export default function ProductDetails({ page }: Props) {
   }
 
   return (
-    <div>
+    <div {...viewItemEvent}>
       <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
       <div class="container flex flex-col gap-4 2xl:max-w-[1300px] max-w-[1230px] sm:gap-5 w-full pt-4 sm:pt-5 px-5 sm:px-0">
         <div

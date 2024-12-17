@@ -24,26 +24,26 @@
       }
     },
     {
-      "__resolveType": "site/sections/Product/ProductDetails.tsx",
-      "page": {
-        "__resolveType": "PDP Loader"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductDetails.tsx",
+        "page": {
+          "__resolveType": "PDP Loader"
+        }
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "products": {
-          "__resolveType": "vtex/loaders/legacy/productList.ts",
-          "props": {
-            "sort": "OrderByPriceDESC",
-            "collection": "384",
-            "count": 12,
-            "similars": true
-          }
-        },
-        "title": "VOCÊ TAMBÉM PODE GOSTAR"
-      }
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "products": {
+        "__resolveType": "vtex/loaders/legacy/productList.ts",
+        "props": {
+          "sort": "OrderByPriceDESC",
+          "collection": "384",
+          "count": 12,
+          "similars": true
+        }
+      },
+      "title": "VOCÊ TAMBÉM PODE GOSTAR"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

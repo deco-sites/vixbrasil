@@ -3,6 +3,7 @@ import Image from "apps/website/components/Image.tsx";
 import { formatPrice } from "../../../sdk/format.ts";
 import { Item, KitProduct } from "./types.ts";
 import { useKitContext } from "./context/index.tsx";
+import { useSendEvent } from "../../../sdk/useSendEvent.ts";
 
 export interface Props {
   productId: string;
@@ -27,6 +28,34 @@ const Input = ({ item, dataDispatch, product }: InputProps) => {
       ? "bg-[#bea669] text-white"
       : "bg-white text-[#bea669]"
   }`;
+
+  const listPrice = item.sellers[0].commertialOffer.ListPrice;
+  const price = item.sellers[0].commertialOffer.Price;
+  const itemLayer = {
+    item_id: item.itemId,
+    item_group_id: product?.productId,
+    quantity: 1,
+    coupon: "",
+    price,
+    discount: Number((price && listPrice ? listPrice - price : 0).toFixed(2)),
+    item_name: product?.productName,
+    item_variant: item.name,
+    item_brand: product?.brand,
+    item_url: product?.link,
+  };
+
+  const selectItemEvent = useSendEvent({
+    on: "change",
+    event: {
+      name: "select_item",
+      params: {
+        item_list_id: "product",
+        item_list_name: "Product",
+        items: [itemLayer],
+      },
+    },
+  });
+
   return (
     <li>
       <input
@@ -62,6 +91,7 @@ const Input = ({ item, dataDispatch, product }: InputProps) => {
             ? "opacity-50 cursor-not-allowed"
             : ""
         }`}
+        {...selectItemEvent}
       >
         {item.Tamanho[0]}
       </label>

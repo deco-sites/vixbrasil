@@ -4,7 +4,6 @@ import { clx } from "../../sdk/clx.ts";
 import { formatPrice } from "../../sdk/format.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
-import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import ShippingSimulationForm from "../shipping/Form.tsx";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
 import AddToCartButton from "./AddToCartButton.tsx";
@@ -61,18 +60,6 @@ function ProductInfo({ page }: Props) {
     listPrice,
   });
 
-  const viewItemEvent = useSendEvent({
-    on: "view",
-    event: {
-      name: "view_item",
-      params: {
-        item_list_id: "product",
-        item_list_name: "Product",
-        items: [item],
-      },
-    },
-  });
-
   //Checks if the variant name is "title"/"default title" and if so, the SKU Selector div doesn't render
   const hasValidVariants = isVariantOf?.hasVariant?.some(
     (variant) =>
@@ -83,7 +70,7 @@ function ProductInfo({ page }: Props) {
   const productTop = product.isAccessoryOrSparePartFor?.[0] ?? product;
   const productBottom = product.isAccessoryOrSparePartFor?.[1] ?? product;
   return (
-    <div {...viewItemEvent} class="flex flex-col" id={id}>
+    <div class="flex flex-col" id={id}>
       {/* Product Name */}
       <div class="flex items-start pb-[10px] mb-5 border-b border-[#bea669]">
         <p

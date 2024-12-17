@@ -7,6 +7,9 @@ import {
   variantAvailability,
 } from "../../sdk/useVariantPossiblities.ts";
 import { useSection } from "@deco/deco/hooks";
+import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
+import { useSendEvent } from "../../sdk/useSendEvent.ts";
+import { useOffer } from "../../sdk/useOffer.ts";
 interface Props {
   product: Product;
 }
@@ -54,7 +57,7 @@ export const Ring = ({ value, checked = false, class: _class }: {
   );
 };
 function VariantSelector({ product }: Props) {
-  const { url, isVariantOf } = product;
+  const { url, isVariantOf, offers } = product;
   const hasVariant = isVariantOf?.hasVariant ?? [];
   const possibilities = useVariantPossibilities(hasVariant, product);
   const relativeUrl = relative(url);
@@ -70,15 +73,34 @@ function VariantSelector({ product }: Props) {
     link: sizeAndLinks[size ?? ""],
   }));
 
+  const {
+    price = 0,
+    listPrice,
+  } = useOffer(offers);
   if (filteredNames.length === 0) {
     return null;
   }
+
+  const item = mapProductToAnalyticsItem({ product, price, listPrice });
+
+  const selectItemEvent = useSendEvent({
+    on: "change",
+    event: {
+      name: "select_item",
+      params: {
+        item_list_id: "product",
+        item_list_name: "Product",
+        items: [item],
+      },
+    },
+  });
   return (
     <ul
       class="flex flex-col gap-4"
       hx-target="closest section"
       hx-swap="outerHTML"
       hx-sync="this:replace"
+      {...selectItemEvent}
     >
       {filteredNames.map((name) => (
         <li class="flex flex-col gap-2">

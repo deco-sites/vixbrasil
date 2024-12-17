@@ -1,7 +1,7 @@
 import { useEffect, useState } from "preact/hooks";
-import Icon from "../../../ui/Icon.tsx";
-import { KitProduct } from "../../KitLook/types.ts";
-import { formatPrice } from "../../../../sdk/format.ts";
+import { KitProduct } from "./types.ts";
+import { formatPrice } from "../../sdk/format.ts";
+import Icon from "../../components/ui/Icon.tsx";
 
 type ShelfDataActions = {
   // deno-lint-ignore no-explicit-any

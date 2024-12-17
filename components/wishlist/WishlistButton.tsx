@@ -12,7 +12,7 @@ const onLoad = (id: string, productID: string) =>
     const button = document.getElementById(id) as HTMLButtonElement;
     const inWishlist = sdk.inWishlist(productID);
     button.disabled = false;
-    button.classList.remove("htmx-request");
+    button?.classList.remove("htmx-request");
     button.querySelector("svg")?.setAttribute(
       "fill",
       inWishlist ? "#bea669" : "none",
@@ -22,7 +22,7 @@ const onClick = (productID: string, productGroupID: string) => {
   const button = event?.currentTarget as HTMLButtonElement;
   const user = window.STOREFRONT.USER.getUser();
   if (user?.email) {
-    button.classList.add("htmx-request");
+    button?.classList.add("htmx-request");
     window.STOREFRONT.WISHLIST.toggle(productID, productGroupID);
   } else {
     window.alert(`Faça o Login para adicionar o item a sua Wishlist`);
