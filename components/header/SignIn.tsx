@@ -1,3 +1,4 @@
+import LoginButton from "../../islands/LoginButton/index.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import Icon from "../ui/Icon.tsx";
@@ -5,7 +6,9 @@ import { useScript } from "@deco/deco/hooks";
 const onLoad = (containerID: string) => {
   window.STOREFRONT.USER.subscribe((sdk) => {
     const container = document.getElementById(containerID) as HTMLDivElement;
-    const nodes = container?.querySelectorAll<HTMLAnchorElement>("a");
+    const nodes = container?.querySelectorAll<HTMLAnchorElement>(
+      "#vix-brasil__login-icon",
+    );
     const login = nodes?.item(0);
     const account = nodes?.item(1);
     const user = sdk.getUser();
@@ -22,6 +25,7 @@ function SignIn({ variant }: {
   variant: "mobile" | "desktop";
 }) {
   const id = useId();
+
   return (
     <div id={id}>
       <a
@@ -32,18 +36,18 @@ function SignIn({ variant }: {
       >
         <Icon id="account_icon" width={18} height={20} />
       </a>
-      <a
+      <div
+        id="vix-brasil__login-icon"
         class={clx(
           "hidden",
-          "btn btn-sm font-thin btn-ghost no-animation",
-          variant === "mobile" && "btn-square",
+          "relative",
         )}
-        href="/account"
         aria-label="Account"
       >
-        <Icon id="account_icon" />
-        {variant === "desktop" && <span>My account</span>}
-      </a>
+        <LoginButton
+          variant={variant}
+        />
+      </div>
       <script
         type="module"
         dangerouslySetInnerHTML={{ __html: useScript(onLoad, id) }}

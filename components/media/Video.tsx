@@ -18,7 +18,7 @@ export interface VideoProps {
   /** @hide true */
   device?: "mobile" | "tablet" | "desktop";
 }
-export const Video = (
+const Video = (
   {
     src,
     mobileSrc,
@@ -91,3 +91,4 @@ export const Video = (
     </div>
   );
 };
+export default Video;

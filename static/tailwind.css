@@ -3691,6 +3691,11 @@ details.collapse summary::-webkit-details-marker {
 }
 
 
+.left-auto {
+  left: auto;
+}
+
+
 .right-0 {
   right: 0px;
 }
@@ -3973,6 +3978,12 @@ details.collapse summary::-webkit-details-marker {
 }
 
 
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -4074,6 +4085,11 @@ details.collapse summary::-webkit-details-marker {
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+
+.mb-9 {
+  margin-bottom: 2.25rem;
 }
 
 
@@ -4324,6 +4340,11 @@ details.collapse summary::-webkit-details-marker {
 
 .h-\[0px\] {
   height: 0px;
+}
+
+
+.h-\[100vh\] {
+  height: 100vh;
 }
 
 
@@ -4600,6 +4621,11 @@ details.collapse summary::-webkit-details-marker {
 
 .w-9 {
   width: 2.25rem;
+}
+
+
+.w-\[100vw\] {
+  width: 100vw;
 }
 
 
@@ -5028,6 +5054,12 @@ details.collapse summary::-webkit-details-marker {
 
 .translate-x-\[-50\%\] {
   --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+
+.rotate-0 {
+  --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -5483,11 +5515,6 @@ details.collapse summary::-webkit-details-marker {
 }
 
 
-.rounded-sm {
-  border-radius: 0.125rem;
-}
-
-
 .rounded-l {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -5581,6 +5608,12 @@ details.collapse summary::-webkit-details-marker {
 
 .border-none {
   border-style: none;
+}
+
+
+.border-\[\#E9DFC9\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(233 223 201 / var(--tw-border-opacity));
 }
 
 
@@ -5694,6 +5727,12 @@ details.collapse summary::-webkit-details-marker {
 .bg-\[\#C9CFCF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(201 207 207 / var(--tw-bg-opacity));
+}
+
+
+.bg-\[\#F7F4ED\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 244 237 / var(--tw-bg-opacity));
 }
 
 
@@ -6189,6 +6228,11 @@ details.collapse summary::-webkit-details-marker {
 
 .pt-2 {
   padding-top: 0.5rem;
+}
+
+
+.pt-2\.5 {
+  padding-top: 0.625rem;
 }
 
 
@@ -7904,6 +7948,10 @@ details.collapse summary::-webkit-details-marker {
 
 @media (min-width: 640px) {
 
+  .sm\:absolute {
+    position: absolute;
+  }
+
   .sm\:bottom-2 {
     bottom: 0.5rem;
   }
@@ -7916,6 +7964,14 @@ details.collapse summary::-webkit-details-marker {
     left: 10rem;
   }
 
+  .sm\:right-auto {
+    right: auto;
+  }
+
+  .sm\:top-12 {
+    top: 3rem;
+  }
+
   .sm\:col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -7926,6 +7982,11 @@ details.collapse summary::-webkit-details-marker {
 
   .sm\:col-start-2 {
     grid-column-start: 2;
+  }
+
+  .sm\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .sm\:mx-auto {
@@ -7977,6 +8038,10 @@ details.collapse summary::-webkit-details-marker {
     height: 273px;
   }
 
+  .sm\:h-\[300px\] {
+    height: 300px;
+  }
+
   .sm\:max-h-\[200px\] {
     max-height: 200px;
   }
@@ -7992,6 +8057,10 @@ details.collapse summary::-webkit-details-marker {
 
   .sm\:w-\[207px\] {
     width: 207px;
+  }
+
+  .sm\:w-\[225px\] {
+    width: 225px;
   }
 
   .sm\:w-\[522px\] {
@@ -8114,8 +8183,26 @@ details.collapse summary::-webkit-details-marker {
     overflow-y: auto;
   }
 
+  .sm\:border {
+    border-width: 1px;
+  }
+
   .sm\:border-none {
     border-style: none;
+  }
+
+  .sm\:border-\[\#bea669\] {
+    --tw-border-opacity: 1;
+    border-color: rgb(190 166 105 / var(--tw-border-opacity));
+  }
+
+  .sm\:bg-\[\#E9DFC980\] {
+    background-color: #E9DFC980;
+  }
+
+  .sm\:bg-\[\#F7F4ED\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(247 244 237 / var(--tw-bg-opacity));
   }
 
   .sm\:bg-white {
@@ -8152,6 +8239,11 @@ details.collapse summary::-webkit-details-marker {
     padding-bottom: 0.75rem;
   }
 
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .sm\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
@@ -8164,6 +8256,14 @@ details.collapse summary::-webkit-details-marker {
 
   .sm\:pb-10 {
     padding-bottom: 2.5rem;
+  }
+
+  .sm\:pl-5 {
+    padding-left: 1.25rem;
+  }
+
+  .sm\:pr-4 {
+    padding-right: 1rem;
   }
 
   .sm\:pt-10 {

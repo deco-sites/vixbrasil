@@ -3,7 +3,7 @@ export default function HeaderFunctions() {
   const logo = document.getElementById("vix-brasil-logo");
   const navigation = document.getElementById("vix-brasil-navigation");
   const icons = document.getElementById("vix-brasil__header-icons");
-  const login = document.getElementById("vix-brasil__login-icon");
+  const login = document.querySelectorAll("#vix-brasil__login-icon");
   const searchBar = document.getElementById("vix-brasil__search-bar--open");
 
   const conditionalHeader = {
@@ -11,7 +11,7 @@ export default function HeaderFunctions() {
       if (window.location.pathname === "/") {
         header?.classList.add("bg-blur");
         navigation?.classList.add("text-white");
-        login?.classList.add("text-white");
+        login?.forEach((item) => item.classList.add("text-white"));
         searchBar?.classList.add("text-white");
         icons?.classList.add("text-white");
         logo?.classList.add("invert");
@@ -25,7 +25,8 @@ export default function HeaderFunctions() {
         );
         navigation?.classList.add("text-black");
         icons?.classList.add("text-black");
-        login?.classList.add("text-black");
+
+        login?.forEach((item) => item.classList.add("text-black"));
         searchBar?.classList.add("text-black");
       }
     },
@@ -44,8 +45,12 @@ export default function HeaderFunctions() {
         icons?.classList.toggle("text-black", isScrolled);
         icons?.classList.toggle("text-white", !isScrolled);
 
-        login?.classList.toggle("text-black", isScrolled);
-        login?.classList.toggle("text-white", !isScrolled);
+        login?.forEach((item) =>
+          item.classList.toggle("text-black", isScrolled)
+        );
+        login?.forEach((item) =>
+          item.classList.toggle("text-white", !isScrolled)
+        );
 
         searchBar?.classList.toggle("text-black", isScrolled);
         searchBar?.classList.toggle("text-white", !isScrolled);
@@ -81,7 +86,7 @@ export default function HeaderFunctions() {
           logo?.classList.remove("invert");
           logo?.classList.remove("brightness-0");
           icons?.classList.remove("text-white");
-          login?.classList.remove("text-white");
+          login?.forEach((item) => item.classList.remove("text-white"));
         }
         searchBar?.classList.toggle("visible", isCollapsed);
         searchBar?.classList.toggle("opacity-100", isCollapsed);
@@ -111,7 +116,7 @@ export default function HeaderFunctions() {
           logo?.classList.add("invert");
           logo?.classList.add("brightness-0");
           icons?.classList.add("text-white");
-          login?.classList.add("text-white");
+          login?.forEach((item) => item.classList.add("text-white"));
         }
       });
     },
