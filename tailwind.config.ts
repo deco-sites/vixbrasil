@@ -12,6 +12,9 @@ export default {
       black: "#000",
       bronze: "#a18c60",
       brown: "#bea669",
+      "light-brown": "#F7F4ED",
+      "medium-brown": "#E9DFC9",
+      "medium-brown-opacity": "#E9DFC980",
       "bronze-opacity": "rgba(161,140,96,.6)",
     },
     backdropBlur: {

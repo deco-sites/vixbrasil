@@ -60,7 +60,7 @@ export default function LoginButton({ variant }: LoginButtonProps) {
     <>
       <button
         id="vix-brasil__login-icon"
-        class={`flex items-center gap-3 pl-4 pr-3 py-1 sm:bg-[#E9DFC980] font-source-sans text-xs tracking-[0.98px] text-black relative rounded-btn sm:border sm:border-[#bea669]`}
+        class={`flex items-center gap-3 pl-4 pr-3 py-1 sm:bg-medium-brown-opacity font-source-sans text-xs tracking-[0.98px] text-black relative rounded-btn sm:border sm:border-brown`}
         onClick={() => {
           setLoginOpen(true);
         }}
@@ -91,14 +91,14 @@ export default function LoginButton({ variant }: LoginButtonProps) {
       <div
         class={`${
           loginOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        } sm:bg-[#F7F4ED] bg-white sm:absolute fixed sm:top-12 sm:left-0 sm:right-auto top-0 right-0 left-auto sm:w-[225px] sm:h-[300px] w-[80vw] h-[100vh] sm:py-4 sm:pl-5 sm:pr-4 duration-200 border border-[#E9DFC9] z-50`}
+        } sm:bg-light-brown bg-white sm:absolute fixed sm:top-12 sm:left-0 sm:right-auto top-0 right-0 left-auto sm:w-[225px] sm:h-[300px] w-[80vw] h-[100vh] sm:py-4 sm:pl-5 sm:pr-4 duration-200 border border-medium-brown z-50`}
         onMouseLeave={() => {
           setLoginOpen(false);
         }}
       >
         {variant !== "desktop" && (
           <>
-            <div class="flex justify-between items-center bg-[#F7F4ED] p-4 w-full font-source-sans text-[#030304] font-bold text-sm uppercase">
+            <div class="flex justify-between items-center bg-light-brown p-4 w-full font-source-sans text-black font-bold text-sm uppercase">
               minha conta
               <button
                 onClick={() => {
@@ -117,31 +117,31 @@ export default function LoginButton({ variant }: LoginButtonProps) {
           </>
         )}
         <a
-          class="font-source-sans text-sm text-black font-light tracking-[0.98px] uppercase flex justify-between items-center py-2.5 sm:mx-0 mx-8  border-b border-[#E9DFC9]"
+          class="font-source-sans text-sm text-black font-light tracking-[0.98px] uppercase flex justify-between items-center py-2.5 sm:mx-0 mx-8  border-b border-medium-brown"
           href="/account#/orders"
         >
           Meus Pedidos {LinkArrow}
         </a>
         <a
-          class="font-source-sans text-sm text-black font-light tracking-[0.98px] uppercase flex justify-between items-center py-2.5 sm:mx-0 mx-8  border-b border-[#E9DFC9]"
+          class="font-source-sans text-sm text-black font-light tracking-[0.98px] uppercase flex justify-between items-center py-2.5 sm:mx-0 mx-8  border-b border-medium-brown"
           href="/account#/wishlist"
         >
           Meus Favoritos {LinkArrow}
         </a>
         <a
-          class="font-source-sans text-sm text-black font-light tracking-[0.98px] uppercase flex justify-between items-center py-2.5 sm:mx-0 mx-8  border-b border-[#E9DFC9]"
+          class="font-source-sans text-sm text-black font-light tracking-[0.98px] uppercase flex justify-between items-center py-2.5 sm:mx-0 mx-8  border-b border-medium-brown"
           href="/account#/profile"
         >
           Meu Perfil {LinkArrow}
         </a>
         <a
-          class="font-source-sans text-sm text-black font-light tracking-[0.98px] uppercase flex justify-between items-center py-2.5 sm:mx-0 mx-8  border-b border-[#E9DFC9]"
+          class="font-source-sans text-sm text-black font-light tracking-[0.98px] uppercase flex justify-between items-center py-2.5 sm:mx-0 mx-8  border-b border-medium-brown"
           href="/account#/profile"
         >
           Minhas Preferências {LinkArrow}
         </a>
         <a
-          class="font-source-sans text-sm text-black font-light tracking-[0.98px] uppercase flex justify-between items-center py-2.5 sm:mx-0 mx-8  border-b border-[#E9DFC9]"
+          class="font-source-sans text-sm text-black font-light tracking-[0.98px] uppercase flex justify-between items-center py-2.5 sm:mx-0 mx-8  border-b border-medium-brown"
           href="/account#/addresses"
         >
           Meus Endereços {LinkArrow}
