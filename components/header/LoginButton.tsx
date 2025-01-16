@@ -26,7 +26,7 @@ const BlackArrow = (
   >
     <path
       d="M12 8.9994L16.2427 13.242L14.8285 14.6563L12 11.8278L9.1716 14.6563L7.7574 13.242L12 8.9994Z"
-      fill="black"
+      fill="currentColor"
     />
   </svg>
 );
@@ -60,7 +60,7 @@ export default function LoginButton({ variant }: LoginButtonProps) {
     <>
       <button
         id="vix-brasil__login-icon"
-        class={`flex items-center gap-3 pl-4 pr-3 py-1 sm:bg-medium-brown-opacity font-source-sans text-xs tracking-[0.98px] text-black relative rounded-btn sm:border sm:border-brown`}
+        class={`flex items-center gap-3 pl-4 pr-3 py-1 sm:bg-medium-brown-opacity group-hover/header:text-black font-source-sans text-xs tracking-[0.98px] text-black relative rounded-btn sm:border sm:border-brown`}
         onClick={() => {
           setLoginOpen(true);
         }}
