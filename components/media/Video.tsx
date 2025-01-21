@@ -45,6 +45,8 @@ const Video = (
     }, 1000);
   }, []);
 
+  console.log({ isVideoLoaded }, { src }, { mobileSrc }, "teste");
+
   return (
     <div
       style={{

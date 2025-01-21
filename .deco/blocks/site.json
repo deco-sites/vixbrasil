@@ -65,6 +65,6 @@
     }
   },
   "flavor": {
-    "framework": "htmx"
+    "framework": "fresh"
   }
 }
