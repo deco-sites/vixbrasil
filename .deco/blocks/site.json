@@ -46,7 +46,10 @@
       "__resolveType": "website/loaders/pages.ts"
     },
     {
-      "__resolveType": "website/loaders/redirects.ts"
+      "__resolveType": "website/loaders/redirectsFromCsv.ts",
+      "redirects": [],
+      "from": "https://data.decoassets.com/vixbrasil/a18c7a9c-995a-4536-906f-bcbc93e13002/redirects.csv",
+      "forcePermanentRedirects": true
     }
   ],
   "caching": {
@@ -62,6 +65,12 @@
     "replaces": [],
     "includeScriptsToHead": {
       "includes": []
+    },
+    "enabled": true,
+    "name": "deco_matcher",
+    "matcher": {
+      "__resolveType": "website/matchers/random.ts",
+      "traffic": 0.5
     }
   },
   "flavor": {
