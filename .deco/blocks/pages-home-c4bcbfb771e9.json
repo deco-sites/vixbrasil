@@ -1,37 +1,31 @@
 {
   "sections": [
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Header"
-      }
+      "__resolveType": "Header"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Images/BannerVideo.tsx",
-        "bannerVideo": [
-          {
-            "type": "video",
-            "target": "_self",
-            "src": "1049736217",
-            "mobileSrc": "1049744898",
-            "url": "/novidades",
-            "alt": "Red Hot Summer Video",
-            "device": "mobile",
-            "thumbnail": "https://data.decoassets.com/vixbrasil/fb747811-0736-4876-bab4-9166ec1c19d2/banner-desktop-(1853x953)-(1).png",
-            "thumbnailMobile": "https://data.decoassets.com/vixbrasil/28a76623-153f-48b7-8c71-816e24191fe6/banner-mobile-(709x1028)_-(1).png"
-          },
-          {
-            "type": "image",
-            "target": "_self",
-            "url": "/novidades",
-            "alt": "Red Hot Summer",
-            "mobileSrc": "https://data.decoassets.com/vixbrasil/b6cb298d-9eb9-4ce0-8f0c-ef659f08c0e6/banner-mobile-(709x1028)_-(1).png",
-            "src": "https://data.decoassets.com/vixbrasil/efa4ae01-9835-409c-a073-e60a79c7cebb/banner-desktop-(1853x953)-(1).png"
-          }
-        ]
-      }
+      "__resolveType": "site/sections/Images/BannerVideo.tsx",
+      "bannerVideo": [
+        {
+          "type": "video",
+          "target": "_self",
+          "src": "1049736217",
+          "mobileSrc": "1049744898",
+          "url": "/novidades",
+          "alt": "Red Hot Summer Video",
+          "device": "mobile",
+          "thumbnail": "https://data.decoassets.com/vixbrasil/fb747811-0736-4876-bab4-9166ec1c19d2/banner-desktop-(1853x953)-(1).png",
+          "thumbnailMobile": "https://data.decoassets.com/vixbrasil/28a76623-153f-48b7-8c71-816e24191fe6/banner-mobile-(709x1028)_-(1).png"
+        },
+        {
+          "type": "image",
+          "target": "_self",
+          "url": "/novidades",
+          "alt": "Red Hot Summer",
+          "mobileSrc": "https://data.decoassets.com/vixbrasil/b6cb298d-9eb9-4ce0-8f0c-ef659f08c0e6/banner-mobile-(709x1028)_-(1).png",
+          "src": "https://data.decoassets.com/vixbrasil/efa4ae01-9835-409c-a073-e60a79c7cebb/banner-desktop-(1853x953)-(1).png"
+        }
+      ]
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -94,47 +88,44 @@
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Shelfs/ShopNowShelf.tsx",
-        "items": [
-          {
-            "src": "https://data.decoassets.com/vixbrasil/4963a577-8bfb-41a5-ae81-29a573361f84/catalogo_desk-(1).png",
-            "alt": "Sea Wanderer",
-            "products": [
-              "11043"
-            ]
-          },
-          {
-            "src": "https://data.decoassets.com/vixbrasil/5eaa4717-f4a6-497b-ad89-ee57f8b3e1ed/catalogo_desk-(2).png",
-            "products": [
-              "11061"
-            ],
-            "alt": "Catálogo Alto verão - Saia e Top Ruby"
-          },
-          {
-            "src": "https://data.decoassets.com/vixbrasil/9092a645-e6ff-44ec-9a7c-7a92cc129fa0/catalogo_desk-(3).png",
-            "alt": "Catálogo Alto verão - Bíquini Scales Ruby",
-            "products": [
-              "11073"
-            ]
-          },
-          {
-            "alt": "Catálogo Alto verão - Vestido Longo Cassia Ruby",
-            "src": "https://data.decoassets.com/vixbrasil/2cf0a37b-ecf5-4fe6-abcf-b3dc35ab0519/catalogo_desk-(4).png",
-            "products": [
-              "11039"
-            ]
-          },
-          {
-            "src": "https://data.decoassets.com/vixbrasil/d27d1233-29cd-4ed3-8733-56ecc5d02725/catalogo_desk-(5).png",
-            "alt": "Catálogo Alto verão - Vestido Longo Ziva Agni",
-            "products": [
-              "10974"
-            ]
-          }
-        ]
-      }
+      "__resolveType": "site/sections/Shelfs/ShopNowShelf.tsx",
+      "items": [
+        {
+          "src": "https://data.decoassets.com/vixbrasil/4963a577-8bfb-41a5-ae81-29a573361f84/catalogo_desk-(1).png",
+          "alt": "Sea Wanderer",
+          "products": [
+            "11043"
+          ]
+        },
+        {
+          "src": "https://data.decoassets.com/vixbrasil/5eaa4717-f4a6-497b-ad89-ee57f8b3e1ed/catalogo_desk-(2).png",
+          "products": [
+            "11061"
+          ],
+          "alt": "Catálogo Alto verão - Saia e Top Ruby"
+        },
+        {
+          "src": "https://data.decoassets.com/vixbrasil/9092a645-e6ff-44ec-9a7c-7a92cc129fa0/catalogo_desk-(3).png",
+          "alt": "Catálogo Alto verão - Bíquini Scales Ruby",
+          "products": [
+            "11073"
+          ]
+        },
+        {
+          "alt": "Catálogo Alto verão - Vestido Longo Cassia Ruby",
+          "src": "https://data.decoassets.com/vixbrasil/2cf0a37b-ecf5-4fe6-abcf-b3dc35ab0519/catalogo_desk-(4).png",
+          "products": [
+            "11039"
+          ]
+        },
+        {
+          "src": "https://data.decoassets.com/vixbrasil/d27d1233-29cd-4ed3-8733-56ecc5d02725/catalogo_desk-(5).png",
+          "alt": "Catálogo Alto verão - Vestido Longo Ziva Agni",
+          "products": [
+            "10974"
+          ]
+        }
+      ]
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
