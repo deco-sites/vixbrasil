@@ -88,44 +88,49 @@
       }
     },
     {
-      "__resolveType": "site/sections/Shelfs/ShopNowShelf.tsx",
-      "items": [
-        {
-          "src": "https://data.decoassets.com/vixbrasil/4963a577-8bfb-41a5-ae81-29a573361f84/catalogo_desk-(1).png",
-          "alt": "Sea Wanderer",
-          "products": [
-            "11043"
-          ]
-        },
-        {
-          "src": "https://data.decoassets.com/vixbrasil/5eaa4717-f4a6-497b-ad89-ee57f8b3e1ed/catalogo_desk-(2).png",
-          "products": [
-            "11061"
-          ],
-          "alt": "Catálogo Alto verão - Saia e Top Ruby"
-        },
-        {
-          "src": "https://data.decoassets.com/vixbrasil/9092a645-e6ff-44ec-9a7c-7a92cc129fa0/catalogo_desk-(3).png",
-          "alt": "Catálogo Alto verão - Bíquini Scales Ruby",
-          "products": [
-            "11073"
-          ]
-        },
-        {
-          "alt": "Catálogo Alto verão - Vestido Longo Cassia Ruby",
-          "src": "https://data.decoassets.com/vixbrasil/2cf0a37b-ecf5-4fe6-abcf-b3dc35ab0519/catalogo_desk-(4).png",
-          "products": [
-            "11039"
-          ]
-        },
-        {
-          "src": "https://data.decoassets.com/vixbrasil/d27d1233-29cd-4ed3-8733-56ecc5d02725/catalogo_desk-(5).png",
-          "alt": "Catálogo Alto verão - Vestido Longo Ziva Agni",
-          "products": [
-            "10974"
-          ]
-        }
-      ]
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Shelfs/ShopNowShelf.tsx",
+        "items": [
+          {
+            "src": "https://data.decoassets.com/vixbrasil/4963a577-8bfb-41a5-ae81-29a573361f84/catalogo_desk-(1).png",
+            "alt": "Sea Wanderer",
+            "products": [
+              "11043"
+            ]
+          },
+          {
+            "src": "https://data.decoassets.com/vixbrasil/5eaa4717-f4a6-497b-ad89-ee57f8b3e1ed/catalogo_desk-(2).png",
+            "products": [
+              "11112",
+              "11101"
+            ],
+            "alt": "Catálogo Alto verão - Saia e Top Ruby"
+          },
+          {
+            "src": "https://data.decoassets.com/vixbrasil/9092a645-e6ff-44ec-9a7c-7a92cc129fa0/catalogo_desk-(3).png",
+            "alt": "Catálogo Alto verão - Bíquini Scales Ruby",
+            "products": [
+              "11119",
+              "11099"
+            ]
+          },
+          {
+            "alt": "Catálogo Alto verão - Vestido Longo Cassia Ruby",
+            "src": "https://data.decoassets.com/vixbrasil/2cf0a37b-ecf5-4fe6-abcf-b3dc35ab0519/catalogo_desk-(4).png",
+            "products": [
+              "11039"
+            ]
+          },
+          {
+            "src": "https://data.decoassets.com/vixbrasil/d27d1233-29cd-4ed3-8733-56ecc5d02725/catalogo_desk-(5).png",
+            "alt": "Catálogo Alto verão - Vestido Longo Ziva Agni",
+            "products": [
+              "10974"
+            ]
+          }
+        ]
+      }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
