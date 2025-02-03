@@ -63,7 +63,7 @@
     "includeScriptsToHead": {
       "includes": []
     },
-    "enabled": false,
+    "enabled": true,
     "name": "deco_matcher",
     "matcher": {
       "__resolveType": "website/matchers/random.ts",
