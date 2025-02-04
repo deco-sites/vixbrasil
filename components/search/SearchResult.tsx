@@ -87,7 +87,7 @@ function checkLayoutAndUpdate() {
   const getProducts = document.querySelectorAll(
     "#vix__department-products",
   );
-  const currentGrid = globalThis.window.localStorage?.getItem("layout-grid");
+  const currentGrid = globalThis.window.localStorage.getItem("layout-grid");
 
   if (currentGrid === "4") {
     getProducts.forEach((item) => {
@@ -188,7 +188,7 @@ function PageResult(
   });
   const infinite = layout?.pagination !== "pagination";
 
-  const layoutGrid = globalThis.window.localStorage?.getItem("layout-grid") ??
+  const layoutGrid = globalThis.window.localStorage.getItem("layout-grid") ??
     "4";
 
   const results = (

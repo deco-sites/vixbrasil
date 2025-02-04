@@ -5,14 +5,14 @@ const script = (id: string) => {
   const KEY = "store-cookie-consent";
   const ACCEPTED = "accepted";
   const HIDDEN = "!translate-y-[200%]";
-  const consent = localStorage.getItem(KEY);
+  const consent = globalThis.window.localStorage?.getItem(KEY);
   const elem = document.getElementById(id);
 
   const handleScroll = () => {
     if (consent !== ACCEPTED && elem) {
       const accept = elem.querySelector("[data-button-cc-accept]");
       accept && accept.addEventListener("click", () => {
-        localStorage.setItem(KEY, ACCEPTED);
+        globalThis.window.localStorage.setItem(KEY, ACCEPTED);
         elem.classList.add(HIDDEN);
       });
       const close = elem.querySelector("[data-button-cc-close]");

@@ -43,8 +43,8 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
     fetchProduct();
   }, []);
 
-  const topIcon = product?.[0].icone_categoria?.[0];
-  const bottomIcon = product?.[1].icone_categoria?.[0];
+  const topIcon = product?.[0].icone_categoria?.[0] ?? "";
+  const bottomIcon = product?.[1].icone_categoria?.[0] ?? "";
 
   const availableTopProduct = product?.[0].items?.find((item) =>
     item.sellers[0].commertialOffer.AvailableQuantity !== 0

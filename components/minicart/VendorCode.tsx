@@ -29,9 +29,9 @@ async function handleVendor() {
 
         nameContainer ? nameContainer.innerText = json[0].nome : null;
       }, 500);
-      localStorage.setItem("vendorCode", json[0].codigo);
-      localStorage.setItem("vendorName", json[0].nome);
-      localStorage.setItem(
+      globalThis.window.localStorage.setItem("vendorCode", json[0].codigo);
+      globalThis.window.localStorage.setItem("vendorName", json[0].nome);
+      globalThis.window.localStorage.setItem(
         "utmiCampaign",
         json[0].isTraining ? "consultora" : "vendedora",
       );
@@ -43,7 +43,8 @@ function handleName() {
     const nameContainer = document.getElementById("vendor-name");
 
     nameContainer
-      ? nameContainer.innerText = localStorage.getItem("vendorName") ?? ""
+      ? nameContainer.innerText =
+        globalThis.window.localStorage.getItem("vendorName") ?? ""
       : null;
   }, 500);
 }
@@ -61,8 +62,8 @@ function VendorCode({ vendor }: Props) {
             id="vendor-name"
             class="p-2 w-full font-source-sans text-sm tracking-[0.07em] text-black opacity-80 focus:outline-none bg-[#f9f9f9] border-b border-[#d8caa5] h-10"
           >
-            {localStorage.getItem("vendorName")
-              ? localStorage.getItem("vendorName")
+            {globalThis.window.localStorage.getItem("vendorName")
+              ? globalThis.window.localStorage.getItem("vendorName")
               : ""}
           </p>
 
