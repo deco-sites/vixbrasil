@@ -61,6 +61,18 @@
           },
           "title": "Novidades",
           "matcher": "/Novidades"
+        },
+        {
+          "image": {},
+          "matcher": "/roupas/vestidos?order=OrderByReleaseDateDESC"
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/vixbrasil/8c0a4f01-a0ae-4467-84e2-3abf0a0576de/banner-categoria-acessorios-desktop.jpg",
+            "mobile": "https://data.decoassets.com/vixbrasil/d8ea53c8-f87d-4e87-b015-9d5ff6000ec3/banner-categoria-acessorios-mobile.jpg"
+          },
+          "matcher": "/acessorios?order=OrderByReleaseDateDESC",
+          "title": "Acessórios"
         }
       ]
     },
