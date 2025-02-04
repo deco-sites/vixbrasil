@@ -67,7 +67,7 @@
     "name": "deco_matcher",
     "matcher": {
       "__resolveType": "website/matchers/random.ts",
-      "traffic": 0.1
+      "traffic": 0.05
     }
   },
   "flavor": {
