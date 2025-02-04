@@ -16,7 +16,7 @@ import * as $ShelfProducts_context_types from "./islands/ShelfProducts/context/t
 import * as $ShelfProducts_index from "./islands/ShelfProducts/index.tsx";
 import * as $VideoIsland from "./islands/VideoIsland.tsx";
 import * as $functions_headerFunctions from "./islands/functions/headerFunctions.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {

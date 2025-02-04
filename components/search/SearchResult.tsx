@@ -69,7 +69,7 @@ function fullProductLayout() {
   getProducts.forEach((item) => {
     item.setAttribute("data-product-grid", "4");
   });
-  localStorage.setItem("layout-grid", "4");
+  globalThis.window.localStorage.setItem("layout-grid", "4");
 }
 
 function smallProductLayout() {
@@ -80,25 +80,25 @@ function smallProductLayout() {
   getProducts.forEach((item) => {
     item.setAttribute("data-product-grid", "3");
   });
-  localStorage.setItem("layout-grid", "3");
+  globalThis.window.localStorage.setItem("layout-grid", "3");
 }
 
 function checkLayoutAndUpdate() {
   const getProducts = document.querySelectorAll(
     "#vix__department-products",
   );
-  const currentGrid = localStorage.getItem("layout-grid");
+  const currentGrid = globalThis.window.localStorage.getItem("layout-grid");
 
   if (currentGrid === "4") {
     getProducts.forEach((item) => {
       item.setAttribute("data-product-grid", "4");
     });
-    localStorage.setItem("layout-grid", "4");
+    globalThis.window.localStorage.setItem("layout-grid", "4");
   } else if (currentGrid === "3") {
     getProducts.forEach((item) => {
       item.setAttribute("data-product-grid", "3");
     });
-    localStorage.setItem("layout-grid", "3");
+    globalThis.window.localStorage.setItem("layout-grid", "3");
   }
 }
 const useUrlRebased = (overrides: string | undefined, base: string) => {
@@ -188,7 +188,8 @@ function PageResult(
   });
   const infinite = layout?.pagination !== "pagination";
 
-  const layoutGrid = localStorage.getItem("layout-grid") ?? "4";
+  const layoutGrid = globalThis.window.localStorage.getItem("layout-grid") ??
+    "4";
 
   const results = (
     <div class="flex flex-col items-center justify-center">

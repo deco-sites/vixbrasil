@@ -115,13 +115,21 @@ export default function KitItem({ productId, dataDispatch }: Props) {
       class="lg:flex items-start border-b border-[#bea669] pb-5 mb-5 w-full gap-3 lg:h-auto h-[470px]"
       data-kit-composition={`${product?.Composição}`}
     >
-      <Image
-        src={availableProduct?.images?.[0]?.imageUrl ?? ""}
-        alt={product?.productName}
-        loading="lazy"
-        width={158}
-        height={238}
-      />
+      {availableProduct?.images?.[0]?.imageUrl
+        ? (
+          <Image
+            src={availableProduct?.images?.[0]?.imageUrl ?? ""}
+            alt={product?.productName}
+            loading="lazy"
+            width={158}
+            height={238}
+          />
+        )
+        : (
+          <div class="flex justify-center items-center h-[238px] w-[158px]">
+            <span class="loading loading-spinner" />
+          </div>
+        )}
       <div>
         <p class="font-source-sans text-black text-lg tracking-[0.07em]">
           {product?.productName}
@@ -145,7 +153,7 @@ export default function KitItem({ productId, dataDispatch }: Props) {
           <p class="mb-1 text-black text-xs font-semibold tracking-[0.07em]">
             Tamanho:
           </p>
-          <ul class="flex lg:gap-2 gap-1 items-center justify-start">
+          <ul class="flex lg:gap-2 gap-1 items-center justify-start flex-wrap">
             {product?.items.map((item) => {
               if (item.name === "KIT") {
                 return null;
