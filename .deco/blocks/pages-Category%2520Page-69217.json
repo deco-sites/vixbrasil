@@ -24,16 +24,17 @@
         },
         {
           "image": {
-            "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/vix-brasil/e211f591-3c5a-424b-807f-55094b8a9851/565ba240-08dd-4def-b61c-644333c11bdb___1540473b2b4818aad5aadc7b08ff93dd.webp",
-            "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/vix-brasil/e211f591-3c5a-424b-807f-55094b8a9851/565ba240-08dd-4def-b61c-644333c11bdb___1540473b2b4818aad5aadc7b08ff93dd.webp",
+            "mobile": "https://data.decoassets.com/vixbrasil/e4589c64-9b42-4429-9776-face00ac8875/banner-categoria-blusas-mobile.jpg",
+            "desktop": "https://data.decoassets.com/vixbrasil/2265528c-599d-480b-9bf5-4fd7ca9ebb76/banner-categoria-blusas-desktop.jpg",
             "alt": "Roupas"
           },
-          "matcher": "/roupas/top"
+          "matcher": "roupas/top?order=OrderByReleaseDateDESC",
+          "title": "Top"
         },
         {
           "image": {
             "desktop": "https://data.decoassets.com/vixbrasil/324859af-e3ea-46c1-b5ac-279baf01d0af/cat-maio.png",
-            "mobile": "https://data.decoassets.com/vixbrasil/324859af-e3ea-46c1-b5ac-279baf01d0af/cat-maio.png"
+            "mobile": "https://data.decoassets.com/vixbrasil/8ce1a452-c66d-42e4-bb2c-8474bf096488/banner-categoria-maios-mobile.jpg"
           },
           "matcher": "/praia/maios?order=OrderByReleaseDateDESC",
           "title": "Maiô"
@@ -41,7 +42,7 @@
         {
           "image": {
             "desktop": "https://data.decoassets.com/vixbrasil/b4fdfa02-93dd-4e13-98e2-d20537e64ecb/cat-saidas.png",
-            "mobile": "https://data.decoassets.com/vixbrasil/b4fdfa02-93dd-4e13-98e2-d20537e64ecb/cat-saidas.png"
+            "mobile": "https://data.decoassets.com/vixbrasil/585db668-0ffe-4414-a8c4-55bb71e1c136/banner-categoria-saidas-mobile.jpg"
           },
           "matcher": "/praia/saidas-de-praia?order=OrderByReleaseDateDESC",
           "title": "Saída de Praia"
@@ -49,7 +50,7 @@
         {
           "image": {
             "desktop": "https://data.decoassets.com/vixbrasil/4376b371-6c73-442b-956d-4491a5446ac9/cat-biquini.png",
-            "mobile": "https://data.decoassets.com/vixbrasil/4376b371-6c73-442b-956d-4491a5446ac9/cat-biquini.png"
+            "mobile": "https://data.decoassets.com/vixbrasil/a8ec8c3f-4838-48c6-ad27-2d6a5bd769cf/banner-categoria-biquinis-mobile.jpg"
           },
           "matcher": "/praia/biquinis?order=OrderByReleaseDateDESC",
           "title": "Biquíni"
@@ -63,7 +64,10 @@
           "matcher": "/Novidades"
         },
         {
-          "image": {},
+          "image": {
+            "mobile": "https://data.decoassets.com/vixbrasil/7de44d72-9104-4fb9-886e-3e2612705de6/banner-categoria-vestidos-mobile.jpg",
+            "desktop": "https://data.decoassets.com/vixbrasil/35753ab9-68db-4729-896e-70b1ae0de9c4/banner-categoria-vestidos-desktop.jpg"
+          },
           "matcher": "/roupas/vestidos?order=OrderByReleaseDateDESC"
         },
         {
