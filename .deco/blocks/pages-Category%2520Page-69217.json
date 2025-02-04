@@ -77,6 +77,44 @@
           },
           "matcher": "/acessorios?order=OrderByReleaseDateDESC",
           "title": "Acessórios"
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/vixbrasil/11832c27-a8c9-4d52-841c-e0cd72546498/banner-categoria-roupas-desktop.jpg",
+            "mobile": "https://data.decoassets.com/vixbrasil/49158916-3429-40eb-920a-bf3b4c8b68ac/banner-categoria-roupas-mobile.jpg"
+          },
+          "matcher": "/roupas/casacos?order=OrderByReleaseDateDESC",
+          "title": "Casacos"
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/vixbrasil/bbe4cfc7-45a6-47cd-a1d6-4a4d58de4b3e/banner-categoria-shorts-desktop.jpg",
+            "mobile": "https://data.decoassets.com/vixbrasil/6ae0fe8a-6335-4745-80d7-ddb019a3d0d0/banner-categoria-shorts-mobile.jpg"
+          },
+          "matcher": "/roupas/shorts?order=OrderByReleaseDateDESC"
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/vixbrasil/cdd2968b-cb60-4dba-b433-45e495462edc/banner-categoria-saias-desktop.jpg",
+            "mobile": "https://data.decoassets.com/vixbrasil/645640ef-bb4f-4887-94fd-82bf5da1a121/banner-categoria-saias-mobile.jpg"
+          },
+          "title": "Saias",
+          "matcher": "/roupas/saias?order=OrderByReleaseDateDESC"
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/vixbrasil/6781efd9-45ba-4a25-80e0-961d93a380b3/banner-categoria-blusas-desktop.jpg",
+            "mobile": "https://data.decoassets.com/vixbrasil/3b27d3df-8af5-47b6-8b24-c5d910f4547c/banner-categoria-blusas-mobile.jpg"
+          },
+          "matcher": "/roupas/blusas?order=OrderByReleaseDateDESC"
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/vixbrasil/11832c27-a8c9-4d52-841c-e0cd72546498/banner-categoria-roupas-desktop.jpg",
+            "mobile": "https://data.decoassets.com/vixbrasil/49158916-3429-40eb-920a-bf3b4c8b68ac/banner-categoria-roupas-mobile.jpg"
+          },
+          "matcher": "/roupas/macacoes?order=OrderByReleaseDateDESC",
+          "title": "Macacões"
         }
       ]
     },

@@ -38,12 +38,15 @@
   "routes": [
     {
       "__resolveType": "vtex/loaders/proxy.ts",
-      "extraPathsToProxy": [],
+      "extraPathsToProxy": [
+        "/*"
+      ],
       "includeSiteMap": [],
       "excludePathsFromDecoSiteMap": []
     },
     {
-      "__resolveType": "website/loaders/pages.ts"
+      "__resolveType": "website/loaders/pages.ts",
+      "hidePagesInDeco": true
     },
     {
       "__resolveType": "website/loaders/redirects.ts"
@@ -71,7 +74,8 @@
     },
     "includeScriptsToBody": {
       "includes": []
-    }
+    },
+    "urlToRunAgainst": "secure.vixbrasil.com"
   },
   "flavor": {
     "framework": "fresh"
