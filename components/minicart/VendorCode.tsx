@@ -44,7 +44,7 @@ function handleName() {
 
     nameContainer
       ? nameContainer.innerText =
-        globalThis.window.localStorage.getItem("vendorName") ?? ""
+        globalThis.window.localStorage?.getItem("vendorName") ?? ""
       : null;
   }, 500);
 }
@@ -62,8 +62,8 @@ function VendorCode({ vendor }: Props) {
             id="vendor-name"
             class="p-2 w-full font-source-sans text-sm tracking-[0.07em] text-black opacity-80 focus:outline-none bg-[#f9f9f9] border-b border-[#d8caa5] h-10"
           >
-            {globalThis.window.localStorage.getItem("vendorName")
-              ? globalThis.window.localStorage.getItem("vendorName")
+            {globalThis.window.localStorage?.getItem("vendorName")
+              ? globalThis.window.localStorage?.getItem("vendorName")
               : ""}
           </p>
 
