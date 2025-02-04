@@ -247,7 +247,8 @@
         {
           "children": [],
           "name": "Sale",
-          "url": "/sale"
+          "url": "/sale",
+          "bold": true
         }
       ]
     },
