@@ -1,6 +1,6 @@
 import type { JSX } from "preact";
 import { clx } from "../../sdk/clx.ts";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 function Dot({ index, ...props }: {
   index: number;
 } & JSX.IntrinsicElements["button"]) {

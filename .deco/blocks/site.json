@@ -38,7 +38,9 @@
   "routes": [
     {
       "__resolveType": "vtex/loaders/proxy.ts",
-      "extraPathsToProxy": [],
+      "extraPathsToProxy": [
+        "/e-shoppers*"
+      ],
       "includeSiteMap": [],
       "excludePathsFromDecoSiteMap": []
     },

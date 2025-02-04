@@ -2,7 +2,7 @@ import LoginButton from "../../islands/LoginButton/index.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import Icon from "../ui/Icon.tsx";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 const onLoad = (containerID: string) => {
   window.STOREFRONT.USER.subscribe((sdk) => {
     const container = document.getElementById(containerID) as HTMLDivElement;

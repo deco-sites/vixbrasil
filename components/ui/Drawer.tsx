@@ -2,7 +2,7 @@ import { type ComponentChildren } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import Icon, { AvailableIcons } from "./Icon.tsx";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 export interface Props {
   open?: boolean;
   class?: string;

@@ -8,7 +8,7 @@ import Icon from "../ui/Icon.tsx";
 import Coupon from "./Coupon.tsx";
 import VendorCode from "./VendorCode.tsx";
 import CartItem, { Item } from "./Item.tsx";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 export interface Minicart {
   /** Cart from the ecommerce platform */
   platformCart: Record<string, unknown>;

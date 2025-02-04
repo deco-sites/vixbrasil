@@ -3,7 +3,7 @@ import { JSX } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { usePlatform } from "../../sdk/usePlatform.tsx";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
   product: Product;
   seller: string;

@@ -1,6 +1,6 @@
 import { MINICART_FORM_ID } from "../../constants.ts";
 import Icon from "../ui/Icon.tsx";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 
 export interface Props {
   vendor?: string;

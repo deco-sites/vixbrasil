@@ -17,7 +17,7 @@ import { useId } from "../../../sdk/useId.ts";
 import { useComponent } from "../../../sections/Component.tsx";
 import Icon from "../../ui/Icon.tsx";
 import { Props as SuggestionProps } from "./Suggestions.tsx";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 import { asResolved, type Resolved } from "@deco/deco";
 // When user clicks on the search button, navigate it to
 export const ACTION = "/s";

@@ -10,7 +10,7 @@ import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import Breadcrumb from "../ui/Breadcrumb.tsx";
 import Drawer from "../ui/Drawer.tsx";
 import Sort from "./Sort.tsx";
-import { useDevice, useScript, useSection } from "@deco/deco/hooks";
+import { useDevice, useScript } from "@deco/deco/hooks";
 import { type SectionProps } from "@deco/deco";
 import { RichText } from "apps/admin/widgets.ts";
 
@@ -118,20 +118,20 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
   return url;
 };
 
-function updateRecordPerPage(page: ProductListingPage) {
-  const productDivs = document.querySelectorAll("#product_shelf");
-  const recordPerPage = productDivs.length;
-  const records = page?.pageInfo?.records ?? 0;
-  const percentage = (recordPerPage / records) * 100;
+// function updateRecordPerPage(page: ProductListingPage) {
+//   const productDivs = document.querySelectorAll("#product_shelf");
+//   const recordPerPage = productDivs.length;
+//   const records = page?.pageInfo?.records ?? 0;
+//   const percentage = (recordPerPage / records) * 100;
 
-  document.getElementById("product-counter")!.innerHTML = `
-    Você visualizou <span class="text-[#bea669]">${recordPerPage} de ${records}</span> produtos
-    <div class="w-[220px] bg-[#eaeaea] mx-auto h-0.5 mb-7 flex">
-      <span style="width: ${
-    percentage.toFixed(2)
-  }%" class="bg-[#bea669] h-0.5"></span>
-    </div>`;
-}
+//   document.getElementById("product-counter")!.innerHTML = `
+//     Você visualizou <span class="text-[#bea669]">${recordPerPage} de ${records}</span> produtos
+//     <div class="w-[220px] bg-[#eaeaea] mx-auto h-0.5 mb-7 flex">
+//       <span style="width: ${
+//     percentage.toFixed(2)
+//   }%" class="bg-[#bea669] h-0.5"></span>
+//     </div>`;
+// }
 
 function SeoSmallText(props: SectionProps<ReturnType<typeof loader>>) {
   const { texts } = props;
@@ -179,14 +179,7 @@ function PageResult(
   const offset = zeroIndexedOffsetPage * perPage;
   const nextPageUrl = useUrlRebased(pageInfo.nextPage, url);
   const prevPageUrl = useUrlRebased(pageInfo.previousPage, url);
-  const partialPrev = useSection({
-    href: prevPageUrl,
-    props: { partial: "hideMore" },
-  });
-  const partialNext = useSection({
-    href: nextPageUrl,
-    props: { partial: "hideLess" },
-  });
+
   const infinite = layout?.pagination !== "pagination";
 
   const layoutGrid = globalThis.window.localStorage?.getItem("layout-grid") ??
@@ -199,12 +192,14 @@ function PageResult(
         class="font-source-sans text-xs tracking-[0.07em] text-black text-center"
       >
       </p>
-      <script
+      {
+        /* <script
         type="module"
         dangerouslySetInnerHTML={{
           __html: useScript(updateRecordPerPage, page),
         }}
-      />
+      /> */
+      }
     </div>
   );
 
@@ -218,8 +213,7 @@ function PageResult(
       >
         <a
           rel="prev"
-          hx-swap="outerHTML show:parent:top"
-          hx-get={partialPrev}
+          href={prevPageUrl}
         >
           <span class="inline [.htmx-request_&]:hidden font-source-sans tracking-[0.07em] font-semibold py-2 px-7 border border-black text-black hover:text-[#bea669] hover:border-[#bea669] duration-200 cursor-pointer">
             Ver produtos anteriores
@@ -269,8 +263,7 @@ function PageResult(
                     (!nextPageUrl || partial === "hideMore") && "!hidden",
                     "flex flex-col items-center justify-center",
                   )}
-                  hx-swap="outerHTML show:parent:top"
-                  hx-get={partialNext}
+                  href={nextPageUrl}
                 >
                   <div class="block [.htmx-request_&]:hidden">
                     {results}

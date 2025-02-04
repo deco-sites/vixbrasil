@@ -1,5 +1,5 @@
 import { useId } from "../../sdk/useId.ts";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 import { type Section } from "@deco/deco/blocks";
 interface Children {
   section: Section;

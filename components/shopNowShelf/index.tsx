@@ -1,7 +1,7 @@
 import { ShopNowShelfItems } from "../../islands/ShelfProducts/index.tsx";
 import ShelfProducts from "../../islands/ShelfProducts/index.tsx";
 import { ShopNowShelfFunctions } from "./functions.js";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 export interface ShopNowShelfProps {
   /** @title Shop Now */
   items: ShopNowShelfItems[];

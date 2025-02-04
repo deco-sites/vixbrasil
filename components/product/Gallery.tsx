@@ -6,7 +6,7 @@ import { useId } from "../../sdk/useId.ts";
 import { ImageZoom } from "../media/ImageZoom.tsx";
 import ProductImageZoom from "./function.js";
 import { useDevice } from "@deco/deco/hooks";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;

@@ -83,63 +83,67 @@ function ProductCard({
         <div>
           <div class="col-start-1 col-span-3 row-start-1 row-span-1">
             <Slider class="carousel carousel-center w-full">
-              {images?.map((image, index) => {
-                if (image.name === "IMAGEM1") {
-                  return null;
-                }
-                return (
-                  <Slider.Item
-                    index={index}
-                    class={clx(
-                      "carousel-item",
-                      "w-full",
-                    )}
-                  >
-                    <figure
-                      class={clx(
-                        "relative w-full",
-                      )}
-                      style={{
-                        aspectRatio: device === "desktop"
-                          ? ASPECT_RATIO
-                          : ASPECT_RATIO_MOBILE,
-                      }}
-                    >
-                      {/* Product Images */}
-                      <a
-                        href={relativeUrl}
-                        aria-label="view product"
-                        class={clx(
-                          "w-full",
-                          !inStock && "opacity-70",
-                        )}
-                      >
-                        <Image
-                          src={image.url!}
-                          alt={image.alternateName}
-                          width={WIDTH}
-                          height={HEIGHT}
-                          style={{
-                            aspectRatio: device === "desktop"
-                              ? ASPECT_RATIO
-                              : ASPECT_RATIO_MOBILE,
-                          }}
-                          class={clx(
-                            "object-contain",
-                            "w-full",
-                          )}
-                          sizes="(max-width: 640px) 50vw, 20vw"
-                          preload={preload}
-                          loading={preload ? "eager" : "lazy"}
-                          decoding="async"
-                        />
-                      </a>
+              {images?.filter((item) => item.encodingFormat === "image").map(
+                (image, index) => {
+                  if (image.name === "IMAGEM1") {
+                    return null;
+                  }
 
-                      {/* Wishlist button */}
-                    </figure>
-                  </Slider.Item>
-                );
-              })}
+                  console.log({ image }, "teste");
+                  return (
+                    <Slider.Item
+                      index={index}
+                      class={clx(
+                        "carousel-item",
+                        "w-full",
+                      )}
+                    >
+                      <figure
+                        class={clx(
+                          "relative w-full",
+                        )}
+                        style={{
+                          aspectRatio: device === "desktop"
+                            ? ASPECT_RATIO
+                            : ASPECT_RATIO_MOBILE,
+                        }}
+                      >
+                        {/* Product Images */}
+                        <a
+                          href={relativeUrl}
+                          aria-label="view product"
+                          class={clx(
+                            "w-full",
+                            !inStock && "opacity-70",
+                          )}
+                        >
+                          <Image
+                            src={image.url!}
+                            alt={image.alternateName}
+                            width={WIDTH}
+                            height={HEIGHT}
+                            style={{
+                              aspectRatio: device === "desktop"
+                                ? ASPECT_RATIO
+                                : ASPECT_RATIO_MOBILE,
+                            }}
+                            class={clx(
+                              "object-contain",
+                              "w-full",
+                            )}
+                            sizes="(max-width: 640px) 50vw, 20vw"
+                            preload={preload}
+                            loading={preload ? "eager" : "lazy"}
+                            decoding="async"
+                          />
+                        </a>
+
+                        {/* Wishlist button */}
+                      </figure>
+                    </Slider.Item>
+                  );
+                },
+              )}
             </Slider>
           </div>
 

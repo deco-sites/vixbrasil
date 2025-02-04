@@ -1,7 +1,7 @@
 import type { HTMLWidget } from "apps/admin/widgets.ts";
 import Section from "../../components/ui/Section.tsx";
 import { useId } from "../../sdk/useId.ts";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 export interface Props {
   /**
    * @title Text

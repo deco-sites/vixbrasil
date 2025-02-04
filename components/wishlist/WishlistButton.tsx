@@ -2,7 +2,7 @@ import { AnalyticsItem } from "apps/commerce/types.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import Icon from "../ui/Icon.tsx";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 interface Props {
   variant?: "full" | "icon";
   item: AnalyticsItem;

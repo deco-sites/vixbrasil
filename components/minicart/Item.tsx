@@ -4,7 +4,7 @@ import { clx } from "../../sdk/clx.ts";
 import { formatPrice } from "../../sdk/format.ts";
 import Icon from "../ui/Icon.tsx";
 import QuantitySelector from "../ui/QuantitySelector.tsx";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 export type Item = AnalyticsItem & {
   refId: string;
   listPrice: number;

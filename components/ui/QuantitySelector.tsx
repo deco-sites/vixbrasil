@@ -1,7 +1,7 @@
 import { type JSX } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 const onClick = (delta: number) => {
   // doidera!
   event!.stopPropagation();

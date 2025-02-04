@@ -17,7 +17,8 @@ import {
 } from "../../constants.ts";
 import SignIn from "../../components/header/SignIn.tsx";
 import HeaderFunctions from "../../islands/functions/headerFunctions.tsx";
-import { useDevice, useScript } from "@deco/deco/hooks";
+import { useDevice } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
 import { NAVBAR_HEIGHT_DESKTOP } from "../../constants.ts";
 import CookieConsent from "../Miscellaneous/CookieConsent.tsx";

@@ -1,5 +1,5 @@
 import Icon from "../ui/Icon.tsx";
-import { useScript } from "@deco/deco/hooks";
+import { useScript } from "site/sdk/useScript.ts";
 const onClick = () => {
   navigator.share({
     title: "Share",
