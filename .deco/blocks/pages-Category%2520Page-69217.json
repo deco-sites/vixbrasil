@@ -47,7 +47,20 @@
           "title": "Saída de Praia"
         },
         {
-          "image": {}
+          "image": {
+            "desktop": "https://data.decoassets.com/vixbrasil/4376b371-6c73-442b-956d-4491a5446ac9/cat-biquini.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/4376b371-6c73-442b-956d-4491a5446ac9/cat-biquini.png"
+          },
+          "matcher": "/praia/biquinis?order=OrderByReleaseDateDESC",
+          "title": "Biquíni"
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/vixbrasil/4c328b41-ae73-4e86-a706-66986f5a88e3/novidades_desktop.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/62a2f240-24b4-4e91-aa05-8e9f8d4c3732/novidades_mobile.png"
+          },
+          "title": "Novidades",
+          "matcher": "/Novidades"
         }
       ]
     },
