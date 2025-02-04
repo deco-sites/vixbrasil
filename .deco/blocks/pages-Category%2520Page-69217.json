@@ -16,6 +16,14 @@
       "banners": [
         {
           "image": {
+            "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/vix-brasil/6ac37dff-2537-4866-b132-eef406b6a178/59eaeba3-c886-42d3-b462-7846d9827d92___6c3b3895afc696b605e37f1c6e56b549.webp",
+            "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/vix-brasil/6ac37dff-2537-4866-b132-eef406b6a178/59eaeba3-c886-42d3-b462-7846d9827d92___6c3b3895afc696b605e37f1c6e56b549.webp",
+            "alt": "Biquínis"
+          },
+          "matcher": "/*"
+        },
+        {
+          "image": {
             "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/vix-brasil/e211f591-3c5a-424b-807f-55094b8a9851/565ba240-08dd-4def-b61c-644333c11bdb___1540473b2b4818aad5aadc7b08ff93dd.webp",
             "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/vix-brasil/e211f591-3c5a-424b-807f-55094b8a9851/565ba240-08dd-4def-b61c-644333c11bdb___1540473b2b4818aad5aadc7b08ff93dd.webp",
             "alt": "Roupas"
@@ -24,11 +32,22 @@
         },
         {
           "image": {
-            "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/vix-brasil/6ac37dff-2537-4866-b132-eef406b6a178/59eaeba3-c886-42d3-b462-7846d9827d92___6c3b3895afc696b605e37f1c6e56b549.webp",
-            "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/vix-brasil/6ac37dff-2537-4866-b132-eef406b6a178/59eaeba3-c886-42d3-b462-7846d9827d92___6c3b3895afc696b605e37f1c6e56b549.webp",
-            "alt": "Biquínis"
+            "desktop": "https://data.decoassets.com/vixbrasil/324859af-e3ea-46c1-b5ac-279baf01d0af/cat-maio.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/324859af-e3ea-46c1-b5ac-279baf01d0af/cat-maio.png"
           },
-          "matcher": "/*"
+          "matcher": "/praia/maios?order=OrderByReleaseDateDESC",
+          "title": "Maiô"
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/vixbrasil/b4fdfa02-93dd-4e13-98e2-d20537e64ecb/cat-saidas.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/b4fdfa02-93dd-4e13-98e2-d20537e64ecb/cat-saidas.png"
+          },
+          "matcher": "/praia/saidas-de-praia?order=OrderByReleaseDateDESC",
+          "title": "Saída de Praia"
+        },
+        {
+          "image": {}
         }
       ]
     },
