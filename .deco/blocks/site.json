@@ -45,7 +45,8 @@
       "excludePathsFromDecoSiteMap": []
     },
     {
-      "__resolveType": "website/loaders/pages.ts"
+      "__resolveType": "website/loaders/pages.ts",
+      "hidePagesInDeco": false
     },
     {
       "__resolveType": "website/loaders/redirects.ts"
@@ -65,7 +66,7 @@
     "includeScriptsToHead": {
       "includes": []
     },
-    "enabled": true,
+    "enabled": false,
     "name": "deco_matcher",
     "matcher": {
       "__resolveType": "website/matchers/random.ts",
@@ -73,7 +74,8 @@
     },
     "includeScriptsToBody": {
       "includes": []
-    }
+    },
+    "urlToRunAgainst": "secure.vixbrasil.com"
   },
   "flavor": {
     "framework": "fresh"
