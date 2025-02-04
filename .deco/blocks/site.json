@@ -68,6 +68,9 @@
     "matcher": {
       "__resolveType": "website/matchers/random.ts",
       "traffic": 0.05
+    },
+    "includeScriptsToBody": {
+      "includes": []
     }
   },
   "flavor": {
