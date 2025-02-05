@@ -1,6 +1,10 @@
 {
-  "name": "Categoria",
-  "path": "/*",
+  "__resolveType": "website/pages/Page.tsx",
+  "name": "Care Vix",
+  "path": "/care-vix",
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
   "sections": [
     {
       "__resolveType": "Header"
@@ -27,8 +31,8 @@
         },
         {
           "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/324859af-e3ea-46c1-b5ac-279baf01d0af/cat-maio.png",
-            "mobile": "https://data.decoassets.com/vixbrasil/8ce1a452-c66d-42e4-bb2c-8474bf096488/banner-categoria-maios-mobile.jpg"
+            "mobile": "https://data.decoassets.com/vixbrasil/8ce1a452-c66d-42e4-bb2c-8474bf096488/banner-categoria-maios-mobile.jpg",
+            "desktop": "https://data.decoassets.com/vixbrasil/324859af-e3ea-46c1-b5ac-279baf01d0af/cat-maio.png"
           },
           "matcher": "/praia/maios*"
         },
@@ -58,15 +62,15 @@
         },
         {
           "image": {
-            "mobile": "https://data.decoassets.com/vixbrasil/7de44d72-9104-4fb9-886e-3e2612705de6/banner-categoria-vestidos-mobile.jpg",
-            "desktop": "https://data.decoassets.com/vixbrasil/35753ab9-68db-4729-896e-70b1ae0de9c4/banner-categoria-vestidos-desktop.jpg"
+            "desktop": "https://data.decoassets.com/vixbrasil/35753ab9-68db-4729-896e-70b1ae0de9c4/banner-categoria-vestidos-desktop.jpg",
+            "mobile": "https://data.decoassets.com/vixbrasil/7de44d72-9104-4fb9-886e-3e2612705de6/banner-categoria-vestidos-mobile.jpg"
           },
           "matcher": "/roupas/vestidos*"
         },
         {
           "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/8c0a4f01-a0ae-4467-84e2-3abf0a0576de/banner-categoria-acessorios-desktop.jpg",
-            "mobile": "https://data.decoassets.com/vixbrasil/d8ea53c8-f87d-4e87-b015-9d5ff6000ec3/banner-categoria-acessorios-mobile.jpg"
+            "mobile": "https://data.decoassets.com/vixbrasil/d8ea53c8-f87d-4e87-b015-9d5ff6000ec3/banner-categoria-acessorios-mobile.jpg",
+            "desktop": "https://data.decoassets.com/vixbrasil/8c0a4f01-a0ae-4467-84e2-3abf0a0576de/banner-categoria-acessorios-desktop.jpg"
           },
           "matcher": "/acessorios*",
           "title": "Acessórios"
@@ -123,11 +127,13 @@
       "__resolveType": "site/sections/Product/SearchResult.tsx",
       "page": {
         "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
-        "sort": "OrderByReleaseDateDESC",
+        "sort": "OrderByScoreDESC",
         "filters": "dynamic",
         "similars": false,
-        "count": 24,
-        "ignoreCaseSelected": false
+        "count": 36,
+        "ignoreCaseSelected": false,
+        "map": "productClusterIds",
+        "term": "456"
       },
       "layout": {
         "pagination": "show-more"
@@ -158,9 +164,5 @@
         "__resolveType": "Footer"
       }
     }
-  ],
-  "seo": {
-    "__resolveType": "website/sections/Seo/SeoV2.tsx"
-  },
-  "__resolveType": "website/pages/Page.tsx"
+  ]
 }

@@ -37,7 +37,7 @@
         "items": [
           {
             "type": "image",
-            "target": "_blank",
+            "target": "_self",
             "src": "https://data.decoassets.com/vixbrasil/8bbfb93f-9f92-4086-88ed-1ed0afc0ec7a/2_swim-(1).png",
             "mobileSrc": "https://data.decoassets.com/vixbrasil/28412ca1-f26b-4f99-aef6-798e8a1ec9fd/2_swim-(1).png",
             "url": "/praia/biquinis?order=OrderByBestDiscountDESC",
@@ -45,7 +45,7 @@
           },
           {
             "type": "image",
-            "target": "_blank",
+            "target": "_self",
             "src": "https://data.decoassets.com/vixbrasil/87ecf708-6809-440c-8347-6a6c6ae2b720/1_roupas-(1).png",
             "mobileSrc": "https://data.decoassets.com/vixbrasil/53837aed-6e7c-40b7-8835-b7acf239c143/1_roupas-(1).png",
             "url": "/roupas?order=OrderByBestDiscountDESC",
@@ -53,7 +53,7 @@
           },
           {
             "type": "image",
-            "target": "_blank",
+            "target": "_self",
             "src": "https://data.decoassets.com/vixbrasil/f7467e7f-3cff-4d6e-8bda-cf2603d853c2/3_maios.png",
             "mobileSrc": "https://data.decoassets.com/vixbrasil/acfc086c-41ac-407b-a740-ca03c1aeb6cb/3_maios.png",
             "url": "/praia/maios?order=OrderByBestDiscountDESC",
@@ -61,7 +61,7 @@
           },
           {
             "type": "image",
-            "target": "_blank",
+            "target": "_self",
             "src": "https://data.decoassets.com/vixbrasil/acdbf20f-c47c-43f3-9d04-41d593857899/3_saidas.png",
             "mobileSrc": "https://data.decoassets.com/vixbrasil/e400a5c2-165d-4af1-a01b-a53e4a1a38f2/3_saidas.png",
             "url": "https://www.vixbrasil.com/praia/saidas-de-praia?order=OrderByBestDiscountDESC",
@@ -69,7 +69,7 @@
           },
           {
             "type": "image",
-            "target": "_blank",
+            "target": "_self",
             "src": "https://data.decoassets.com/vixbrasil/53b08f2d-6253-4ad5-9f76-eb067565c0c9/5_acessorios.png",
             "mobileSrc": "https://data.decoassets.com/vixbrasil/6276dc36-6067-4e2a-befd-c99f093c1fde/5_acessorios.png",
             "url": "/acessorios?order=OrderByBestDiscountDESC",
