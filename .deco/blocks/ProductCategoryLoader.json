@@ -1,0 +1,6 @@
+{
+  "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
+  "sort": "OrderByPriceDESC",
+  "filters": "dynamic",
+  "count": 36
+}
