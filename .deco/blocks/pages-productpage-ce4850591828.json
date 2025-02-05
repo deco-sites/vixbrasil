@@ -6,18 +6,6 @@
   },
   "sections": [
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "commerce/sections/Seo/SeoPDPV2.tsx",
-        "jsonLD": {
-          "__resolveType": "PDP Loader"
-        },
-        "jsonLDs": [
-          {}
-        ]
-      }
-    },
-    {
       "__resolveType": "Header"
     },
     {
