@@ -118,7 +118,7 @@
     "includeScriptsToHead": {
       "includes": []
     },
-    "enabled": true,
+    "enabled": false,
     "name": "deco_matcher",
     "matcher": {
       "__resolveType": "website/matchers/random.ts",
