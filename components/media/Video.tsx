@@ -1,5 +1,7 @@
-import { useEffect, useState } from "preact/hooks";
 import { ImageWidget } from "apps/admin/widgets.ts";
+import { useComponent } from "site/sections/Component.tsx";
+import { LoadVideoProps } from "site/components/media/LoadVideo.tsx";
+
 /** @title Video */
 export interface VideoProps {
   /** @readOnly true */
@@ -18,6 +20,7 @@ export interface VideoProps {
   /** @hide true */
   device?: "mobile" | "tablet" | "desktop";
 }
+
 const Video = (
   {
     src,
@@ -31,63 +34,43 @@ const Video = (
     device,
   }: VideoProps,
 ) => {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
-  const handlePlayClick = () => {
-    setIsVideoLoaded(true);
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (device !== "desktop") {
-        setIsVideoLoaded(true);
-      }
-    }, 1000);
-  }, []);
-
   return (
     <div
       style={{
         height: `${device === "desktop" ? "52vw" : "149.6vw"}`,
       }}
       class="w-full"
+      id="vixbrasil__video-container"
     >
-      {!isVideoLoaded
-        ? (
-          <div
-            class=" relative before:w-full before:h-full before:absolute before:top-0 before:left-0 z-[1]"
-            onMouseOver={handlePlayClick}
-          >
-            <img
-              src={device === "desktop" ? thumbnail : thumbnailMobile}
-              alt={alt}
-              class="w-full h-full object-cover"
-              width={globalThis.window.innerWidth > 1024 ? 1920 : 540}
-              height={globalThis.window.innerWidth > 1024 ? 950 : 800}
-            />
-          </div>
-        )
-        : (
-          <a
-            href={url}
-            target={target}
-            class=" relative before:w-full before:h-full before:absolute before:top-0 before:left-0 z-[1]"
-          >
-            <iframe
-              src={`https://player.vimeo.com/video/${
-                globalThis.window.innerWidth > 1024 ? src : mobileSrc
-              }?title=0&byline=0&portrait=0&muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963`}
-              width={`${globalThis.window.innerWidth > 1024 ? "426" : "240"}`}
-              height={`${globalThis.window.innerWidth > 1024 ? "218" : "0"}`}
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              title={alt}
-              data-ready="true"
-              class={`${classes}`}
-              style="width: 100%; height: 100%;"
-            />
-          </a>
+      <div
+        id="thumbnail-container"
+        class="relative before:w-full before:h-full before:absolute before:top-0 before:left-0 z-[1]"
+        hx-get={useComponent<LoadVideoProps>(
+          import.meta.resolve(
+            "site/components/media/LoadVideo.tsx",
+          ),
+          {
+            src,
+            mobileSrc,
+            url,
+            alt,
+            target,
+            classes,
+            device,
+          },
         )}
+        hx-trigger="mouseover"
+        hx-target="closest #vixbrasil__video-container"
+        hx-swap="innerHTML"
+      >
+        <img
+          src={device === "desktop" ? thumbnail : thumbnailMobile}
+          alt={alt}
+          class="w-full h-full object-cover"
+          width={device === "desktop" ? 1920 : 540}
+          height={device === "desktop" ? 950 : 800}
+        />
+      </div>
     </div>
   );
 };

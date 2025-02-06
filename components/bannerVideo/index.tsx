@@ -1,9 +1,8 @@
 import { Image, ImageProps } from "../media/Image.tsx";
-import VideoComponent from "../../islands/VideoIsland.tsx";
-import { VideoProps } from "../media/Video.tsx";
 import Slider from "../ui/Slider.tsx";
 import { useId } from "../../sdk/useId.ts";
 import { useDevice } from "@deco/deco/hooks";
+import Video, { VideoProps } from "site/components/media/Video.tsx";
 
 export interface BannerVideoProps {
   /** @title Banner de Vídeo ou Imagem */
@@ -53,7 +52,7 @@ export default function BannerVideoComponent(
                 index={index}
                 class="carousel-item w-full h-full justify-center items-center"
               >
-                <VideoComponent
+                <Video
                   type="video"
                   src={item.src}
                   mobileSrc={item.mobileSrc}

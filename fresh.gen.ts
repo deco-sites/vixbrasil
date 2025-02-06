@@ -14,7 +14,6 @@ import * as $ProductCompositionKit from "./islands/ProductCompositionKit.tsx";
 import * as $ShelfProducts_context_index from "./islands/ShelfProducts/context/index.tsx";
 import * as $ShelfProducts_context_types from "./islands/ShelfProducts/context/types.ts";
 import * as $ShelfProducts_index from "./islands/ShelfProducts/index.tsx";
-import * as $VideoIsland from "./islands/VideoIsland.tsx";
 import * as $functions_headerFunctions from "./islands/functions/headerFunctions.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -34,7 +33,6 @@ const manifest = {
     "./islands/ShelfProducts/context/index.tsx": $ShelfProducts_context_index,
     "./islands/ShelfProducts/context/types.ts": $ShelfProducts_context_types,
     "./islands/ShelfProducts/index.tsx": $ShelfProducts_index,
-    "./islands/VideoIsland.tsx": $VideoIsland,
     "./islands/functions/headerFunctions.tsx": $functions_headerFunctions,
   },
   baseUrl: import.meta.url,
