@@ -32,7 +32,6 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
         const response = await fetch(
           `/api/catalog_system/pub/products/search?fq=skuId:${top}&fq=skuId:${bottom}`,
         );
-        console.log({ response }, "teste");
 
         const data = await response.json();
 

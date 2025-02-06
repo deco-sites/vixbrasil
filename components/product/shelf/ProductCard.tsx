@@ -54,6 +54,15 @@ function ProductCard({
 
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
   const flag = additionalProperty?.find((item) => item.propertyID === "384");
+  const flagSale = additionalProperty?.find((item) =>
+    item.propertyID === "283"
+  );
+  const flagCare = additionalProperty?.find((item) =>
+    item.propertyID === "245"
+  );
+  const flagIconicos = additionalProperty?.find((item) =>
+    item.propertyID === "585"
+  );
 
   {/* Add click event to dataLayer */}
   const event = useSendEvent({
@@ -89,7 +98,6 @@ function ProductCard({
                     return null;
                   }
 
-                  console.log({ image }, "teste");
                   return (
                     <Slider.Item
                       index={index}
@@ -200,6 +208,31 @@ function ProductCard({
             </p>
           </div>
         )}
+        {flagCare && (
+          <div class="absolute top-8 right-[7px]">
+            <img
+              src="https://vixbrasil.vtexassets.com/assets/vtex.file-manager-graphql/images/bbada81c-42d2-4396-8ca0-9066ba92fd23___614e77159043cf4df41420ff0ab4ef95.png"
+              alt="Care"
+              class="h-[4.5rem] w-8"
+            />
+          </div>
+        )}
+        {flagSale && (
+          <div class="absolute top-3 left-3 h-5">
+            <p class="font-medium tracking-[0.07em] uppercase text-[#9a8445] font-source-sans lg:text-lg text-base">
+              Sale
+            </p>
+          </div>
+        )}
+        {flagIconicos && (
+          <div class="absolute bottom-[8.5rem] left-3">
+            <img
+              src="https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.220/img/shelf/flag-iconico___c0fc894456675e58cedf5fcb0adab696.png"
+              alt="Icônicos"
+              class="h-10 w-24"
+            />
+          </div>
+        )}
         <div class="absolute top-3 right-3">
           <WishlistButton item={item} variant="icon" />
         </div>
@@ -211,11 +244,12 @@ function ProductCard({
             {title}
           </span>
         </a>
+
         {device === "desktop"
-          ? <AddToCartShelf product={product} />
+          ? <AddToCartShelf product={product} device={device} />
           : (
             <a href={product?.url}>
-              <AddToCartShelf product={product} />
+              <AddToCartShelf product={product} device={device} />
             </a>
           )}
       </div>

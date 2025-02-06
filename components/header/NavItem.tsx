@@ -103,7 +103,7 @@ function NavItem({ item }: { item: NavItemProps }) {
                                     ? "font-semibold hover:font-bold"
                                     : "font-light hover:font-normal"
                                 } font-source-sans text-bronze duration-200`}
-                                href={leaf.url}
+                                href={i.url}
                               >
                                 <span class="text-sm uppercase">{i.name}</span>
                               </a>

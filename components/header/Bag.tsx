@@ -21,7 +21,11 @@ function Bag() {
   const id = useId();
   return (
     <>
-      <label class="indicator" for={MINICART_DRAWER_ID} aria-label="open cart">
+      <label
+        class="indicator cursor-pointer"
+        for={MINICART_DRAWER_ID}
+        aria-label="open cart"
+      >
         <span
           id={id}
           class="hidden indicator-item badge badge-primary badge-sm bg-[#bea669] font-source-sans font-normal text-[0.75rem] border-none rounded-full w-4 h-4 top-[0px] right-[0px]"

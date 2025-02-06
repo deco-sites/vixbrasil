@@ -135,12 +135,15 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
 
 function SeoSmallText(props: SectionProps<ReturnType<typeof loader>>) {
   const { texts } = props;
+  if (!texts?.text || texts?.text === "<p></p>") {
+    return <></>;
+  }
 
   return (
     <div class="max-w-[750px] mx-auto my-4">
       <div
         class="category-seo font-source-sans tracking-[0.07em] leading-4"
-        dangerouslySetInnerHTML={{ __html: texts?.text ?? "não foi 1" }}
+        dangerouslySetInnerHTML={{ __html: texts?.text }}
       />
       <a
         href="#seach-seo"
@@ -154,7 +157,9 @@ function SeoSmallText(props: SectionProps<ReturnType<typeof loader>>) {
 
 function SeoText(props: SectionProps<ReturnType<typeof loader>>) {
   const { texts } = props;
-
+  if (!texts?.seoText || texts?.seoText === "<p></p>") {
+    return <></>;
+  }
   return (
     <div
       class="mt-20 py-[60px] bg-[#f7f4eb] w-full flex items-center justify-center"
@@ -162,7 +167,7 @@ function SeoText(props: SectionProps<ReturnType<typeof loader>>) {
     >
       <div
         class="category-seo font-source-sans max-w-[750px] tracking-[0.07em] leading-4"
-        dangerouslySetInnerHTML={{ __html: texts?.seoText ?? "não foi 1" }}
+        dangerouslySetInnerHTML={{ __html: texts?.seoText }}
       />
     </div>
   );

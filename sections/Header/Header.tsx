@@ -96,7 +96,9 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
             <Icon id="search" size={18} />
           </label>
           <SignIn variant="desktop" />
-          <Icon id="favorite" size={20} />
+          <a href="/account#/wishlist">
+            <Icon id="favorite" size={20} />
+          </a>
           <Bag />
         </div>
       </div>

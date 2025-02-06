@@ -1,7 +1,6 @@
 import { useState } from "preact/hooks";
 import type { Product } from "apps/commerce/types.ts";
 import { useOffer } from "../../../../sdk/useOffer.ts";
-import { useUI } from "../../../../sdk/useUI.ts";
 import { MINICART_DRAWER_ID } from "../../../../constants.ts";
 import { useShelfContext } from "../../../../islands/AddToCartShelf/context/index.tsx";
 import ShelfInfo from "./ShelfInfo.tsx";
@@ -9,6 +8,7 @@ import KitShelfInfo from "../../../../islands/KitShelfInfo/index.tsx";
 
 export interface AddToCartShelfProps {
   product: Product;
+  device: string;
 }
 
 export type ToCart = {
@@ -18,10 +18,11 @@ export type ToCart = {
   name: string;
 };
 
-export default function AddToCartShelf({ product }: AddToCartShelfProps) {
+export default function AddToCartShelf(
+  { product, device }: AddToCartShelfProps,
+) {
   const { state } = useShelfContext();
   const [buttonTitle, setButtonTitle] = useState("Adicionar à sacola");
-  const { displayCart } = useUI();
   const { offers, additionalProperty } = product;
   const { listPrice, price } = useOffer(offers);
   const refId = additionalProperty?.find((item) => item.name === "RefId");
@@ -49,8 +50,10 @@ export default function AddToCartShelf({ product }: AddToCartShelfProps) {
           quantity: 1,
         }],
       });
-
-      displayCart.value = true;
+      const openMinicart = globalThis?.document?.querySelector(
+        "#vix__open-cart",
+      ) as HTMLLabelElement;
+      openMinicart?.click();
     } else {
       setButtonTitle("Selecione um tamanho!");
       setTimeout(() => {
@@ -87,7 +90,10 @@ export default function AddToCartShelf({ product }: AddToCartShelfProps) {
           }),
         },
       );
-      displayCart.value = true;
+      const openMinicart = globalThis?.document?.querySelector(
+        "#vix__open-cart",
+      ) as HTMLLabelElement;
+      openMinicart?.click();
     } else {
       setButtonTitle("Selecione um tamanho!");
       setTimeout(() => {
@@ -108,11 +114,10 @@ export default function AddToCartShelf({ product }: AddToCartShelfProps) {
         )
         : <ShelfInfo product={product} />}
 
-      <label
-        class="flex justify-center"
-        for={MINICART_DRAWER_ID}
-        aria-label="open cart add product"
-      >
+      <label id={"vix__open-cart"} for={MINICART_DRAWER_ID} class="hide">
+      </label>
+
+      <div class="flex items-center justify-center">
         <button
           onClick={() => {
             if ((product?.isAccessoryOrSparePartFor?.length ?? 0) > 0) {
@@ -123,9 +128,9 @@ export default function AddToCartShelf({ product }: AddToCartShelfProps) {
           }}
           class={`tracking-[0.07em] font-source-sans uppercase text-[#fff] font-normal w-full max-w-[240px] mx-auto text-base cursor-pointer pt-[0.5em] pb-[0.64em]  duration-200 bg-[#cbb887] hover:opacity-80`}
         >
-          {globalThis.window.innerWidth > 1024 ? buttonTitle : "Comprar"}
+          {device === "desktop" ? buttonTitle : "Comprar"}
         </button>
-      </label>
+      </div>
     </>
   );
 }
