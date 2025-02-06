@@ -14,7 +14,6 @@
             "desktop": "https://data.decoassets.com/vixbrasil/4c328b41-ae73-4e86-a706-66986f5a88e3/novidades_desktop.png"
           },
           "matcher": "/Novidades",
-          "title": "Novidades",
           "active": true
         },
         {
@@ -23,7 +22,6 @@
             "desktop": "https://data.decoassets.com/vixbrasil/8c0a4f01-a0ae-4467-84e2-3abf0a0576de/banner-categoria-acessorios-desktop.jpg"
           },
           "matcher": "/acessorios*",
-          "title": "Acessórios",
           "active": true
         },
         {
@@ -50,7 +48,6 @@
             "mobile": "https://data.decoassets.com/vixbrasil/49158916-3429-40eb-920a-bf3b4c8b68ac/banner-categoria-roupas-mobile.jpg"
           },
           "matcher": "/roupas/macacoes*",
-          "title": "Macacões",
           "active": true
         },
         {
@@ -102,8 +99,7 @@
             "mobile": "https://data.decoassets.com/vixbrasil/585db668-0ffe-4414-a8c4-55bb71e1c136/banner-categoria-saidas-mobile.jpg"
           },
           "matcher": "/praia/saidas-de-praia*",
-          "active": true,
-          "title": "Saída de Praia"
+          "active": true
         },
         {
           "image": {

@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/Novidades",
+    "to": "/novidades",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}
