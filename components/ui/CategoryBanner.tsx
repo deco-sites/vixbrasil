@@ -7,6 +7,8 @@ import { type SectionProps } from "@deco/deco";
 export interface Banner {
   /** @description URL de renderização do banner */
   matcher: string;
+  /** @description Desativate banner for this matcher */
+  active: boolean;
   /** @description text to be rendered on top of the image */
   title?: string;
   /** @description text to be rendered on top of the image */
@@ -31,6 +33,7 @@ const DEFAULT_PROPS = {
         alt: "a",
       },
       title: "Woman",
+      active: true,
       matcher: "/*",
       subtitle: "As",
     },
@@ -38,7 +41,7 @@ const DEFAULT_PROPS = {
 };
 function Banner(props: SectionProps<ReturnType<typeof loader>>) {
   const { banner } = props;
-  if (!banner) {
+  if (!banner || !banner.active) {
     return null;
   }
   const { title, subtitle, image } = banner;
@@ -47,14 +50,14 @@ function Banner(props: SectionProps<ReturnType<typeof loader>>) {
       <Picture preload class="col-start-1 col-span-1 row-start-1 row-span-1">
         <Source
           src={image.mobile}
-          width={360}
-          height={140}
+          width={385}
+          height={125}
           media="(max-width: 767px)"
         />
         <Source
           src={image.desktop}
-          width={1440}
-          height={450}
+          width={1920}
+          height={449}
           media="(min-width: 767px)"
         />
         <img class="w-full" src={image.desktop} alt={image.alt ?? title} />

@@ -225,7 +225,7 @@ function ProductCard({
           </div>
         )}
         {flagIconicos && (
-          <div class="absolute bottom-[8.5rem] left-3">
+          <div class="absolute bottom-[9rem] left-3">
             <img
               src="https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.220/img/shelf/flag-iconico___c0fc894456675e58cedf5fcb0adab696.png"
               alt="Icônicos"

@@ -1,7 +1,7 @@
 import { ProductListingPage } from "apps/commerce/types.ts";
 import { useDevice } from "@deco/deco/hooks";
 import Icon from "../ui/Icon.tsx";
-const SORT_QUERY_PARAM = "sort";
+const SORT_QUERY_PARAM = "order";
 const PAGE_QUERY_PARAM = "page";
 export type Props = Pick<ProductListingPage, "sortOptions"> & {
   url: string;
