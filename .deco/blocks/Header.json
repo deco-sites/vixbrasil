@@ -26,6 +26,11 @@
   },
   "navItems": [
     {
+      "url": "/novidades",
+      "name": "New In",
+      "children": []
+    },
+    {
       "@type": "NavItemProps",
       "url": "#",
       "name": "Shop",
@@ -33,14 +38,14 @@
         {
           "children": [
             {
-              "bold": true,
               "name": "Novidades",
-              "url": "/novidades"
+              "url": "/novidades",
+              "bold": true
             },
             {
-              "bold": true,
               "name": "Sale Verão 25",
-              "url": "/sale"
+              "url": "/sale",
+              "bold": true
             }
           ]
         },
@@ -303,9 +308,14 @@
       ]
     },
     {
-      "@type": "SiteNavigationElement",
+      "name": "Personal Shopper",
       "url": "/e-shoppers",
-      "name": "Personal Shopper"
+      "@type": "SiteNavigationElement"
+    },
+    {
+      "children": [],
+      "name": "Sale",
+      "url": "/sale"
     }
   ],
   "mobileItems": [
@@ -362,19 +372,23 @@
               "children": [
                 {
                   "title": "Mini",
-                  "url": "/roupas/vestidos/mini"
+                  "url": "/roupas/vestidos/mini",
+                  "target": "_self"
                 },
                 {
                   "title": "Curto",
-                  "url": "/roupas/vestidos/curto"
+                  "url": "/roupas/vestidos/curto",
+                  "target": "_self"
                 },
                 {
                   "title": "Midi",
-                  "url": "/roupas/vestidos/midi"
+                  "url": "/roupas/vestidos/midi",
+                  "target": "_self"
                 },
                 {
                   "title": "Longo",
-                  "url": "/roupas/vestidos/longo"
+                  "url": "/roupas/vestidos/longo",
+                  "target": "_self"
                 }
               ]
             },
@@ -547,6 +561,13 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "target": "_self",
+          "children": [],
+          "title": "Sale",
+          "url": "/sale",
+          "bold": true
         }
       ]
     },

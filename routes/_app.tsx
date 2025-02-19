@@ -48,7 +48,7 @@ export default defineApp(async (_req, ctx) => {
         <script
           defer
           id="sizebay-vfr-v4"
-          src="https://static.sizebay.technology/1165/prescript.js"
+          src="https://static.sizebay.technology/1160/prescript_new.js"
         >
         </script>
         {/* End Sizebay  */}

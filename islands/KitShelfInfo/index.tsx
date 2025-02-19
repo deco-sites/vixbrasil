@@ -43,11 +43,16 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
 
     fetchProduct();
   }, []);
+  const productTop =
+    product?.find((item) => item.icone_categoria?.[0] === "top") ??
+      product?.[0];
+  const productBottom =
+    product?.find((item) => item.icone_categoria?.[0] === "calcinha") ??
+      product?.[1];
+  const topIcon = productTop?.icone_categoria?.[0];
+  const bottomIcon = productBottom?.icone_categoria?.[0];
 
-  const topIcon = product?.[0]?.icone_categoria?.[0];
-  const bottomIcon = product?.[1]?.icone_categoria?.[0];
-
-  const availableTopProduct = product?.[0]?.items?.find((item) =>
+  const availableTopProduct = productTop?.items?.find((item) =>
     item.sellers[0].commertialOffer.AvailableQuantity !== 0
   );
 
@@ -55,7 +60,7 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
     .ListPrice;
   const topPrice = availableTopProduct?.sellers[0].commertialOffer.Price;
 
-  const availableBottomProduct = product?.[1]?.items?.find((item) =>
+  const availableBottomProduct = productBottom?.items?.find((item) =>
     item.sellers[0].commertialOffer.AvailableQuantity !== 0
   );
 
@@ -162,7 +167,7 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
             <ul
               class={`${dropdownTop} overflow-hidden duration-200 absolute z-10`}
             >
-              {product?.[0]?.items?.map((item) => {
+              {productTop?.items?.map((item) => {
                 if (item.Tamanho[0] === "KIT") {
                   return null;
                 }
@@ -227,7 +232,7 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
             <ul
               class={`${dropdownBottom} overflow-hidden duration-200 absolute z-10`}
             >
-              {product?.[1]?.items?.map((item) => {
+              {productBottom?.items?.map((item) => {
                 if (item.Tamanho[0] === "KIT") {
                   return null;
                 }

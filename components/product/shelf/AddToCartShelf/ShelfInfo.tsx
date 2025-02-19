@@ -53,13 +53,13 @@ export default function ShelfInfo({ product }: AddToCartShelfProps) {
         </div>
 
         <div
-          class="hidden lg:block h-auto border border-[#e8e8e8] mx-auto cursor-pointer w-[120px] mb-[10px] absolute top-3 bg-white opacity-0 duration-200 group-hover/image-shelf:opacity-100"
+          class="hidden lg:block h-auto border border-[#e8e8e8] mx-auto cursor-pointer w-[145%] mb-[10px] absolute top-3 bg-white opacity-0 duration-200 group-hover/image-shelf:opacity-100"
           onMouseLeave={() => {
             setDropdown("h-[0px]");
           }}
         >
           <button
-            class="flex w-full items-center justify-between pr-3 gap-1 list-none font-source-sans text-sm tracking-[0.07em] text-black list"
+            class="flex w-full items-center justify-between pr-3 gap-1 list-none font-source-sans text-sm tracking-[0.07em] text-black list py-[0.2rem] px-4"
             onClick={() => {
               setDropdown("h[100%]");
             }}

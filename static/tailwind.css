@@ -3696,8 +3696,8 @@ details.collapse summary::-webkit-details-marker {
 }
 
 
-.bottom-\[8\.5rem\] {
-  bottom: 8.5rem;
+.bottom-\[9rem\] {
+  bottom: 9rem;
 }
 
 
@@ -4711,6 +4711,11 @@ details.collapse summary::-webkit-details-marker {
 
 .w-\[13px\] {
   width: 13px;
+}
+
+
+.w-\[145\%\] {
+  width: 145%;
 }
 
 
@@ -6186,6 +6191,12 @@ details.collapse summary::-webkit-details-marker {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+
+.py-\[0\.2rem\] {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
 

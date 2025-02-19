@@ -67,8 +67,8 @@ function ProductInfo({ page }: Props) {
       variant?.name?.toLowerCase() !== "default title",
   ) ?? false;
 
-  const productTop = product.isAccessoryOrSparePartFor?.[0] ?? product;
-  const productBottom = product.isAccessoryOrSparePartFor?.[1] ?? product;
+  const productTop = product.isAccessoryOrSparePartFor?.[1] ?? product;
+  const productBottom = product.isAccessoryOrSparePartFor?.[0] ?? product;
   return (
     <div class="flex flex-col" id={id}>
       {/* Product Name */}
