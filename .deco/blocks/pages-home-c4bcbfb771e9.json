@@ -93,21 +93,21 @@
         "__resolveType": "site/sections/Shelfs/ShopNowShelf.tsx",
         "items": [
           {
-            "src": "https://data.decoassets.com/vixbrasil/c749ec9e-d4e1-449a-958d-caeb47a09cac/Catalogo_desk-(1).png",
+            "src": "https://data.decoassets.com/vixbrasil/17b0319c-1257-4f3a-b755-83f363c9e105/catC3A1logo_desk(1).png",
             "alt": "tropical tropezienne",
             "products": [
               "11949"
             ]
           },
           {
-            "src": "https://data.decoassets.com/vixbrasil/59f37e04-2317-4b18-b0d0-ebc70ea443a9/Catalogo_desk-(2).png",
+            "src": "https://data.decoassets.com/vixbrasil/989058e3-7657-46be-8247-2128fe61a429/catC3A1logo_desk(2).png",
             "products": [
               "11962"
             ],
             "alt": "Catálogo Alto verão - Saia e Top Ruby"
           },
           {
-            "src": "https://data.decoassets.com/vixbrasil/b1c2f562-0b9d-4f0f-8e19-fb400671aa4c/Catalogo_mobile-(3).png",
+            "src": "https://data.decoassets.com/vixbrasil/d11dd3a5-c9ef-49a9-b370-923c347e65b5/catC3A1logo_desk(3).png",
             "alt": "Catálogo Alto verão - Bíquini Scales Ruby",
             "products": [
               "12021",
@@ -116,14 +116,14 @@
           },
           {
             "alt": "Catálogo Alto verão - Vestido Longo Cassia Ruby",
-            "src": "https://data.decoassets.com/vixbrasil/c6aa3639-fef7-43ee-b27e-94edc46c94a4/Catalogo_desk-(4).png",
+            "src": "https://data.decoassets.com/vixbrasil/f94c192f-d1eb-4303-9a64-1ccbe2e36b82/catC3A1logo_desk(4).png",
             "products": [
               "11952",
               "11956"
             ]
           },
           {
-            "src": "https://data.decoassets.com/vixbrasil/28e9b319-99a8-4b31-9a37-65c2d2151e38/Catalogo_desk-(5).png",
+            "src": "https://data.decoassets.com/vixbrasil/93797ef1-7a94-4f1c-b318-10d8a44e8afd/catC3A1logo_desk(5).png",
             "alt": "Catálogo Alto verão - Vestido Longo Ziva Agni",
             "products": [
               "11937",
