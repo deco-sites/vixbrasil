@@ -120,6 +120,15 @@
             "alt": "Biquínis"
           },
           "matcher": "/*"
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/vixbrasil/19458092-4fd8-4c35-8af6-2e05af196f2f/banner-sale-desktop.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/b6bb1125-b19c-4453-863f-a6f4463cab39/banner-sale-mobile.png",
+            "alt": "sale"
+          },
+          "matcher": "/sale*",
+          "active": false
         }
       ]
     },
