@@ -59,6 +59,7 @@ export default function LoginButton({ variant }: LoginButtonProps) {
   return (
     <>
       <button
+        type="button"
         id="vix-brasil__login-icon"
         class={`flex items-center gap-3 pl-4 pr-3 py-1 sm:bg-medium-brown-opacity group-hover/header:text-black font-source-sans text-xs tracking-[0.98px] text-black relative rounded-btn sm:border sm:border-brown`}
         onClick={() => {
@@ -101,6 +102,7 @@ export default function LoginButton({ variant }: LoginButtonProps) {
             <div class="flex justify-between items-center bg-light-brown p-4 w-full font-source-sans text-black font-bold text-sm uppercase">
               minha conta
               <button
+                type="button"
                 onClick={() => {
                   setLoginOpen(false);
                 }}

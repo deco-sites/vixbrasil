@@ -17,6 +17,7 @@ export interface Props {
   status?: "success" | "failed";
 }
 export async function action(props: Props, req: Request, ctx: AppContext) {
+  // deno-lint-ignore react-rules-of-hooks
   const platform = usePlatform();
   const form = await req.formData();
   const name = `${form.get("name") ?? ""}`;
@@ -51,6 +52,8 @@ function Newsletter({
   //     </div>
   //   );
   // }
+
+  const postUrl = useComponent(import.meta.url);
   return (
     <section class="sm:max-w-[350px] py-4 sm:py-0 mb-6 sm:mb-0 px-6 sm:px-0  bg-[#f7f4ed] sm:bg-white">
       <div class="place-items-center">
@@ -86,7 +89,7 @@ function Newsletter({
             <form
               hx-target="closest section"
               hx-swap="outerHTML"
-              hx-post={useComponent(import.meta.url)}
+              hx-post={postUrl}
               class="flex flex-col gap-8 w-full sm:gap-2"
             >
               <input

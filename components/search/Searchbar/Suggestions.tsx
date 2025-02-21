@@ -65,7 +65,10 @@ function Suggestions(
                   href={`${ACTION}?${NAME}=${term}`}
                   class="flex gap-4 items-center font-source-sans text-xs font-semibold uppercase"
                 >
-                  <span dangerouslySetInnerHTML={{ __html: term }} />
+                  <span
+                    // deno-lint-ignore react-no-danger
+                    dangerouslySetInnerHTML={{ __html: term }}
+                  />
                 </a>
               </li>
             ))}

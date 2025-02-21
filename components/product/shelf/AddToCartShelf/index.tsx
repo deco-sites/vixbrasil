@@ -50,10 +50,14 @@ export default function AddToCartShelf(
           quantity: 1,
         }],
       });
-      const openMinicart = globalThis?.document?.querySelector(
-        "#vix__open-cart",
-      ) as HTMLLabelElement;
-      openMinicart?.click();
+
+      setTimeout(() => {
+
+        const openMinicart = globalThis?.document?.querySelector(
+          "#minicart-drawer",
+        ) as HTMLLabelElement;
+        openMinicart?.click();
+      }, 1000)
     } else {
       setButtonTitle("Selecione um tamanho!");
       setTimeout(() => {
@@ -91,7 +95,7 @@ export default function AddToCartShelf(
         },
       );
       const openMinicart = globalThis?.document?.querySelector(
-        "#vix__open-cart",
+        "#minicart-drawer",
       ) as HTMLLabelElement;
       openMinicart?.click();
     } else {
@@ -114,11 +118,12 @@ export default function AddToCartShelf(
         )
         : <ShelfInfo product={product} />}
 
-      <label id={"vix__open-cart"} for={MINICART_DRAWER_ID} class="hide">
+      <label id="vix__open-cart" for={MINICART_DRAWER_ID} class="hide">
       </label>
 
       <div class="flex items-center justify-center">
         <button
+          type="button"
           onClick={() => {
             if ((product?.isAccessoryOrSparePartFor?.length ?? 0) > 0) {
               handleKitAddToCart();

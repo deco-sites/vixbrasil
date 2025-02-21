@@ -90,6 +90,7 @@ function BannerItem(
             {action.subTitle}
           </span>
           <button
+            type="button"
             class="btn btn-primary btn-outline border-0 bg-base-100 min-w-[180px]"
             aria-label={action.label}
           >

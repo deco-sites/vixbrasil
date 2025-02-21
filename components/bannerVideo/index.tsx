@@ -106,7 +106,7 @@ export default function BannerVideoComponent(
         rootId={container}
         interval={8000}
         scroll="auto"
-        infinite={true}
+        infinite
       />
     </div>
   );

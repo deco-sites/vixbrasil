@@ -85,6 +85,7 @@ export function ErrorFallback() {
       </div>
 
       <button
+        type="button"
         class="btn btn-primary"
         hx-patch={useComponent(import.meta.url)}
         hx-swap="outerHTML"
@@ -131,11 +132,11 @@ export default function Cart(
         hx-swap="outerHTML"
       >
         {/* Button to submit the form */}
-        <button hidden autofocus />
+        <button type="submit" hidden autofocus />
 
         {/* Add to cart controllers */}
         <input name="add-to-cart" type="hidden" />
-        <button hidden name="action" value="add-to-cart" />
+        <button type="submit" hidden name="action" value="add-to-cart" />
 
         {/* This contains the STOREFRONT cart. */}
         <input
@@ -274,6 +275,7 @@ export default function Cart(
                     <a
                       class="flex items-center justify-center w-full text-base font-semibold font-source-sans text-white bg-black h-9 uppercase hover:bg-[#bea669] duration-200 border border-black hover:border-[#bea669]"
                       href={checkoutHref}
+                      // deno-lint-ignore react-rules-of-hooks
                       hx-on:click={useScript(sendBeginCheckoutEvent)}
                     >
                       <span class="[.htmx-request_&]:hidden">
@@ -289,7 +291,9 @@ export default function Cart(
       </form>
       <script
         type="module"
+        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{
+          // deno-lint-ignore react-rules-of-hooks
           __html: useScript(onLoad, MINICART_FORM_ID),
         }}
       />

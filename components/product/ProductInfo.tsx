@@ -45,6 +45,7 @@ function ProductInfo({ page }: Props) {
     seller = "1",
     availability,
     installments,
+    // deno-lint-ignore react-rules-of-hooks
   } = useOffer(offers);
 
   const breadcrumb = {
@@ -164,7 +165,7 @@ function ProductInfo({ page }: Props) {
       </div>
 
       {/* Descrição */}
-      <ProductDescriptions info={description} title={"Descrição do produto"} />
+      <ProductDescriptions info={description} title="Descrição do produto" />
 
       {/* Composição */}
       {hasValidVariants && isAccessoryOrSparePartFor
@@ -176,7 +177,7 @@ function ProductInfo({ page }: Props) {
         : (
           <ProductDescriptions
             info={composition?.value}
-            title={"Composição"}
+            title="Composição"
           />
         )}
     </div>

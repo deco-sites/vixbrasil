@@ -63,9 +63,20 @@ export default function Searchbar(
   { placeholder = "O que você está buscando?", loader }: SearchbarProps,
 ) {
   const slot = useId();
+
+  const scriptSearchBar = useScript(
+    script,
+    SEARCHBAR_INPUT_FORM_ID,
+    NAME,
+    SEARCHBAR_POPUP_ID,
+  );
+
+  const scriptHook = useComponent<SuggestionProps>(Suggestions, {
+    loader: asResolved(loader),
+  });
   return (
     <div
-      id={"vix-brasil__search-bar"}
+      id="vix-brasil__search-bar"
       class="w-full overflow-hidden max-w-0 grid gap-0 duration-200 relative lg:left-[50px] left-0 hidden"
       style={{ gridTemplateRows: "min-content auto" }}
     >
@@ -88,9 +99,7 @@ export default function Searchbar(
           placeholder={placeholder}
           autocomplete="off"
           hx-target={`#${slot}`}
-          hx-post={loader && useComponent<SuggestionProps>(Suggestions, {
-            loader: asResolved(loader),
-          })}
+          hx-post={loader && scriptHook}
           hx-trigger={`input changed delay:300ms, ${NAME}`}
           hx-indicator={`#${SEARCHBAR_INPUT_FORM_ID}`}
           hx-swap="innerHTML"
@@ -117,13 +126,9 @@ export default function Searchbar(
       {/* Send search events as the user types */}
       <script
         type="module"
+        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{
-          __html: useScript(
-            script,
-            SEARCHBAR_INPUT_FORM_ID,
-            NAME,
-            SEARCHBAR_POPUP_ID,
-          ),
+          __html: scriptSearchBar,
         }}
       />
     </div>

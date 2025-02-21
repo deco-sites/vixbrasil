@@ -35,6 +35,7 @@ export default function ProductCompositionKit(
             </summary>
             <div
               class="ml-2 mt-2 font-source-sans font-semibold text-sm tracking-[0.07em] overflow-hidden px-2 py-4 group-open/product-infos:animation-dropdown duration-200"
+              // deno-lint-ignore react-no-danger
               dangerouslySetInnerHTML={{ __html: product?.Composição[0] ?? "" }}
             />
           </details>

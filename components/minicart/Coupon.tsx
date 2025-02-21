@@ -57,6 +57,7 @@ function Coupon({ coupon, discount }: Props) {
                       this.nextElementSibling.classList.toggle('opacity-30', this.value.length === 0);"
         />
         <button
+          type="button"
           form={MINICART_FORM_ID}
           class="w-10 h-10 bg-[#bea669] flex justify-center items-center capitalize tracking-[0.07em] font-semibold text-sm text-white opacity-30"
           name="action"

@@ -69,8 +69,10 @@ function fullProductLayout() {
   getProducts.forEach((item) => {
     item.setAttribute("data-product-grid", "4");
   });
-  globalThis.window.localStorage.setItem("layout-grid", "4");
+  globalThis.window?.localStorage.setItem("layout-grid", "4");
 }
+
+const scriptFullProductLayout = useScript(fullProductLayout);
 
 function smallProductLayout() {
   const getProducts = document.querySelectorAll(
@@ -80,28 +82,32 @@ function smallProductLayout() {
   getProducts.forEach((item) => {
     item.setAttribute("data-product-grid", "3");
   });
-  globalThis.window.localStorage.setItem("layout-grid", "3");
+  globalThis.window?.localStorage.setItem("layout-grid", "3");
 }
+
+const scriptSmallProductLayout = useScript(smallProductLayout);
 
 function checkLayoutAndUpdate() {
   const getProducts = document.querySelectorAll(
     "#vix__department-products",
   );
-  const currentGrid = globalThis.window.localStorage?.getItem("layout-grid") ??
+  const currentGrid = globalThis.window?.localStorage?.getItem("layout-grid") ??
     "";
 
   if (currentGrid === "4") {
     getProducts.forEach((item) => {
       item.setAttribute("data-product-grid", "4");
     });
-    globalThis.window.localStorage.setItem("layout-grid", "4");
+    globalThis.window?.localStorage.setItem("layout-grid", "4");
   } else if (currentGrid === "3") {
     getProducts.forEach((item) => {
       item.setAttribute("data-product-grid", "3");
     });
-    globalThis.window.localStorage.setItem("layout-grid", "3");
+    globalThis.window?.localStorage.setItem("layout-grid", "3");
   }
 }
+
+const scriptCheckLayoutAndUpdate = useScript(checkLayoutAndUpdate);
 const useUrlRebased = (overrides: string | undefined, base: string) => {
   let url: string | undefined = undefined;
   if (overrides) {
@@ -136,13 +142,14 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
 function SeoSmallText(props: SectionProps<ReturnType<typeof loader>>) {
   const { texts } = props;
   if (!texts?.text || texts?.text === "<p></p>") {
-    return <></>;
+    return null;
   }
 
   return (
     <div class="max-w-[750px] mx-auto my-4">
       <div
         class="category-seo font-source-sans tracking-[0.07em] leading-4"
+        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: texts?.text }}
       />
       <a
@@ -158,7 +165,7 @@ function SeoSmallText(props: SectionProps<ReturnType<typeof loader>>) {
 function SeoText(props: SectionProps<ReturnType<typeof loader>>) {
   const { texts } = props;
   if (!texts?.seoText || texts?.seoText === "<p></p>") {
-    return <></>;
+    return null;
   }
   return (
     <div
@@ -167,6 +174,7 @@ function SeoText(props: SectionProps<ReturnType<typeof loader>>) {
     >
       <div
         class="category-seo font-source-sans max-w-[750px] tracking-[0.07em] leading-4"
+        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: texts?.seoText }}
       />
     </div>
@@ -187,7 +195,7 @@ function PageResult(
 
   const infinite = layout?.pagination !== "pagination";
 
-  const layoutGrid = globalThis.window.localStorage?.getItem("layout-grid") ??
+  const layoutGrid = globalThis.window?.localStorage?.getItem("layout-grid") ??
     "4";
 
   const results = (
@@ -242,8 +250,9 @@ function PageResult(
       >
         <script
           type="module"
+          // deno-lint-ignore react-no-danger
           dangerouslySetInnerHTML={{
-            __html: useScript(checkLayoutAndUpdate),
+            __html: scriptCheckLayoutAndUpdate,
           }}
         />
         {products?.map((product, index) => (
@@ -356,6 +365,7 @@ function Result(
         item_list_id: breadcrumb.itemListElement?.at(-1)?.item,
         items: page.products?.map((product, index) =>
           mapProductToAnalyticsItem({
+            // deno-lint-ignore react-rules-of-hooks
             ...(useOffer(product.offers)),
             index: offset + index,
             product,
@@ -368,6 +378,12 @@ function Result(
 
   const sortBy = sortOptions.length > 0 && (
     <Sort sortOptions={sortOptions} url={url} />
+  );
+
+  const scriptHook = useScript(
+    setPageQuerystring,
+    `${pageInfo.currentPage}`,
+    container,
   );
   return (
     <>
@@ -431,8 +447,9 @@ function Result(
                     </div>
                     <div class="flex justify-between items-center gap-3 ml-10">
                       <button
+                        type="button"
                         class="flex gap-0.5 items-center group/switch-layout"
-                        hx-on:click={useScript(fullProductLayout)}
+                        hx-on:click={scriptFullProductLayout}
                       >
                         <span class="w-1.5 h-[18px] inline bg-[#d8caa5] group-hover/switch-layout:bg-[#bea669] duration-200" />
                         <span class="w-1.5 h-[18px] inline bg-[#d8caa5] group-hover/switch-layout:bg-[#bea669] duration-200" />
@@ -440,8 +457,9 @@ function Result(
                         <span class="w-1.5 h-[18px] inline bg-[#d8caa5] group-hover/switch-layout:bg-[#bea669] duration-200" />
                       </button>
                       <button
+                        type="button"
                         class="flex gap-0.5 items-center group/switch-layout"
-                        hx-on:click={useScript(smallProductLayout)}
+                        hx-on:click={scriptSmallProductLayout}
                       >
                         <span class="w-1.5 h-[18px] inline bg-[#d8caa5] group-hover/switch-layout:bg-[#bea669] duration-200" />
                         <span class="w-1.5 h-[18px] inline bg-[#d8caa5] group-hover/switch-layout:bg-[#bea669] duration-200" />
@@ -464,12 +482,9 @@ function Result(
       </div>
       <script
         type="module"
+        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{
-          __html: useScript(
-            setPageQuerystring,
-            `${pageInfo.currentPage}`,
-            container,
-          ),
+          __html: scriptHook,
         }}
       />
     </>

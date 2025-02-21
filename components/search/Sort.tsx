@@ -19,7 +19,7 @@ const labels: Record<string, string> = {
   "orders:desc": "Mais vendidos",
   "name:desc": "Nome - de Z a A",
   "name:asc": "Nome - de A a Z",
-  "release:desc": "Lançamento",
+  "release:desc": "Mais recentes",
   "discount:desc": "Maior desconto",
 };
 function Sort({ sortOptions, url }: Props) {
@@ -35,6 +35,9 @@ function Sort({ sortOptions, url }: Props) {
   }));
 
   const selectLabel = options.find((item) => item.value === current)?.label;
+
+  console.log(labels)
+  console.log(options)
   return (
     <>
       <label
@@ -50,7 +53,7 @@ function Sort({ sortOptions, url }: Props) {
         >
           {device === "desktop"
             ? labels[selectLabel ?? ""] ??
-              labels[options[0].label]
+              "Relevância"
             : "Ordenar Por"}
 
           <Icon

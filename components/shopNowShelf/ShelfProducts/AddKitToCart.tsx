@@ -33,6 +33,14 @@ function AddKitToCart() {
           }),
         },
       );
+
+      setTimeout(() => {
+
+        const openMinicart = globalThis?.document?.querySelector(
+          "#minicart-drawer",
+        ) as HTMLLabelElement;
+        openMinicart?.click();
+      }, 1000)
     }
   };
 
@@ -63,6 +71,7 @@ function AddKitToCart() {
           </p>
         )}
       <button
+        type="button"
         onClick={() => handleAddToCart()}
         class={`tracking-[0.07em] font-source-sans uppercase text-[#f7f4ed] font-normal w-full pt-[0.5em] pb-[0.64em]  duration-200 bg-black ${
           state?.kitItems.length === 0

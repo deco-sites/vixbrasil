@@ -70,7 +70,9 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
 
         <div class="flex justify-center items-center w-full">
           <ul id="vix-brasil-navigation" class="flex">
-            {navItems?.slice(0, 10).map((item) => <NavItem item={item} />)}
+            {navItems?.slice(0, 10).map((item) => (
+              <NavItem item={item} key={item} />
+            ))}
           </ul>
           <div>{/* ship to */}</div>
         </div>
@@ -220,6 +222,8 @@ function Header({
   ...props
 }: Props) {
   const device = useDevice();
+
+  const scriptHeaderFunction = useScript(HeaderFunctions);
   return (
     <header
       style={{
@@ -242,7 +246,8 @@ function Header({
       </div>
       <script
         type="module"
-        dangerouslySetInnerHTML={{ __html: useScript(HeaderFunctions) }}
+        // deno-lint-ignore react-no-danger
+        dangerouslySetInnerHTML={{ __html: scriptHeaderFunction }}
       />
     </header>
   );

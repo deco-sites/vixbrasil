@@ -31,6 +31,7 @@ function Question({ question, answer }: Question) {
       </summary>
       <div
         class="collapse-content"
+        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: answer }}
       />
     </details>
@@ -45,6 +46,7 @@ function Contact({ title, description, link }: Contact) {
         {description && (
           <div
             class="text-lg lg:text-xl"
+            // deno-lint-ignore react-no-danger
             dangerouslySetInnerHTML={{ __html: description }}
           />
         )}
@@ -85,7 +87,12 @@ export default function FAQ({
 
       <ul class="w-full">
         <li>
-          {questions.map((question) => <Question {...question} />)}
+          {questions.map((question) => (
+            <Question
+              {...question}
+              key={question}
+            />
+          ))}
         </li>
       </ul>
 

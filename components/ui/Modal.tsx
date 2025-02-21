@@ -29,7 +29,10 @@ function Modal({ children, open, id = useId() }: Props) {
       </div>
       <script
         type="module"
-        dangerouslySetInnerHTML={{ __html: useScript(script, id) }}
+        // deno-lint-ignore react-no-danger
+        dangerouslySetInnerHTML={{
+          __html: useScript(script, id),
+        }}
       />
     </>
   );

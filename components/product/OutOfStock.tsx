@@ -51,7 +51,10 @@ export default function Notify({ productID }: Props) {
           name="email"
         />
 
-        <button class="font-source-sans font-medium text-sm uppercase text-white w-20 h-8 bg-[#bea669] px-4 rounded-lg">
+        <button
+          type="button"
+          class="font-source-sans font-medium text-sm uppercase text-white w-20 h-8 bg-[#bea669] px-4 rounded-lg"
+        >
           <span class="[.htmx-request_&]:hidden inline">Enviar</span>
           <span class="[.htmx-request_&]:inline hidden loading loading-spinner loading-xs" />
         </button>

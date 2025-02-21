@@ -17,8 +17,8 @@ const snippet = () => {
 const loader = (): Script => {
   const transformReq = () => {
     const script = `<script defer src="${
-      useScriptAsDataURI(snippet)
-    }"></script>`;
+      // deno-lint-ignore react-rules-of-hooks
+      useScriptAsDataURI(snippet)}"></script>`;
     return script;
   };
   return ({ src: transformReq });

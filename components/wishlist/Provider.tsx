@@ -31,14 +31,16 @@ function WishlistProvider({ wishlist }: {
     >
       <input type="hidden" name="product-id" />
       <input type="hidden" name="product-group-id" />
-      <button hidden />
+      <button type="button" hidden />
 
       <script
         type="application/json"
+        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(wishlist) }}
       />
       <script
         type="module"
+        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{
           __html: useScript(onLoad, WISHLIST_FORM_ID),
         }}

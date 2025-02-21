@@ -34,6 +34,7 @@ export default function GallerySlider(props: Props) {
   );
   const imagesFiltered = filtered.length > 0 ? filtered : groupImages;
   const images = imagesFiltered.filter((item) => item.name !== "IMAGEM1");
+  // deno-lint-ignore react-rules-of-hooks
   const device = useDevice();
   return (
     <>
@@ -152,7 +153,11 @@ export default function GallerySlider(props: Props) {
 
       <script
         type="module"
-        dangerouslySetInnerHTML={{ __html: useScript(ProductImageZoom) }}
+        // deno-lint-ignore react-no-danger
+        dangerouslySetInnerHTML={{
+          // deno-lint-ignore react-rules-of-hooks
+          __html: useScript(ProductImageZoom),
+        }}
       />
     </>
   );

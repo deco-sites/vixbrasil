@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 
-
 @tailwind utilities;
 
 @layer base {
@@ -11,8 +10,8 @@
   }
 
   /** Remove default styles from input[type=number] */
-  input[type='number']::-webkit-inner-spin-button,
-  input[type='number']::-webkit-outer-spin-button {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
@@ -42,7 +41,6 @@
   border-radius: 50%;
   padding: 0.5rem;
   top: 47%;
-
 
   width: 28px;
   height: 28px;
@@ -75,21 +73,21 @@
 
 .shop-now__slider--arrow--prev,
 .banner-video__slider--arrow--prev {
-  left: 80px; 
+  left: 80px;
   transform: rotate(180deg);
 }
 .shop-now__slider--arrow--prev {
-  left: 5px; 
+  left: 5px;
 }
 
 .banner-video__slider--arrow--next:after {
-     transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .shop-now__slider--arrow--next {
-  right: 5px; 
+  right: 5px;
 }
 .banner-video__slider--arrow--next {
-  right: 80px; 
+  right: 80px;
 }
 
 .slick-dots.shop-now-shelf__dots {
@@ -139,25 +137,24 @@
 
 @media all and (max-width: 1024px) {
   .banner-video__slider--arrow--prev {
-    left:20px; 
+    left: 20px;
   }
   .banner-video__slider--arrow--next {
-    right:20px; 
+    right: 20px;
   }
 }
-
 
 #imageZoom--image {
   width: 508px;
   height: 768px;
   object-fit: cover;
-  transition: background-size 0.3s, background-position 0.3s; 
+  transition: background-size 0.3s, background-position 0.3s;
   cursor: zoom-in;
 }
 
 #imageZoom--image.zoom-active {
   cursor: zoom-out;
-  background-size: 200%
+  background-size: 200%;
 }
 
 @keyframes progress-frame {

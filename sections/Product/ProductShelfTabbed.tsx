@@ -1,3 +1,4 @@
+// deno-lint-ignore-file
 import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 
@@ -65,7 +66,7 @@ export const LoadingFallback = (
 
     <Section.Tabbed>
       <>
-        <Section.Placeholder height="471px" />;
+        <Section.Placeholder height="471px" />
       </>
     </Section.Tabbed>
   </Section.Container>

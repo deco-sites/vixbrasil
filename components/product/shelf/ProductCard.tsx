@@ -254,7 +254,7 @@ function ProductCard({
           )}
       </div>
 
-      <Slider.JS rootId={`image-shelf--${id}`} infinite={true} />
+      <Slider.JS rootId={`image-shelf--${id}`} infinite />
     </div>
   );
 }

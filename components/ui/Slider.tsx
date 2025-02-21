@@ -6,6 +6,7 @@ function Dot({ index, ...props }: {
 } & JSX.IntrinsicElements["button"]) {
   return (
     <button
+      type="button"
       {...props}
       data-dot={index}
       aria-label={`go to slider item ${index}`}
@@ -24,6 +25,7 @@ function Item({ index, ...props }: JSX.IntrinsicElements["li"] & {
 function NextButton(props: JSX.IntrinsicElements["button"]) {
   return (
     <button
+      type="button"
       disabled
       data-slide={`next--${props.id}`}
       aria-label="Next item"
@@ -34,6 +36,7 @@ function NextButton(props: JSX.IntrinsicElements["button"]) {
 function PrevButton(props: JSX.IntrinsicElements["button"]) {
   return (
     <button
+      type="button"
       disabled
       data-slide={`prev--${props.id}`}
       aria-label="Previous item"
@@ -195,6 +198,7 @@ function JS({ rootId, scroll = "smooth", interval, infinite = false }: Props) {
   return (
     <script
       type="module"
+      // deno-lint-ignore react-no-danger
       dangerouslySetInnerHTML={{
         __html: useScript(onLoad, {
           rootId,

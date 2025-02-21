@@ -1,3 +1,4 @@
+// deno-lint-ignore-file
 import { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import type { JSX } from "preact";
@@ -127,6 +128,7 @@ function Links(props: Props) {
 
   return (
     <BaseContainer background={background}>
+      {/* // deno-lint-ignore jsx-no-useless-fragment */}
       <>
         <header class="flex flex-col justify-center items-center gap-4">
           {header?.logo?.img && (

@@ -77,7 +77,7 @@ function FilterValues({ key, values }: FilterToggle) {
           );
         }
 
-        return <ValueItem {...item} />;
+        return <ValueItem {...item} key={item} />;
       })}
     </ul>
   );

@@ -26,6 +26,7 @@ export const ShopNowShelfComponent = ({ items }: ShopNowShelfProps) => {
 
       <script
         type="module"
+        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: useScript(ShopNowShelfFunctions) }}
       />
     </div>

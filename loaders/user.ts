@@ -9,6 +9,7 @@ async function loader(
   _req: Request,
   ctx: AppContext,
 ): Promise<Person | null> {
+  // deno-lint-ignore react-rules-of-hooks
   const platform = usePlatform();
 
   if (platform === "vtex") {

@@ -87,8 +87,8 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
                   topIcon ?? "",
                 )
               }.png`}
-              width={"auto"}
-              height={"auto"}
+              width="auto"
+              height="auto"
               alt="Product category icon"
               class="lg:w-[30px] lg:h-[30px] w-[13px] h-[13px]"
             />
@@ -110,8 +110,8 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
                   bottomIcon ?? "",
                 )
               }.png`}
-              width={"auto"}
-              height={"auto"}
+              width="auto"
+              height="auto"
               alt="Product category icon"
               class="lg:w-[30px] lg:h-[30px] w-[13px] h-[13px]"
             />
@@ -136,6 +136,7 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
             }}
           >
             <button
+              type="button"
               class="flex w-full items-center justify-between pr-3 gap-1 list-none font-source-sans text-sm tracking-[0.07em] text-black list"
               onClick={() => {
                 setDropdownTop("h[100%]");
@@ -148,8 +149,8 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
                       topIcon ?? "",
                     )
                   }.png`}
-                  width={"auto"}
-                  height={"auto"}
+                  width="auto"
+                  height="auto"
                   alt="Product category icon"
                   class="lg:w-[30px] lg:h-[30px] w-[13px] h-[13px]"
                 />
@@ -201,6 +202,7 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
             }}
           >
             <button
+              type="button"
               class="flex w-full items-center justify-between pr-3 gap-1 list-none font-source-sans text-sm tracking-[0.07em] text-black list"
               onClick={() => {
                 setDropdownBottom("h[100%]");
@@ -213,8 +215,8 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
                       bottomIcon ?? "",
                     )
                   }.png`}
-                  width={"auto"}
-                  height={"auto"}
+                  width="auto"
+                  height="auto"
                   alt="Product category icon"
                   class="lg:w-[30px] lg:h-[30px] w-[13px] h-[13px]"
                 />

@@ -202,7 +202,7 @@ function Desktop({
                 created by
               </span>
               <div>
-                <img loading="lazy" src={logo} width={"auto"} height={"auto"} />
+                <img loading="lazy" src={logo} width="auto" height="auto" />
               </div>
             </div>
             {
@@ -386,7 +386,7 @@ function Mobile({
                 created by
               </span>
               <div class="pt-2">
-                <img loading="lazy" src={logo} width={"auto"} height={"auto"} />
+                <img loading="lazy" src={logo} width="auto" height="auto" />
               </div>
             </div>
             {

@@ -22,6 +22,7 @@ const ProductPopUp = (
       <div class="absolute z-10 bg-white lg:w-auto lg:min-w-[950px] w-[98vw] rounded-[2px]">
         <div class="relative flex justify-center ">
           <button
+            type="button"
             onClick={() => setActive(false)}
             class="absolute top-2 right-2 text-black hover:text-[#bea669] duration-200 cursor-pointer"
           >
@@ -36,7 +37,13 @@ const ProductPopUp = (
           {products.map((item, index) => {
             const dataDispatch = index === 0 ? "SET_DATA_1" : "SET_DATA_2";
 
-            return <KitItem productId={item} dataDispatch={dataDispatch} />;
+            return (
+              <KitItem
+                productId={item}
+                dataDispatch={dataDispatch}
+                key={item}
+              />
+            );
           })}
         </div>
         <AddKitToCart />
@@ -62,7 +69,7 @@ export default function ShelfProducts(
         }}
         class="lg:p-4 p-1 after:duration-200 font-source-sans text-white font-bold relative after:content-['Shop_Now'] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:flex after:justify-center after:items-center after:opacity-0 hover:after:opacity-100 after:bg-bronze-opacity"
       >
-        <img src={src} alt={alt} width={"auto"} height={"auto"} />
+        <img src={src} alt={alt} width="auto" height="auto" />
       </div>
 
       {active &&

@@ -55,6 +55,7 @@ export default defineApp(async (_req, ctx) => {
 
         {/* Enable View Transitions API */}
         <style
+          // deno-lint-ignore react-no-danger
           dangerouslySetInnerHTML={{
             __html: `@view-transition { navigation: auto; }`,
           }}
@@ -123,7 +124,10 @@ export default defineApp(async (_req, ctx) => {
       {/* Service Worker */}
       <script
         type="module"
-        dangerouslySetInnerHTML={{ __html: useScript(serviceWorkerScript) }}
+        // deno-lint-ignore react-no-danger
+        dangerouslySetInnerHTML={{
+          __html: useScript(serviceWorkerScript),
+        }}
       />
     </>
   );

@@ -82,6 +82,7 @@ async function action(
   ctx: AppContext,
 ): Promise<Minicart> {
   const { setQuantity, setCoupon, addToCart, removeCoupon, setVendorCode } =
+    // deno-lint-ignore react-rules-of-hooks
     actions[usePlatform()];
 
   const form = cartFrom(await req.formData());
@@ -97,6 +98,7 @@ async function action(
     : setQuantity;
 
   if (!handler) {
+    // deno-lint-ignore react-rules-of-hooks
     throw new Error(`Unsupported action on platform ${usePlatform()}`);
   }
 

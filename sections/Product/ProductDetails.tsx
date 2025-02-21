@@ -25,10 +25,8 @@ export default function ProductDetails({ page }: Props) {
   const { breadcrumbList, product } = page;
   const { offers } = product;
 
-  const {
-    price = 0,
-    listPrice,
-  } = useOffer(offers);
+  // deno-lint-ignore react-rules-of-hooks
+  const { price = 0, listPrice } = useOffer(offers);
 
   const breadcrumb = {
     ...breadcrumbList,
@@ -42,7 +40,7 @@ export default function ProductDetails({ page }: Props) {
     price,
     listPrice,
   });
-
+  // deno-lint-ignore react-rules-of-hooks
   const viewItemEvent = useSendEvent({
     on: "view",
     event: {

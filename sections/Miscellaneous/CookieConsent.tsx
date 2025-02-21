@@ -5,14 +5,14 @@ const script = (id: string) => {
   const KEY = "store-cookie-consent";
   const ACCEPTED = "accepted";
   const HIDDEN = "!translate-y-[200%]";
-  const consent = globalThis.window.localStorage?.getItem(KEY);
+  const consent = globalThis.window?.localStorage?.getItem(KEY);
   const elem = document.getElementById(id);
 
   const handleScroll = () => {
     if (consent !== ACCEPTED && elem) {
       const accept = elem.querySelector("[data-button-cc-accept]");
       accept && accept.addEventListener("click", () => {
-        globalThis.window.localStorage.setItem(KEY, ACCEPTED);
+        globalThis.window?.localStorage.setItem(KEY, ACCEPTED);
         elem.classList.add(HIDDEN);
       });
       const close = elem.querySelector("[data-button-cc-close]");
@@ -98,6 +98,7 @@ function CookieConsent() {
           </div>
 
           <button
+            type="button"
             class={clx(
               "w-full h-9 bg-brown rounded=[1px] flex items-center justify-center text-white font-source-sans text-sm tracking-[0.07em] font-semibold text-center",
               "sm:w-[207px]",
@@ -106,7 +107,11 @@ function CookieConsent() {
           >
             Aceitar
           </button>
-          <button class="absolute top-3 right-3" data-button-cc-close>
+          <button
+            type="button"
+            class="absolute top-3 right-3"
+            data-button-cc-close
+          >
             <svg
               width="15"
               height="14"
@@ -134,6 +139,7 @@ function CookieConsent() {
       </div>
       <script
         type="module"
+        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: useScript(script, id) }}
       />
     </>

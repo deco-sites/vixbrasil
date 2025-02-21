@@ -34,8 +34,8 @@ export default function ShelfInfo({ product }: AddToCartShelfProps) {
                   icon.value ?? "",
                 )
               }.png`}
-              width={"auto"}
-              height={"auto"}
+              width="auto"
+              height="auto"
               alt="Product category icon"
               class="lg:w-[30px] lg:h-[30px] w-[13px] h-[13px]"
             />
@@ -53,12 +53,13 @@ export default function ShelfInfo({ product }: AddToCartShelfProps) {
         </div>
 
         <div
-          class="hidden lg:block h-auto border border-[#e8e8e8] mx-auto cursor-pointer w-[145%] mb-[10px] absolute top-3 bg-white opacity-0 duration-200 group-hover/image-shelf:opacity-100"
+          class="hidden lg:block h-auto border border-[#e8e8e8] mx-auto cursor-pointer w-[145%] mb-[10px] absolute top-[0px] left-[-20px] bg-white opacity-0 duration-200 group-hover/image-shelf:opacity-100"
           onMouseLeave={() => {
             setDropdown("h-[0px]");
           }}
         >
           <button
+            type="button"
             class="flex w-full items-center justify-between pr-3 gap-1 list-none font-source-sans text-sm tracking-[0.07em] text-black list py-[0.2rem] px-4"
             onClick={() => {
               setDropdown("h[100%]");
@@ -71,8 +72,8 @@ export default function ShelfInfo({ product }: AddToCartShelfProps) {
                     icon.value ?? "",
                   )
                 }.png`}
-                width={"auto"}
-                height={"auto"}
+                width="auto"
+                height="auto"
                 alt="Product category icon"
                 class="lg:w-[30px] lg:h-[30px] w-[13px] h-[13px]"
               />

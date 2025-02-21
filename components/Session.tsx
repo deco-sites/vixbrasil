@@ -259,16 +259,19 @@ interface Props {
 export default function Session(
   { minicart, wishlist, user, mode = "lazy" }: Props,
 ) {
+  const postUrl = useComponent(import.meta.url);
+  const scriptSdk = useScript(sdk);
   if (mode === "lazy") {
     return (
       <>
         <Head>
           <script
             type="module"
-            dangerouslySetInnerHTML={{ __html: useScript(sdk) }}
+            // deno-lint-ignore react-no-danger
+            dangerouslySetInnerHTML={{ __html: scriptSdk }}
           />
         </Head>
-        <div hx-trigger="load" hx-post={useComponent(import.meta.url)} />
+        <div hx-trigger="load" hx-post={postUrl} />
       </>
     );
   }

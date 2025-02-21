@@ -17,6 +17,14 @@ const onClick = () => {
     decodeURIComponent(container.getAttribute("data-cart-item")!),
   );
   window.STOREFRONT.CART.addToCart(item, platformProps);
+
+  setTimeout(() => {
+
+    const openMinicart = globalThis?.document?.querySelector(
+      "#minicart-drawer",
+    ) as HTMLLabelElement;
+    openMinicart?.click();
+  }, 1000)
 };
 
 // Copy cart form values into AddToCartButton
@@ -106,6 +114,7 @@ function AddToCartButton(props: Props) {
       )}
     >
       <button
+        type="button"
         class={clx("flex-grow cursor-pointer", _class?.toString())}
         hx-on:click={useScript(onClick)}
       >
@@ -114,6 +123,7 @@ function AddToCartButton(props: Props) {
 
       <script
         type="module"
+        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: useScript(onLoad, id) }}
       />
     </div>

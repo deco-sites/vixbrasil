@@ -43,6 +43,7 @@ function WishlistButton({ item }: Props) {
   return (
     <>
       <button
+        type="button"
         id={id}
         data-wishlist-button
         disabled
@@ -60,6 +61,7 @@ function WishlistButton({ item }: Props) {
       </button>
       <script
         type="module"
+        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: useScript(onLoad, id, productID) }}
       />
     </>

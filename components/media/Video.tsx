@@ -1,5 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
-import { ImageWidget } from "apps/admin/widgets.ts";
+import type { ImageWidget } from "apps/admin/widgets.ts";
 /** @title Video */
 export interface VideoProps {
   /** @readOnly true */
@@ -18,19 +18,17 @@ export interface VideoProps {
   /** @hide true */
   device?: "mobile" | "tablet" | "desktop";
 }
-const Video = (
-  {
-    src,
-    mobileSrc,
-    url,
-    alt,
-    target = "_self",
-    classes = "",
-    thumbnail,
-    thumbnailMobile,
-    device,
-  }: VideoProps,
-) => {
+const Video = ({
+  src,
+  mobileSrc,
+  url,
+  alt,
+  target = "_self",
+  classes = "",
+  thumbnail,
+  thumbnailMobile,
+  device,
+}: VideoProps) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const handlePlayClick = () => {
@@ -62,8 +60,8 @@ const Video = (
               src={device === "desktop" ? thumbnail : thumbnailMobile}
               alt={alt}
               class="w-full h-full object-cover"
-              width={globalThis.window.innerWidth > 1024 ? 1920 : 540}
-              height={globalThis.window.innerWidth > 1024 ? 950 : 800}
+              width={globalThis?.window?.innerWidth > 1024 ? 1920 : 540}
+              height={globalThis?.window?.innerWidth > 1024 ? 950 : 800}
             />
           </div>
         )
