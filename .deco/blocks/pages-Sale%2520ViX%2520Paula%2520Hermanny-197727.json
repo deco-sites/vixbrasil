@@ -14,121 +14,12 @@
       "banners": [
         {
           "image": {
-            "mobile": "https://data.decoassets.com/vixbrasil/e4589c64-9b42-4429-9776-face00ac8875/banner-categoria-blusas-mobile.jpg",
-            "desktop": "https://data.decoassets.com/vixbrasil/2265528c-599d-480b-9bf5-4fd7ca9ebb76/banner-categoria-blusas-desktop.jpg",
-            "alt": "Roupas"
-          },
-          "matcher": "/roupas/top*",
-          "title": "Top"
-        },
-        {
-          "image": {
-            "mobile": "https://data.decoassets.com/vixbrasil/645640ef-bb4f-4887-94fd-82bf5da1a121/banner-categoria-saias-mobile.jpg",
-            "desktop": "https://data.decoassets.com/vixbrasil/cdd2968b-cb60-4dba-b433-45e495462edc/banner-categoria-saias-desktop.jpg",
-            "alt": "Roupas"
-          },
-          "matcher": "/roupas/saias*"
-        },
-        {
-          "image": {
-            "mobile": "https://data.decoassets.com/vixbrasil/8ce1a452-c66d-42e4-bb2c-8474bf096488/banner-categoria-maios-mobile.jpg",
-            "desktop": "https://data.decoassets.com/vixbrasil/324859af-e3ea-46c1-b5ac-279baf01d0af/cat-maio.png"
-          },
-          "matcher": "/praia/maios*"
-        },
-        {
-          "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/b4fdfa02-93dd-4e13-98e2-d20537e64ecb/cat-saidas.png",
-            "mobile": "https://data.decoassets.com/vixbrasil/585db668-0ffe-4414-a8c4-55bb71e1c136/banner-categoria-saidas-mobile.jpg"
-          },
-          "matcher": "/praia/saidas-de-praia*",
-          "title": "Saída de Praia"
-        },
-        {
-          "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/4376b371-6c73-442b-956d-4491a5446ac9/cat-biquini.png",
-            "mobile": "https://data.decoassets.com/vixbrasil/a8ec8c3f-4838-48c6-ad27-2d6a5bd769cf/banner-categoria-biquinis-mobile.jpg"
-          },
-          "matcher": "/praia/biquinis*",
-          "title": "Biquíni"
-        },
-        {
-          "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/4c328b41-ae73-4e86-a706-66986f5a88e3/novidades_desktop.png",
-            "mobile": "https://data.decoassets.com/vixbrasil/62a2f240-24b4-4e91-aa05-8e9f8d4c3732/novidades_mobile.png"
-          },
-          "matcher": "/Novidades",
-          "title": "Novidades"
-        },
-        {
-          "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/35753ab9-68db-4729-896e-70b1ae0de9c4/banner-categoria-vestidos-desktop.jpg",
-            "mobile": "https://data.decoassets.com/vixbrasil/7de44d72-9104-4fb9-886e-3e2612705de6/banner-categoria-vestidos-mobile.jpg"
-          },
-          "matcher": "/roupas/vestidos*"
-        },
-        {
-          "image": {
-            "mobile": "https://data.decoassets.com/vixbrasil/d8ea53c8-f87d-4e87-b015-9d5ff6000ec3/banner-categoria-acessorios-mobile.jpg",
-            "desktop": "https://data.decoassets.com/vixbrasil/8c0a4f01-a0ae-4467-84e2-3abf0a0576de/banner-categoria-acessorios-desktop.jpg"
-          },
-          "matcher": "/acessorios*",
-          "title": "Acessórios"
-        },
-        {
-          "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/11832c27-a8c9-4d52-841c-e0cd72546498/banner-categoria-roupas-desktop.jpg",
-            "mobile": "https://data.decoassets.com/vixbrasil/49158916-3429-40eb-920a-bf3b4c8b68ac/banner-categoria-roupas-mobile.jpg"
-          },
-          "matcher": "/roupas/casacos*",
-          "title": "Casacos"
-        },
-        {
-          "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/bbe4cfc7-45a6-47cd-a1d6-4a4d58de4b3e/banner-categoria-shorts-desktop.jpg",
-            "mobile": "https://data.decoassets.com/vixbrasil/6ae0fe8a-6335-4745-80d7-ddb019a3d0d0/banner-categoria-shorts-mobile.jpg"
-          },
-          "matcher": "/roupas/shorts*"
-        },
-        {
-          "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/39766bb9-bf28-48f3-8a69-753d43a7f094/calcas.png",
-            "mobile": "https://data.decoassets.com/vixbrasil/39766bb9-bf28-48f3-8a69-753d43a7f094/calcas.png"
-          },
-          "matcher": "/roupas/*",
-          "title": "Calças"
-        },
-        {
-          "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/6781efd9-45ba-4a25-80e0-961d93a380b3/banner-categoria-blusas-desktop.jpg",
-            "mobile": "https://data.decoassets.com/vixbrasil/3b27d3df-8af5-47b6-8b24-c5d910f4547c/banner-categoria-blusas-mobile.jpg"
-          },
-          "matcher": "/roupas/blusas*"
-        },
-        {
-          "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/11832c27-a8c9-4d52-841c-e0cd72546498/banner-categoria-roupas-desktop.jpg",
-            "mobile": "https://data.decoassets.com/vixbrasil/49158916-3429-40eb-920a-bf3b4c8b68ac/banner-categoria-roupas-mobile.jpg"
-          },
-          "matcher": "/roupas/macacoes*",
-          "title": "Macacões"
-        },
-        {
-          "image": {
-            "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/vix-brasil/6ac37dff-2537-4866-b132-eef406b6a178/59eaeba3-c886-42d3-b462-7846d9827d92___6c3b3895afc696b605e37f1c6e56b549.webp",
-            "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/vix-brasil/6ac37dff-2537-4866-b132-eef406b6a178/59eaeba3-c886-42d3-b462-7846d9827d92___6c3b3895afc696b605e37f1c6e56b549.webp",
-            "alt": "Biquínis"
-          },
-          "matcher": "/*"
-        },
-        {
-          "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/19458092-4fd8-4c35-8af6-2e05af196f2f/banner-sale-desktop.png",
             "mobile": "https://data.decoassets.com/vixbrasil/b6bb1125-b19c-4453-863f-a6f4463cab39/banner-sale-mobile.png",
+            "desktop": "https://data.decoassets.com/vixbrasil/19458092-4fd8-4c35-8af6-2e05af196f2f/banner-sale-desktop.png",
             "alt": "sale"
           },
           "matcher": "/sale*",
-          "active": false
+          "active": true
         }
       ]
     },
