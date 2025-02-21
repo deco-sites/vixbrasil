@@ -75,7 +75,7 @@
       "tags": ["fresh", "recommended"]
     }
   },
-  "nodeModulesDir": "auto",
+  "nodeModulesDir": true,
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
