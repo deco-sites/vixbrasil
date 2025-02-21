@@ -52,12 +52,11 @@ export default function AddToCartShelf(
       });
 
       setTimeout(() => {
-
         const openMinicart = globalThis?.document?.querySelector(
           "#minicart-drawer",
         ) as HTMLLabelElement;
         openMinicart?.click();
-      }, 1000)
+      }, 1000);
     } else {
       setButtonTitle("Selecione um tamanho!");
       setTimeout(() => {

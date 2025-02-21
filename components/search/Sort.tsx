@@ -36,8 +36,8 @@ function Sort({ sortOptions, url }: Props) {
 
   const selectLabel = options.find((item) => item.value === current)?.label;
 
-  console.log(labels)
-  console.log(options)
+  console.log(labels);
+  console.log(options);
   return (
     <>
       <label

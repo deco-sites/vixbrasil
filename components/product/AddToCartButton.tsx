@@ -19,12 +19,11 @@ const onClick = () => {
   window.STOREFRONT.CART.addToCart(item, platformProps);
 
   setTimeout(() => {
-
     const openMinicart = globalThis?.document?.querySelector(
       "#minicart-drawer",
     ) as HTMLLabelElement;
     openMinicart?.click();
-  }, 1000)
+  }, 1000);
 };
 
 // Copy cart form values into AddToCartButton

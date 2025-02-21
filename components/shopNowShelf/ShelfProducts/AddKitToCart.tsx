@@ -35,12 +35,11 @@ function AddKitToCart() {
       );
 
       setTimeout(() => {
-
         const openMinicart = globalThis?.document?.querySelector(
           "#minicart-drawer",
         ) as HTMLLabelElement;
         openMinicart?.click();
-      }, 1000)
+      }, 1000);
     }
   };
 

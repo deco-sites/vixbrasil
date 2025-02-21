@@ -39,7 +39,7 @@ function AddKitToCart() {
           "#minicart-drawer",
         ) as HTMLLabelElement;
         openMinicart?.click();
-      }, 1000)
+      }, 1000);
     }
   };
 
