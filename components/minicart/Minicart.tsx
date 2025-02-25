@@ -212,7 +212,10 @@ export default function Cart(
 
                 {/* Cart Footer */}
                 <footer class="w-full shadow-[0px_-10px_20px_0px_#00000024]">
-                  <details class="collapse group/footer-minicart border-t border-base-200 p-2 flex flex-col bg-white pt-0 rounded-none" open>
+                  <details
+                    class="collapse group/footer-minicart border-t border-base-200 p-2 flex flex-col bg-white pt-0 rounded-none"
+                    open
+                  >
                     <summary class="collapse-title p-0 !flex justify-center botder-t-[2px] border-[#f7f4ed] h-10 min-h-5">
                       <Icon
                         id="footer-minicart-open"
