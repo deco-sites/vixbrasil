@@ -9,8 +9,8 @@ function AddKitToCart() {
       products: [
         state.kitItems.map((sku) => {
           return {
-            brand: 'Vix Brasil',
-            category: 'Kit',
+            brand: "Vix Brasil",
+            category: "Kit",
             id: sku?.id,
             variant: sku?.variant,
             name: sku?.variant,
