@@ -53,7 +53,9 @@ function ProductCard({
   const relativeUrl = relative(url);
 
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
-  const flag = additionalProperty?.find((item) => item.propertyID === "384");
+  const flag = additionalProperty?.find((item) =>
+    item.propertyID === "597"
+  );
   const flagSale = additionalProperty?.find((item) =>
     item.propertyID === "283"
   );

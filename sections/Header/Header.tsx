@@ -221,7 +221,7 @@ function Header({
 
     globalThis?.document?.addEventListener("DOMContentLoaded", function () {
       console.log(`CustomEventData: event view pageView ready`);
-      window?.dataLayer.push({
+      globalThis?.window?.dataLayer.push({
         event: "pageView",
         params: params,
       });
