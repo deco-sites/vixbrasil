@@ -39,7 +39,6 @@ function Animation(
   return (
     <>
       <style
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: animationByType[animationType] }}
       >
       </style>
@@ -52,9 +51,7 @@ function Animation(
       </div>
       <script
         type="module"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{
-          // deno-lint-ignore react-rules-of-hooks
           __html: useScript(snippet, id),
         }}
       />
@@ -144,7 +141,6 @@ export function Preview() {
   return (
     <div>
       <style
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: animationByType["slide-left"] }}
       >
       </style>

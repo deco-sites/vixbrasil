@@ -122,7 +122,6 @@ function AddToCartButton(props: Props) {
 
       <script
         type="module"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: useScript(onLoad, id) }}
       />
     </div>

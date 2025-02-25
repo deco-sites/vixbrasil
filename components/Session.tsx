@@ -267,7 +267,6 @@ export default function Session(
         <Head>
           <script
             type="module"
-            // deno-lint-ignore react-no-danger
             dangerouslySetInnerHTML={{ __html: scriptSdk }}
           />
         </Head>

@@ -139,7 +139,6 @@ function CookieConsent() {
       </div>
       <script
         type="module"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: useScript(script, id) }}
       />
     </>

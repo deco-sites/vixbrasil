@@ -17,7 +17,6 @@ export interface Props {
   status?: "success" | "failed";
 }
 export async function action(props: Props, req: Request, ctx: AppContext) {
-  // deno-lint-ignore react-rules-of-hooks
   const platform = usePlatform();
   const form = await req.formData();
   const name = `${form.get("name") ?? ""}`;

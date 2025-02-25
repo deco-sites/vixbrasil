@@ -149,7 +149,6 @@ function SeoSmallText(props: SectionProps<ReturnType<typeof loader>>) {
     <div class="max-w-[750px] mx-auto my-4">
       <div
         class="category-seo font-source-sans tracking-[0.07em] leading-4"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: texts?.text }}
       />
       <a
@@ -174,7 +173,6 @@ function SeoText(props: SectionProps<ReturnType<typeof loader>>) {
     >
       <div
         class="category-seo font-source-sans max-w-[750px] tracking-[0.07em] leading-4"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: texts?.seoText }}
       />
     </div>
@@ -250,7 +248,6 @@ function PageResult(
       >
         <script
           type="module"
-          // deno-lint-ignore react-no-danger
           dangerouslySetInnerHTML={{
             __html: scriptCheckLayoutAndUpdate,
           }}
@@ -365,7 +362,6 @@ function Result(
         item_list_id: breadcrumb.itemListElement?.at(-1)?.item,
         items: page.products?.map((product, index) =>
           mapProductToAnalyticsItem({
-            // deno-lint-ignore react-rules-of-hooks
             ...(useOffer(product.offers)),
             index: offset + index,
             product,
@@ -482,7 +478,6 @@ function Result(
       </div>
       <script
         type="module"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{
           __html: scriptHook,
         }}

@@ -4,6 +4,25 @@ import { formatPrice } from "../../../sdk/format.ts";
 function AddKitToCart() {
   const { state } = useKitContext();
 
+  const ecommerceKit = {
+    add: {
+      products: [
+        state.kitItems.map((sku) => {
+          return {
+            brand: 'Vix Brasil',
+            category: 'Kit',
+            id: sku?.id,
+            variant: sku?.variant,
+            name: sku?.variant,
+            price: sku?.price,
+            quantity: 1,
+          };
+        }),
+      ],
+    },
+    currencyCode: "BRL",
+  };
+
   const handleAddToCart = () => {
     if (state.kitItems) {
       window.STOREFRONT.CART.addToCart(
@@ -40,6 +59,12 @@ function AddKitToCart() {
         ) as HTMLLabelElement;
         openMinicart?.click();
       }, 1000);
+
+      console.log(`CustomEventData: event click addToCart ready`);
+      window?.dataLayer.push({
+        event: "addToCart",
+        ecommerce: ecommerceKit,
+      });
     }
   };
 

@@ -26,7 +26,40 @@ export default function AddToCartShelf(
   const { offers, additionalProperty } = product;
   const { listPrice, price } = useOffer(offers);
   const refId = additionalProperty?.find((item) => item.name === "RefId");
-
+  const ecommerceKit = {
+    add: {
+      products: [
+        state.kitItems.map((sku) => {
+          return {
+            brand: product?.brand?.name,
+            category: product?.category,
+            id: sku?.id,
+            variant: sku?.variant,
+            name: sku?.variant,
+            price: sku?.price,
+            quantity: 1,
+          };
+        }),
+      ],
+    },
+    currencyCode: "BRL",
+  };
+  const ecommerce = {
+    add: {
+      products: [
+        {
+          brand: product?.brand?.name,
+          category: product?.category,
+          id: product?.productID,
+          variant: product?.alternateName,
+          name: product?.alternateName,
+          price: product?.offers?.offers?.[0]?.price,
+          quantity: 1,
+        },
+      ],
+    },
+    currencyCode: "BRL",
+  };
   const handleAddToCart = () => {
     if (state.singleItem?.id !== "") {
       globalThis.window.STOREFRONT.CART.addToCart([{
@@ -57,6 +90,11 @@ export default function AddToCartShelf(
         ) as HTMLLabelElement;
         openMinicart?.click();
       }, 1000);
+      console.log(`CustomEventData: event click addToCart ready`);
+      window?.dataLayer.push({
+        event: "addToCart",
+        ecommerce: ecommerce,
+      });
     } else {
       setButtonTitle("Selecione um tamanho!");
       setTimeout(() => {
@@ -97,6 +135,12 @@ export default function AddToCartShelf(
         "#minicart-drawer",
       ) as HTMLLabelElement;
       openMinicart?.click();
+
+      console.log(`CustomEventData: event click addToCart ready`);
+      window?.dataLayer.push({
+        event: "addToCart",
+        ecommerce: ecommerceKit,
+      });
     } else {
       setButtonTitle("Selecione um tamanho!");
       setTimeout(() => {

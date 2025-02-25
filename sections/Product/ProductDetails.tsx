@@ -4,9 +4,9 @@ import ProductInfo from "../../components/product/ProductInfo.tsx";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
-import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
+import { useScript } from "site/sdk/useScript.ts";
 
 export interface Props {
   /** @title Integration */
@@ -25,7 +25,6 @@ export default function ProductDetails({ page }: Props) {
   const { breadcrumbList, product } = page;
   const { offers } = product;
 
-  // deno-lint-ignore react-rules-of-hooks
   const { price = 0, listPrice } = useOffer(offers);
 
   const breadcrumb = {
@@ -40,18 +39,37 @@ export default function ProductDetails({ page }: Props) {
     price,
     listPrice,
   });
-  // deno-lint-ignore react-rules-of-hooks
-  const viewItemEvent = useSendEvent({
-    on: "view",
-    event: {
-      name: "view_item",
-      params: {
-        item_list_id: "product",
-        item_list_name: "Product",
-        items: [item],
+  // deno-lint-ignore no-explicit-any
+  const productDetailEvent = (item: any) => {
+    const ecommerce = {
+      detail: {
+        actionField: {
+          list: item.item_category2,
+        },
+        products: [
+          {
+            brand: item.item_brand,
+            category: item.item_category2,
+            id: item.item_group_id,
+            variant: item.item_id,
+            name: item.item_name,
+            price: item.price,
+            quantity: 1,
+          },
+        ],
       },
-    },
-  });
+    };
+
+    globalThis?.document?.addEventListener("DOMContentLoaded", function () {
+      console.log(`CustomEventData: event view productDetail ready`);
+      window?.dataLayer.push({
+        event: "productDetail",
+        ecommerce: ecommerce,
+      });
+    });
+  };
+
+  const sendEvent = useScript(productDetailEvent, item);
 
   if (!page) {
     return (
@@ -67,7 +85,7 @@ export default function ProductDetails({ page }: Props) {
   }
 
   return (
-    <div {...viewItemEvent}>
+    <div>
       <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
       <div class="container flex flex-col gap-4 2xl:max-w-[1300px] max-w-[1230px] sm:gap-5 w-full pt-4 sm:pt-5 px-5 sm:px-0">
         <div
@@ -88,6 +106,11 @@ export default function ProductDetails({ page }: Props) {
       <div class="lg:my-[100px] my-[50px]">
         <hr class="w-full text-[#e8e8e8]" />
       </div>
+
+      <script
+        type="module"
+        dangerouslySetInnerHTML={{ __html: sendEvent }}
+      />
     </div>
   );
 }

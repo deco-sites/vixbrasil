@@ -74,7 +74,6 @@ function VendorCode({ vendor }: Props) {
             hx-swap="innerHTML"
             hx-target="this.parentElement"
             class="w-10 h-10 bg-[#bea669] flex justify-center items-center capitalize tracking-[0.07em] font-semibold text-sm text-white cursor-pointer"
-            // deno-lint-ignore react-rules-of-hooks
             hx-on:click={useScript(handleVendor)}
           >
             <Icon id="trash" size={20} />
@@ -92,9 +91,7 @@ function VendorCode({ vendor }: Props) {
 
         <script
           type="module"
-          // deno-lint-ignore react-no-danger
           dangerouslySetInnerHTML={{
-            // deno-lint-ignore react-rules-of-hooks
             __html: useScript(handleName),
           }}
         />
@@ -128,7 +125,6 @@ function VendorCode({ vendor }: Props) {
           hx-trigger="click"
           hx-swap="innerHTML"
           hx-target="#vendor-input"
-          // deno-lint-ignore react-rules-of-hooks
           hx-on:click={useScript(handleVendor)}
         >
           Ok

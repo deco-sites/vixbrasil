@@ -14,7 +14,7 @@ export default function ProductShelf({ products, title, cta }: Props) {
   if (!products || products.length === 0) {
     return null;
   }
-  // deno-lint-ignore react-rules-of-hooks
+
   const viewItemListEvent = useSendEvent({
     on: "view",
     event: {
@@ -25,7 +25,7 @@ export default function ProductShelf({ products, title, cta }: Props) {
           mapProductToAnalyticsItem({
             index,
             product,
-            // deno-lint-ignore react-rules-of-hooks
+
             ...(useOffer(product.offers)),
           })
         ),

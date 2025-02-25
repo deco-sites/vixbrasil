@@ -118,6 +118,19 @@ export default function Cart(
   },
 ) {
   const count = items.length;
+  const event = () => {
+    const openMinicart = globalThis?.document?.querySelector(
+      "#minicart-drawer",
+    ) as HTMLLabelElement;
+
+    openMinicart.addEventListener("click", () => {
+      console.log(`CustomEventData: event view view_cart ready`);
+      window?.dataLayer.push({
+        event: "view_cart",
+        ecommerce: window.STOREFRONT.CART.getCart(),
+      });
+    });
+  };
   return (
     <>
       <form
@@ -275,7 +288,6 @@ export default function Cart(
                     <a
                       class="flex items-center justify-center w-full text-base font-semibold font-source-sans text-white bg-black h-9 uppercase hover:bg-[#bea669] duration-200 border border-black hover:border-[#bea669]"
                       href={checkoutHref}
-                      // deno-lint-ignore react-rules-of-hooks
                       hx-on:click={useScript(sendBeginCheckoutEvent)}
                     >
                       <span class="[.htmx-request_&]:hidden">
@@ -291,10 +303,14 @@ export default function Cart(
       </form>
       <script
         type="module"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{
-          // deno-lint-ignore react-rules-of-hooks
           __html: useScript(onLoad, MINICART_FORM_ID),
+        }}
+      />
+      <script
+        type="module"
+        dangerouslySetInnerHTML={{
+          __html: useScript(event),
         }}
       />
     </>

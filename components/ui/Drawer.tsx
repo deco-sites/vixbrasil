@@ -55,9 +55,7 @@ function Drawer(
       </div>
       <script
         type="module"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{
-          // deno-lint-ignore react-rules-of-hooks
           __html: useScript(script, id),
         }}
       />

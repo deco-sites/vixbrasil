@@ -83,7 +83,6 @@ function VariantSelector({ product }: Props) {
 
   const item = mapProductToAnalyticsItem({ product, price, listPrice });
 
-  // deno-lint-ignore react-rules-of-hooks
   const selectItemEvent = useSendEvent({
     on: "change",
     event: {

@@ -198,7 +198,6 @@ function JS({ rootId, scroll = "smooth", interval, infinite = false }: Props) {
   return (
     <script
       type="module"
-      // deno-lint-ignore react-no-danger
       dangerouslySetInnerHTML={{
         __html: useScript(onLoad, {
           rootId,

@@ -19,6 +19,7 @@ import SignIn from "../../components/header/SignIn.tsx";
 import HeaderFunctions from "../../islands/functions/headerFunctions.tsx";
 import { useDevice } from "@deco/deco/hooks";
 import { useScript } from "site/sdk/useScript.ts";
+
 import { type LoadingFallbackProps } from "@deco/deco";
 import { NAVBAR_HEIGHT_DESKTOP } from "../../constants.ts";
 import CookieConsent from "../Miscellaneous/CookieConsent.tsx";
@@ -28,6 +29,7 @@ export interface Logo {
   width?: number;
   height?: number;
 }
+
 export interface SectionProps {
   /**
    * @title Desktop items
@@ -150,32 +152,19 @@ const Mobile = ({ logo, searchbar, mobileItems, loading }: Props) => (
       >
         <Icon id="menu" size={22} />
       </label>
-      <label
-        for={SEARCHBAR_DRAWER_ID}
-        aria-label="search icon button"
-      >
-        <input
-          type="checkbox"
-          id={SEARCHBAR_DRAWER_ID}
-          class="peer hidden"
-        />
+      <label for={SEARCHBAR_DRAWER_ID} aria-label="search icon button">
+        <input type="checkbox" id={SEARCHBAR_DRAWER_ID} class="peer hidden" />
         <span
           id="vix-brasil__search-bar--open"
           class="peer-checked:hidden block"
         >
-          <Icon
-            id="search"
-            size={18}
-          />
+          <Icon id="search" size={18} />
         </span>
         <span
           id="vix-brasil__search-bar--close"
           class="peer-checked:block hidden"
         >
-          <Icon
-            id="close"
-            size={18}
-          />
+          <Icon id="close" size={18} />
         </span>
       </label>
 
@@ -187,12 +176,7 @@ const Mobile = ({ logo, searchbar, mobileItems, loading }: Props) => (
           style={{ minHeight: NAVBAR_HEIGHT_MOBILE }}
           aria-label="logo"
         >
-          <Image
-            src={logo.src}
-            alt={logo.alt}
-            width={170}
-            height={53}
-          />
+          <Image src={logo.src} alt={logo.alt} width={170} height={53} />
         </a>
       )}
 
@@ -224,6 +208,28 @@ function Header({
   const device = useDevice();
 
   const scriptHeaderFunction = useScript(HeaderFunctions);
+
+  const eventPageView = () => {
+    const params = {
+      location: globalThis?.window?.location?.href,
+      page: globalThis?.window?.location?.pathname,
+      title: globalThis?.document?.title,
+      originalLocation: globalThis?.window?.location?.host,
+      originalReferrer: "",
+      "gtm.uniqueEventId": 55,
+    };
+
+    globalThis?.document?.addEventListener("DOMContentLoaded", function () {
+      console.log(`CustomEventData: event view pageView ready`);
+      window?.dataLayer.push({
+        event: "pageView",
+        params: params,
+      });
+    });
+  };
+
+  const sendEvent = useScript(eventPageView);
+
   return (
     <header
       style={{
@@ -246,8 +252,11 @@ function Header({
       </div>
       <script
         type="module"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: scriptHeaderFunction }}
+      />
+      <script
+        type="module"
+        dangerouslySetInnerHTML={{ __html: sendEvent }}
       />
     </header>
   );

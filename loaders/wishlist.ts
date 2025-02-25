@@ -10,7 +10,6 @@ async function loader(
   _req: Request,
   ctx: AppContext,
 ): Promise<Wishlist> {
-  // deno-lint-ignore react-rules-of-hooks
   const platform = usePlatform();
 
   if (platform === "vtex") {

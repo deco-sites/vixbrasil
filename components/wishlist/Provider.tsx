@@ -35,12 +35,10 @@ function WishlistProvider({ wishlist }: {
 
       <script
         type="application/json"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(wishlist) }}
       />
       <script
         type="module"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{
           __html: useScript(onLoad, WISHLIST_FORM_ID),
         }}

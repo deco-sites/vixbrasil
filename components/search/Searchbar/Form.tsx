@@ -126,7 +126,6 @@ export default function Searchbar(
       {/* Send search events as the user types */}
       <script
         type="module"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{
           __html: scriptSearchBar,
         }}

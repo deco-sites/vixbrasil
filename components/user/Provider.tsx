@@ -13,12 +13,10 @@ function UserProvider({ user }: {
       <script
         id={USER_ID}
         type="application/json"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(user) }}
       />
       <script
         type="module"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{
           __html: useScript(onLoad, USER_ID),
         }}

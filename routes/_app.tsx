@@ -32,7 +32,7 @@ export default defineApp(async (_req, ctx) => {
         <link
           rel="preload"
           as="script"
-          href="https://www.googletagmanager.com/gtm.js?id=GTM-NZ2CC7C"
+          href="https://www.googletagmanager.com/gtm.js?id=GTM-PRD9CF2N"
         />
         <link
           rel="preload"
@@ -55,7 +55,6 @@ export default defineApp(async (_req, ctx) => {
 
         {/* Enable View Transitions API */}
         <style
-          // deno-lint-ignore react-no-danger
           dangerouslySetInnerHTML={{
             __html: `@view-transition { navigation: auto; }`,
           }}
@@ -124,7 +123,6 @@ export default defineApp(async (_req, ctx) => {
       {/* Service Worker */}
       <script
         type="module"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{
           __html: useScript(serviceWorkerScript),
         }}

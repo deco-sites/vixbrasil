@@ -45,7 +45,6 @@ function ProductInfo({ page }: Props) {
     seller = "1",
     availability,
     installments,
-    // deno-lint-ignore react-rules-of-hooks
   } = useOffer(offers);
 
   const breadcrumb = {

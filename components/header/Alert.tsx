@@ -20,7 +20,6 @@ function Alert({ alerts = [], interval = 5 }: Props) {
           <Slider.Item index={index} class="carousel-item">
             <span
               class="px-5 py-4 w-screen text-center"
-              // deno-lint-ignore react-no-danger
               dangerouslySetInnerHTML={{ __html: alert }}
             />
           </Slider.Item>

@@ -66,7 +66,6 @@ function Suggestions(
                   class="flex gap-4 items-center font-source-sans text-xs font-semibold uppercase"
                 >
                   <span
-                    // deno-lint-ignore react-no-danger
                     dangerouslySetInnerHTML={{ __html: term }}
                   />
                 </a>

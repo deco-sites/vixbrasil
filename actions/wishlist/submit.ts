@@ -15,7 +15,7 @@ async function action(
   ctx: AppContext,
 ): Promise<Wishlist> {
   const { productID, productGroupID } = props;
-  // deno-lint-ignore react-rules-of-hooks
+
   const platform = usePlatform();
 
   if (platform === "vtex") {

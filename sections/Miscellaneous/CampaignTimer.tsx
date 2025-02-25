@@ -104,7 +104,6 @@ function CampaignTimer({
           <div
             id={`${id}::expired`}
             class="hidden text-sm text-center lg:text-xl lg:text-left lg:max-w-lg"
-            // deno-lint-ignore react-no-danger
             dangerouslySetInnerHTML={{ __html: text || "Expired!" }}
           >
           </div>
@@ -122,7 +121,6 @@ function CampaignTimer({
       </div>
       <script
         type="module"
-        // deno-lint-ignore react-no-danger
         dangerouslySetInnerHTML={{ __html: scriptHook }}
       />
     </>

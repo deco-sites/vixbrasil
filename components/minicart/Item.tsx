@@ -67,7 +67,6 @@ function CartItem({ item, index, locale, currency }: Props) {
               isGift && "hidden",
               "w-3 h-3",
             )}
-            // deno-lint-ignore react-rules-of-hooks
             hx-on:click={useScript(removeItemHandler)}
           >
             <Icon id="trash" size={12} />

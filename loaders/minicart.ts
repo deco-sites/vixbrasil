@@ -24,7 +24,6 @@ function loader(
   req: Request,
   ctx: AppContext,
 ): Promise<Minicart> {
-  // deno-lint-ignore react-rules-of-hooks
   const platform = usePlatform();
 
   const loader = loaders[platform];
