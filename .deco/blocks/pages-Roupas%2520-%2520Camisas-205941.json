@@ -1,6 +1,6 @@
 {
-  "name": "Categoria",
-  "path": "/*",
+  "name": "Roupas - Camisas",
+  "path": "/roupas/camisas",
   "sections": [
     {
       "__resolveType": "Header"
@@ -149,7 +149,8 @@
           "filters": "dynamic",
           "similars": false,
           "count": 24,
-          "ignoreCaseSelected": false
+          "ignoreCaseSelected": false,
+          "fq": "C:2/81"
         },
         "layout": {
           "pagination": "show-more"
