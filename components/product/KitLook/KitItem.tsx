@@ -101,6 +101,7 @@ const Input = ({ item, dataDispatch, product }: InputProps) => {
 
 export default function KitItem({ productId, dataDispatch }: Props) {
   const [product, setProduct] = useState<KitProduct | null>();
+  const [productOrder, setProductOrder] = useState<number>(0);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -115,6 +116,7 @@ export default function KitItem({ productId, dataDispatch }: Props) {
         console.error("Error fetching product:", error);
       }
     };
+
     fetchProduct();
   }, []);
 
@@ -125,10 +127,25 @@ export default function KitItem({ productId, dataDispatch }: Props) {
   const listPrice = availableProduct?.sellers[0].commertialOffer.ListPrice;
   const price = availableProduct?.sellers[0].commertialOffer.Price;
 
+  useEffect(() => {
+    const categoriasTop = ["top", "blusa", "camisa", "casaco"];
+
+    const categoriasBottom = ["calça", "calcinha", "saia", "short", "calca"];
+
+    const productTop = categoriasTop.includes(product?.icone_categoria?.[0] ?? '');
+
+    const productBottom = categoriasBottom.includes(
+      product?.icone_categoria?.[0] ?? ''
+    );
+
+    setProductOrder(productTop ? 1 : productBottom ? 2 : 0);
+  }, [product]);
+
   return (
     <div
-      class="flex items-start border-b border-[#bea669] pb-5 mb-5 w-full gap-3"
+      class={`flex items-start border-b border-[#bea669] pb-5 mb-5 w-full gap-3`}
       data-kit-composition={`${product?.Composição}`}
+      style={{ order: `${productOrder}` }}
     >
       {availableProduct?.images?.[0]?.imageUrl
         ? (

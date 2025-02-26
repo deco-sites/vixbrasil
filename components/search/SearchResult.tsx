@@ -6,7 +6,6 @@ import Icon from "../../components/ui/Icon.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
-import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import Breadcrumb from "../ui/Breadcrumb.tsx";
 import Drawer from "../ui/Drawer.tsx";
 import Sort from "./Sort.tsx";
@@ -352,25 +351,6 @@ function Result(
   const perPage = pageInfo?.recordPerPage || products.length;
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
   const offset = zeroIndexedOffsetPage * perPage;
-  const viewItemListEvent = useSendEvent({
-    on: "view",
-    event: {
-      name: "view_item_list",
-      params: {
-        // TODO: get category name from search or cms setting
-        item_list_name: breadcrumb.itemListElement?.at(-1)?.name,
-        item_list_id: breadcrumb.itemListElement?.at(-1)?.item,
-        items: page.products?.map((product, index) =>
-          mapProductToAnalyticsItem({
-            ...(useOffer(product.offers)),
-            index: offset + index,
-            product,
-            breadcrumbList: page.breadcrumb,
-          })
-        ),
-      },
-    },
-  });
 
   const sortBy = sortOptions.length > 0 && (
     <Sort sortOptions={sortOptions} url={url} />
@@ -381,6 +361,29 @@ function Result(
     `${pageInfo.currentPage}`,
     container,
   );
+
+  const viewItemListEvent = () => {
+    globalThis?.document?.addEventListener("DOMContentLoaded", function () {
+      console.log(`CustomEventData: event view view_item_list ready`);
+      globalThis?.window?.dataLayer.push({
+        event: "view_item_list",
+        params: {
+          item_list_name: breadcrumb.itemListElement?.at(-1)?.name,
+          item_list_id: breadcrumb.itemListElement?.at(-1)?.item,
+          items: page.products?.map((product, index) =>
+            mapProductToAnalyticsItem({
+              ...(useOffer(product.offers)),
+              index: offset + index,
+              product,
+              breadcrumbList: page.breadcrumb,
+            })
+          ),
+        },
+      });
+    });
+  };
+
+  const sendEvent = useScript(viewItemListEvent);
   return (
     <>
       <div id={container} {...viewItemListEvent} class="w-full">
@@ -480,6 +483,12 @@ function Result(
         type="module"
         dangerouslySetInnerHTML={{
           __html: scriptHook,
+        }}
+      />
+      <script
+        type="module"
+        dangerouslySetInnerHTML={{
+          __html: sendEvent,
         }}
       />
     </>

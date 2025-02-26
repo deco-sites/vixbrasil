@@ -97,7 +97,7 @@ function ProductInfo({ page }: Props) {
       {/* Sku Selector */}
       {hasValidVariants && isAccessoryOrSparePartFor
         ? (
-          <div>
+          <div class="flex flex-col">
             <KitLook
               productIdTop={productTop.sku}
               productIdBottom={productBottom.sku}

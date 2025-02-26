@@ -43,12 +43,21 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
 
     fetchProduct();
   }, []);
+  const categoriasTop = ["top", "blusa", "camisa", "casaco"];
+
+  const categoriasBottom = ["calça", "calcinha", "saia", "short", "calca"];
+
   const productTop =
-    product?.find((item) => item.icone_categoria?.[0] === "top") ??
+    product?.find((item) =>
+      categoriasTop.includes(item.icone_categoria?.[0])
+    ) ??
       product?.[0];
   const productBottom =
-    product?.find((item) => item.icone_categoria?.[0] === "calcinha") ??
+    product?.find((item) =>
+      categoriasBottom.includes(item.icone_categoria?.[0])
+    ) ??
       product?.[1];
+
   const topIcon = productTop?.icone_categoria?.[0];
   const bottomIcon = productBottom?.icone_categoria?.[0];
 

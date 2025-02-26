@@ -86,7 +86,7 @@ function AddKitToCart() {
   };
 
   return (
-    <div>
+    <div style={{ order: "3" }}>
       {state.kitItems.length
         ? <SelectProducts />
         : (
