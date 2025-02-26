@@ -132,10 +132,12 @@ export default function KitItem({ productId, dataDispatch }: Props) {
 
     const categoriasBottom = ["calça", "calcinha", "saia", "short", "calca"];
 
-    const productTop = categoriasTop.includes(product?.icone_categoria?.[0] ?? '');
+    const productTop = categoriasTop.includes(
+      product?.icone_categoria?.[0] ?? "",
+    );
 
     const productBottom = categoriasBottom.includes(
-      product?.icone_categoria?.[0] ?? ''
+      product?.icone_categoria?.[0] ?? "",
     );
 
     setProductOrder(productTop ? 1 : productBottom ? 2 : 0);
