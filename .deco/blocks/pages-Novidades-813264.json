@@ -50,11 +50,12 @@
         },
         {
           "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/4c328b41-ae73-4e86-a706-66986f5a88e3/novidades_desktop.png",
-            "mobile": "https://data.decoassets.com/vixbrasil/62a2f240-24b4-4e91-aa05-8e9f8d4c3732/novidades_mobile.png"
+            "desktop": "https://data.decoassets.com/vixbrasil/5e7f9199-ed1a-4b03-9945-d5460f385034/banner_categoria_novidades__desk.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/d3d93cd0-27e9-45b9-a563-00eb3a230bb1/banner_categoria_novidades__mobile.png"
           },
           "matcher": "/Novidades",
-          "title": "Novidades"
+          "title": "Novidades",
+          "active": true
         },
         {
           "image": {
