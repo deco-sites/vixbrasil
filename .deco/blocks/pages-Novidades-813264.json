@@ -11,10 +11,10 @@
         {
           "image": {
             "mobile": "https://data.decoassets.com/vixbrasil/d3d93cd0-27e9-45b9-a563-00eb3a230bb1/banner_categoria_novidades__mobile.png",
-            "desktop": "https://data.decoassets.com/vixbrasil/5e7f9199-ed1a-4b03-9945-d5460f385034/banner_categoria_novidades__desk.png"
+            "desktop": "https://data.decoassets.com/vixbrasil/5e7f9199-ed1a-4b03-9945-d5460f385034/banner_categoria_novidades__desk.png",
+            "alt": "Novidades"
           },
           "matcher": "/novidades",
-          "title": "Novidades",
           "active": true
         }
       ]
