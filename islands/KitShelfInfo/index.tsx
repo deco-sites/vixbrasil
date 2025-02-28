@@ -185,8 +185,8 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
                   item.sellers[0].commertialOffer.AvailableQuantity;
                 return (
                   <li
-                    class={`block cursor-pointer w-[120px] bg-white hover:bg-[#bea669] duration-200 p-2 font-source-sans text-sm tracking-[0.07em] ${
-                      avaibility && "opacity-60"
+                    class={`block w-[120px] bg-white  duration-200 p-2 font-source-sans text-sm tracking-[0.07em] ${
+                      !avaibility && "hover:bg-[#bea669] cursor-pointer"
                     }`}
                     onClick={() => {
                       dispatch({
@@ -205,7 +205,9 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
                       });
                     }}
                   >
-                    {item.Tamanho[0]}
+                    <span class={`${avaibility && "opacity-40"}`}>
+                      {item.Tamanho[0]}
+                    </span>
                   </li>
                 );
               })}
@@ -252,8 +254,8 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
                   item.sellers[0].commertialOffer.AvailableQuantity;
                 return (
                   <li
-                    class={`block cursor-pointer w-[120px] bg-white hover:bg-[#bea669] duration-200 p-2 font-source-sans text-sm tracking-[0.07em] ${
-                      avaibility && "opacity-60"
+                    class={`block  w-[120px] bg-white  duration-200 p-2 font-source-sans text-sm tracking-[0.07em] ${
+                      !avaibility && "hover:bg-[#bea669] cursor-pointer"
                     }`}
                     onClick={() => {
                       dispatch({
@@ -272,7 +274,9 @@ export default function KitShelfInfo({ top, bottom, useShelfContext }: Props) {
                       });
                     }}
                   >
-                    {item.Tamanho[0]}
+                    <span class={`${avaibility && "opacity-40"}`}>
+                      {item.Tamanho[0]}
+                    </span>
                   </li>
                 );
               })}

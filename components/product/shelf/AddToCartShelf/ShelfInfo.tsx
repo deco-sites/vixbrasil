@@ -93,9 +93,14 @@ export default function ShelfInfo({ product }: AddToCartShelfProps) {
                 return null;
               }
 
+              const availability = item?.offers?.offers?.[0]?.availability ===
+                "https://schema.org/OutOfStock";
+
               return (
                 <li
-                  class={`block cursor-pointer w-full bg-white hover:bg-[#bea669] duration-200 p-2`}
+                  class={`block  w-full bg-white  ${
+                    !availability && "hover:bg-[#bea669] cursor-pointer"
+                  } duration-200 p-2`}
                   onClick={() => {
                     dispatch({
                       type: "SET_ITEM",
@@ -108,7 +113,9 @@ export default function ShelfInfo({ product }: AddToCartShelfProps) {
                     });
                   }}
                 >
-                  {value}
+                  <span class={`${availability && "opacity-40"}`}>
+                    {value}
+                  </span>
                 </li>
               );
             })}
