@@ -130,8 +130,8 @@
         },
         {
           "image": {
-            "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/vix-brasil/6ac37dff-2537-4866-b132-eef406b6a178/59eaeba3-c886-42d3-b462-7846d9827d92___6c3b3895afc696b605e37f1c6e56b549.webp",
-            "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/vix-brasil/6ac37dff-2537-4866-b132-eef406b6a178/59eaeba3-c886-42d3-b462-7846d9827d92___6c3b3895afc696b605e37f1c6e56b549.webp",
+            "desktop": "https://data.decoassets.com/vixbrasil/bc8ec6af-4802-4150-bec6-3300ec6d5b1b/roupas-desktop.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/70f8b726-3e17-425d-9b2a-620a7e71e6f7/roupas_mobile.png",
             "alt": "Biquínis"
           },
           "matcher": "/*",

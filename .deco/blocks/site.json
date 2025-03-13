@@ -93,7 +93,8 @@
         "/exclusivo*",
         "/blackfriday-template-base*",
         "/brincos/colares*",
-        "/checkout*"
+        "/checkout*",
+        "/inverno25*"
       ],
       "includeSiteMap": [],
       "excludePathsFromDecoSiteMap": []
