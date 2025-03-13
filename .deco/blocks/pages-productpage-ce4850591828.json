@@ -32,6 +32,11 @@
       "section": {
         "__resolveType": "Footer"
       }
+    },
+    {
+      "__resolveType": "website/sections/Seo/SeoV2.tsx",
+      "favicon": "https://data.decoassets.com/vixbrasil/f0366e19-e866-4a58-b1d2-0c43f332cf12/vixbrasil-favicon.png",
+      "image": "https://data.decoassets.com/vixbrasil/5e7f9199-ed1a-4b03-9945-d5460f385034/banner_categoria_novidades__desk.png"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"
