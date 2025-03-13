@@ -9,21 +9,13 @@
         {
           "type": "video",
           "target": "_self",
-          "src": "1057583487",
-          "mobileSrc": "1057826766",
-          "url": "/novidades",
-          "alt": "Tropical Tropezienne",
+          "src": "1065076753",
+          "mobileSrc": "1065066405",
+          "url": "/inverno25",
+          "alt": "Bohemian Spirit",
           "device": "mobile",
-          "thumbnail": "https://data.decoassets.com/vixbrasil/30f858e7-8fe3-4402-8e4d-c81d2802e1d4/banner_home_lancamentoW25_desktop-video-estatico.jpg",
-          "thumbnailMobile": "https://data.decoassets.com/vixbrasil/7c252661-2757-44de-9578-2c2e28bf0bce/banner_home_lancamentoW25_mobile-video-estatico.png"
-        },
-        {
-          "type": "image",
-          "target": "_self",
-          "url": "/sale",
-          "alt": "Alto Verão 2025 SALE",
-          "src": "https://data.decoassets.com/vixbrasil/7f46d97c-bc26-40e6-bca9-78d3de9bbc69/BannerHome_sale_altoverao_desk.png",
-          "mobileSrc": "https://data.decoassets.com/vixbrasil/bdde00d7-aa98-4839-9e0d-4a58a4f3e943/BannerHome_sale_altoverao_mobile.png"
+          "thumbnail": "https://data.decoassets.com/vixbrasil/3f00fc77-7750-42eb-860f-a29c5c7e1a17/banner-home_estatico_desktop.png",
+          "thumbnailMobile": "https://data.decoassets.com/vixbrasil/87adb04e-e3db-457f-88b1-cdcac4045af1/bannerhome_lancamento_mobile_estatico.png"
         }
       ]
     },
@@ -35,42 +27,42 @@
           {
             "type": "image",
             "target": "_self",
-            "src": "https://data.decoassets.com/vixbrasil/71891d6e-2955-4964-9dd6-ebdddae67635/2_biquinis.png",
-            "mobileSrc": "https://data.decoassets.com/vixbrasil/8ae502d7-7560-4005-9da8-625dae6e82fb/2_biquinis.png",
+            "src": "https://data.decoassets.com/vixbrasil/842d8f47-46cc-483a-9d89-57c477e07d75/1_biquinis.png",
+            "mobileSrc": "https://data.decoassets.com/vixbrasil/1d4f7984-ccaf-41ed-a68e-3e65735c9d7f/1_biquinis.png",
             "url": "/praia/biquinis?order=OrderByReleaseDateDESC",
             "alt": "Bíquini"
           },
           {
             "type": "image",
             "target": "_self",
-            "src": "https://data.decoassets.com/vixbrasil/c6ef6b8e-634c-4d24-bba7-9fceb9a57c27/1_roupas-(1).png",
-            "mobileSrc": "https://data.decoassets.com/vixbrasil/9b8aad84-974f-47e3-af92-2db0d19eac0b/1_roupas-(1).png",
+            "src": "https://data.decoassets.com/vixbrasil/f3c1493e-c65c-411e-b6dd-ba76b5056859/2_roupas.png",
+            "mobileSrc": "https://data.decoassets.com/vixbrasil/acdefc81-c449-42bc-b692-2a2b5b67e745/2_roupas.png",
             "url": "/roupas?order=OrderByReleaseDateDESC",
             "alt": "Roupas"
           },
           {
             "type": "image",
             "target": "_self",
-            "src": "https://data.decoassets.com/vixbrasil/32d57b9f-b2ce-4a04-b15f-86eccdf82d10/3_maios.png",
-            "mobileSrc": "https://data.decoassets.com/vixbrasil/01137019-be86-47d5-b56c-adb8795a2f18/3_maios.png",
-            "url": "/praia/maios?order=OrderByReleaseDateDESC",
-            "alt": "Maiô"
-          },
-          {
-            "type": "image",
-            "target": "_self",
-            "src": "https://data.decoassets.com/vixbrasil/5bdd1f7d-e9b8-4430-84ae-c18219616058/5_saidas.png",
-            "mobileSrc": "https://data.decoassets.com/vixbrasil/72db4a03-577e-4140-8d50-7c8112c571b6/5_saidas.png",
+            "src": "https://data.decoassets.com/vixbrasil/e501484c-f03b-4c55-9cf1-24b71eda2b30/4_saidas.png",
+            "mobileSrc": "https://data.decoassets.com/vixbrasil/06fa46c4-9b90-47dc-9dfb-a912fee0ac56/4_saidas.png",
             "url": "/praia/saidas-de-praia?order=OrderByReleaseDateDESC",
-            "alt": "Saída de Praia"
+            "alt": "Saídas"
           },
           {
             "type": "image",
             "target": "_self",
-            "src": "https://data.decoassets.com/vixbrasil/9719548e-82f1-431e-8897-f0ef5e6e0d77/4_acessorios.png",
-            "mobileSrc": "https://data.decoassets.com/vixbrasil/d4674ae3-6d61-4c4e-99f7-422483be185c/4_acessorios.png",
-            "url": "/acessorios?order=OrderByReleaseDateDESC",
+            "src": "https://data.decoassets.com/vixbrasil/8c79b6fa-8e6d-4e9c-8040-c6e411ed16e2/3_acessorios-(1).png",
+            "mobileSrc": "https://data.decoassets.com/vixbrasil/a8738037-902c-438a-b1a0-c94431769340/3_acessorios-(1).png",
+            "url": "/praia/saidas-de-praia?order=OrderByReleaseDateDESC",
             "alt": "Acessórios"
+          },
+          {
+            "type": "image",
+            "target": "_self",
+            "src": "https://data.decoassets.com/vixbrasil/87dbd597-1e93-4b1c-a5a2-b7a4efdf385d/5_maios-(1).png",
+            "mobileSrc": "https://data.decoassets.com/vixbrasil/40676229-47db-4ee2-92eb-60247efbb900/5_maios-(1).png",
+            "url": "/acessorios?order=OrderByReleaseDateDESC",
+            "alt": "Maiôs"
           }
         ]
       }
@@ -80,10 +72,10 @@
       "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
         "type": "image",
-        "src": "https://data.decoassets.com/vixbrasil/027f0d84-70df-48b1-83e4-a0e678c8f386/bannermiolo_white_desktop.png",
-        "mobileSrc": "https://data.decoassets.com/vixbrasil/fbd91887-bfca-4c9f-8b54-0b4db6dc7173/bannermiolo_white_mobile.png",
+        "src": "https://data.decoassets.com/vixbrasil/5bf4ef47-e259-4442-96f4-b808a4702170/bannermiolo_allblack_desktop.png",
+        "mobileSrc": "https://data.decoassets.com/vixbrasil/fc93c6d7-7305-4541-83c2-aa5e03b60586/bannermiolo_allblack_mobile.png",
         "url": "/white",
-        "alt": "White Essentials",
+        "alt": "All Black",
         "target": "_self"
       }
     },
@@ -93,41 +85,39 @@
         "__resolveType": "site/sections/Shelfs/ShopNowShelf.tsx",
         "items": [
           {
-            "src": "https://data.decoassets.com/vixbrasil/17b0319c-1257-4f3a-b755-83f363c9e105/catC3A1logo_desk(1).png",
-            "alt": "Catálogo inverno 25",
+            "src": "https://data.decoassets.com/vixbrasil/dfc0204b-03d4-402a-bbc6-eef48abfb667/catalogo_desk_1.png",
+            "alt": "Bohemian Spirit",
             "products": [
-              "11949"
+              "12128"
             ]
           },
           {
-            "src": "https://data.decoassets.com/vixbrasil/989058e3-7657-46be-8247-2128fe61a429/catC3A1logo_desk(2).png",
+            "src": "https://data.decoassets.com/vixbrasil/bfe1e1dd-25a0-452c-a769-5d5846568c2e/catalogo_desk_2.png",
             "products": [
-              "11962"
+              "12039"
             ],
-            "alt": "Catálogo inverno 25"
+            "alt": "Vestido"
           },
           {
-            "src": "https://data.decoassets.com/vixbrasil/d11dd3a5-c9ef-49a9-b370-923c347e65b5/catC3A1logo_desk(3).png",
-            "alt": "Catálogo inverno 25",
+            "src": "https://data.decoassets.com/vixbrasil/fe0b330d-7b2f-4172-9424-a90ac7811941/catalogo_desk_3-(1).png",
+            "alt": "Biquini",
             "products": [
-              "12021",
-              "11995"
+              "11995",
+              "12021"
             ]
           },
           {
-            "alt": "Catálogo inverno 25",
-            "src": "https://data.decoassets.com/vixbrasil/f94c192f-d1eb-4303-9a64-1ccbe2e36b82/catC3A1logo_desk(4).png",
+            "alt": "Saída",
+            "src": "https://data.decoassets.com/vixbrasil/d57a6436-fe4f-4ac6-b152-6fbb05e09284/catalogo_desk_4.png",
             "products": [
-              "11952",
-              "11956"
+              "12126"
             ]
           },
           {
-            "src": "https://data.decoassets.com/vixbrasil/93797ef1-7a94-4f1c-b318-10d8a44e8afd/catC3A1logo_desk(5).png",
-            "alt": "Catálogo inverno 25",
+            "src": "https://data.decoassets.com/vixbrasil/b7bea52f-f667-4cd1-a3ab-0ee5360d8df0/catalogo_desk_5.png",
+            "alt": "Roupa",
             "products": [
-              "11937",
-              "11943"
+              "12025"
             ]
           }
         ]
@@ -138,8 +128,8 @@
       "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
         "type": "image",
-        "src": "https://data.decoassets.com/vixbrasil/1a457a76-eaeb-4d44-884f-ec547e8d4231/banner_baixe-o-app_desk.png",
-        "mobileSrc": "https://data.decoassets.com/vixbrasil/2fa8ca24-0dc8-4af4-9f73-356b1b2dc2b0/Banner_baixe-o-app_mobile.png",
+        "src": "https://data.decoassets.com/vixbrasil/4b20937b-db54-4e0c-a24b-be1a2e6263d1/miolo-app-desktop-(1).png",
+        "mobileSrc": "https://data.decoassets.com/vixbrasil/ce302363-edf6-43c8-a23b-4672b0fc792d/miolo-app-mobile.png",
         "url": "https://linktr.ee/vixpaulahermannybr",
         "alt": "Baixe o App",
         "target": "_self"
