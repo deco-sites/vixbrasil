@@ -311,11 +311,6 @@
       "name": "Personal Shopper",
       "url": "/e-shoppers",
       "@type": "SiteNavigationElement"
-    },
-    {
-      "children": [],
-      "name": "Sale",
-      "url": "/sale"
     }
   ],
   "mobileItems": [
