@@ -10,8 +10,8 @@
       "banners": [
         {
           "image": {
-            "mobile": "https://data.decoassets.com/vixbrasil/d3d93cd0-27e9-45b9-a563-00eb3a230bb1/banner_categoria_novidades__mobile.png",
-            "desktop": "https://data.decoassets.com/vixbrasil/5e7f9199-ed1a-4b03-9945-d5460f385034/banner_categoria_novidades__desk.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/a0a3add1-0967-4f02-883f-bbe1b3cc274d/novidades_mobile.png",
+            "desktop": "https://data.decoassets.com/vixbrasil/a6c12a34-35e7-4f90-a865-9184e097e1ba/novidades_desktop.png",
             "alt": "Novidades"
           },
           "matcher": "/novidades",

@@ -26,7 +26,7 @@
   },
   "navItems": [
     {
-      "url": "/novidades",
+      "url": "/novidades?order=OrderByReleaseDateDESC",
       "name": "New In",
       "children": []
     },
@@ -125,7 +125,7 @@
               "url": "/roupas/saias?order=OrderByReleaseDateDESC"
             },
             {
-              "name": "Short",
+              "name": "Shorts",
               "url": "/roupas/shorts?order=OrderByReleaseDateDESC"
             },
             {
@@ -141,11 +141,16 @@
           "bold": true,
           "children": [
             {
+              "name": "Brincos/Colares/Pulseiras",
+              "url": "/acessorios-colares-brincos-pulseiras?order=OrderByReleaseDateDESC",
+              "children": []
+            },
+            {
               "name": "Bolsa",
               "url": "/bolsas?order=OrderByReleaseDateDESC"
             },
             {
-              "name": "Chapéu",
+              "name": "Chapéus",
               "url": "/chapeus?order=OrderByReleaseDateDESC"
             },
             {
@@ -188,16 +193,16 @@
           "bold": true,
           "children": [
             {
-              "name": "Laise",
-              "url": "/laise"
-            },
-            {
               "name": "All Black",
               "url": "/allblack"
             },
             {
               "name": "White",
               "url": "/white"
+            },
+            {
+              "name": "Laise",
+              "url": "/laise"
             },
             {
               "name": "Beads",
@@ -231,7 +236,7 @@
               "url": "/praia/biquinis/calcinhas/br?order=OrderByReleaseDateDESC"
             },
             {
-              "name": "Hot Pants",
+              "name": "Hot Pant",
               "url": "/hot-pant?order=OrderByReleaseDateDESC"
             },
             {
@@ -242,7 +247,23 @@
           ]
         },
         {
-          "children": [],
+          "children": [
+            {
+              "children": [],
+              "name": "Praia",
+              "url": "/sale/praia"
+            },
+            {
+              "children": [],
+              "name": "Saídas de Praia",
+              "url": "/sale/saidas-de-praia"
+            },
+            {
+              "children": [],
+              "name": "Roupas",
+              "url": "/sale/roupas"
+            }
+          ],
           "name": "Sale",
           "url": "/sale",
           "bold": true
@@ -309,14 +330,8 @@
     {
       "item": [
         {
-          "title": "Novidades",
-          "url": "/novidades",
-          "target": "_self",
-          "bold": true
-        },
-        {
-          "title": "Verão 25",
-          "url": "/altoverao25",
+          "title": "Inverno 25",
+          "url": "/inverno25",
           "target": "_self",
           "bold": true
         },
@@ -353,7 +368,7 @@
           "target": "_self",
           "children": [
             {
-              "title": "Vestido",
+              "title": "Vestidos",
               "url": "/roupas/vestidos",
               "target": "_self",
               "children": [
@@ -410,12 +425,12 @@
               "target": "_self"
             },
             {
-              "title": "Saia",
+              "title": "Saias",
               "url": "/roupas/saias?order=OrderByReleaseDateDESC",
               "target": "_self"
             },
             {
-              "title": "Short",
+              "title": "Shorts",
               "url": "/roupas/shorts?order=OrderByReleaseDateDESC",
               "target": "_self"
             }
@@ -426,6 +441,12 @@
           "url": "/acessorios?order=OrderByReleaseDateDESC",
           "target": "_self",
           "children": [
+            {
+              "title": "Brincos/Colares/Pulseiras",
+              "url": "/acessorios-colares-brincos-pulseiras?order=OrderByReleaseDateDESC",
+              "target": "_blank",
+              "children": []
+            },
             {
               "title": "Bolsa",
               "url": "/bolsas?order=OrderByReleaseDateDESC",
@@ -447,9 +468,9 @@
               "target": "_self"
             },
             {
+              "target": "_self",
               "title": "Cintos",
-              "url": "/cintos?order=OrderByReleaseDateDESC",
-              "target": "_self"
+              "url": "/cintos?order=OrderByReleaseDateDESC"
             }
           ]
         },
@@ -550,10 +571,29 @@
           ]
         },
         {
-          "target": "_self",
-          "children": [],
           "title": "Sale",
           "url": "/sale",
+          "target": "_self",
+          "children": [
+            {
+              "target": "_blank",
+              "children": [],
+              "title": "Praia",
+              "url": "/sale/praia"
+            },
+            {
+              "target": "_blank",
+              "children": [],
+              "title": "Saídas",
+              "url": "/sale/saidas-de-praia"
+            },
+            {
+              "target": "_blank",
+              "children": [],
+              "url": "/sale/roupas",
+              "title": "Roupas"
+            }
+          ],
           "bold": true
         }
       ]
