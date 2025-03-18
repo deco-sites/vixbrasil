@@ -146,7 +146,7 @@
               "children": []
             },
             {
-              "name": "Bolsa",
+              "name": "Bolsas",
               "url": "/bolsas?order=OrderByReleaseDateDESC"
             },
             {

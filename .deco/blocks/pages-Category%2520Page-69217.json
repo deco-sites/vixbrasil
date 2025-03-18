@@ -18,8 +18,32 @@
         },
         {
           "image": {
-            "mobile": "https://data.decoassets.com/vixbrasil/30f259c5-e3d1-480b-918c-9ae82787ddd8/shorts_mobile.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/e54c5fc3-ff0a-4282-914e-452969d05228/acessorios_mobile.png",
+            "desktop": "https://data.decoassets.com/vixbrasil/7be4c879-9e83-4e6d-9f8c-eff55877cb42/acessorios-desktop.png"
+          },
+          "matcher": "/acessorios/bolsas*",
+          "active": true
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/vixbrasil/7be4c879-9e83-4e6d-9f8c-eff55877cb42/acessorios-desktop.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/e54c5fc3-ff0a-4282-914e-452969d05228/acessorios_mobile.png"
+          },
+          "matcher": "/acessorios/chapeus*",
+          "active": true
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/vixbrasil/7be4c879-9e83-4e6d-9f8c-eff55877cb42/acessorios-desktop.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/e54c5fc3-ff0a-4282-914e-452969d05228/acessorios_mobile.png"
+          },
+          "matcher": "/acessorios/sandalias*",
+          "active": true
+        },
+        {
+          "image": {
             "desktop": "https://data.decoassets.com/vixbrasil/d03676f4-b43b-463c-bb01-597d8f401fe6/shorts-desktop.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/30f259c5-e3d1-480b-918c-9ae82787ddd8/shorts_mobile.png",
             "alt": "Shorts"
           },
           "matcher": "/roupas/shorts*",
@@ -36,8 +60,8 @@
         },
         {
           "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/bc8ec6af-4802-4150-bec6-3300ec6d5b1b/roupas-desktop.png",
-            "mobile": "https://data.decoassets.com/vixbrasil/4a9eff0d-2720-4e52-b48f-9e83e397b6ef/roupas_mobile.png"
+            "mobile": "https://data.decoassets.com/vixbrasil/4a9eff0d-2720-4e52-b48f-9e83e397b6ef/roupas_mobile.png",
+            "desktop": "https://data.decoassets.com/vixbrasil/bc8ec6af-4802-4150-bec6-3300ec6d5b1b/roupas-desktop.png"
           },
           "matcher": "/roupas/macacoes*",
           "active": true
@@ -60,8 +84,8 @@
         },
         {
           "image": {
-            "mobile": "https://data.decoassets.com/vixbrasil/5472298f-a7dc-4fee-95ae-184e2f91f336/tops_mobile.png",
             "desktop": "https://data.decoassets.com/vixbrasil/5c558908-0f3c-4efd-b1c7-7a643a0c77b8/tops-desktop.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/5472298f-a7dc-4fee-95ae-184e2f91f336/tops_mobile.png",
             "alt": "Blusas"
           },
           "matcher": "/roupas/top*",
@@ -134,8 +158,8 @@
             "mobile": "https://data.decoassets.com/vixbrasil/70f8b726-3e17-425d-9b2a-620a7e71e6f7/roupas_mobile.png",
             "alt": "Biquínis"
           },
-          "matcher": "/*",
-          "active": true
+          "active": true,
+          "matcher": "/*"
         }
       ]
     },
