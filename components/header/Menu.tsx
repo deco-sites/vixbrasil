@@ -45,7 +45,7 @@ function SubMenuItem(subItem: MobileMenuItems) {
               </p>
               <ul>
                 {subItem.children?.map((node) => (
-                  node.children
+                  node?.children?.length > 0
                     ? (
                       <li class="p-2">
                         <details class="dropdown group/submenu-mobile">
