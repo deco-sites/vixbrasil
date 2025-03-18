@@ -543,19 +543,19 @@
           "target": "_self",
           "children": [
             {
-              "target": "_blank",
+              "target": "_self",
               "children": [],
               "title": "Praia",
               "url": "/sale/praia"
             },
             {
-              "target": "_blank",
+              "target": "_self",
               "children": [],
-              "title": "Saídas",
+              "title": "Saídas de Praia",
               "url": "/sale/saidas-de-praia"
             },
             {
-              "target": "_blank",
+              "target": "_self",
               "children": [],
               "url": "/sale/roupas",
               "title": "Roupas"

@@ -52,6 +52,7 @@ function SubMenuItem(subItem: MobileMenuItems) {
                           <summary class="list-none flex items-center gap-2 font-source-sans text-left text-sm tracking-[0.98px] uppercase font-light">
                             {node.title}
 
+                            
                             <span>
                               <Icon
                                 id="sm-arrow"
