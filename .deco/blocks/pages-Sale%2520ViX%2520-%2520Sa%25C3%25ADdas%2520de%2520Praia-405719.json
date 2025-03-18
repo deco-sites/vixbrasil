@@ -1,7 +1,7 @@
 {
   "__resolveType": "website/pages/Page.tsx",
   "name": "Sale ViX - Saídas de Praia",
-  "path": "/sale/saidas-de-praia",
+  "path": "/sale/saidas-de-praia?order=OrderByReleaseDateDESC",
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
@@ -27,7 +27,7 @@
       "__resolveType": "site/sections/Product/SearchResult.tsx",
       "page": {
         "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
-        "sort": "OrderByScoreDESC",
+        "sort": "OrderByReleaseDateDESC",
         "filters": "dynamic",
         "similars": false,
         "count": 36,
