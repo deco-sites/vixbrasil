@@ -576,7 +576,27 @@
         {
           "title": "Sobre a vix",
           "url": "/institucional/sobre-a-empresa-vix",
-          "target": "_self"
+          "target": "_self",
+          "children": [
+            {
+              "target": "_self",
+              "children": [],
+              "title": "Casa Vix",
+              "url": "/casa-vix"
+            },
+            {
+              "target": "_self",
+              "children": [],
+              "title": "nosso compromisso",
+              "url": "/nossocompromisso"
+            },
+            {
+              "target": "_self",
+              "children": [],
+              "title": "A Marca",
+              "url": "/institucional/sobre-a-empresa-vix"
+            }
+          ]
         },
         {
           "title": "Lojas",
