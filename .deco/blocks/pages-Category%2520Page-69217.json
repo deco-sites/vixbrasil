@@ -169,7 +169,7 @@
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
           "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
-          "sort": "OrderByReviewRateDESC",
+          "sort": "OrderByReleaseDateDESC",
           "filters": "dynamic",
           "similars": false,
           "count": 24,
