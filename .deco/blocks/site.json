@@ -125,12 +125,12 @@
     "name": "deco_matcher",
     "matcher": {
       "__resolveType": "website/matchers/random.ts",
-      "traffic": 0.05
+      "traffic": 0.1
     },
     "includeScriptsToBody": {
       "includes": []
     },
-    "urlToRunAgainst": "secure.vixbrasil.com"
+    "urlToRunAgainst": "https://secure.vixbrasil.com"
   },
   "flavor": {
     "framework": "fresh"

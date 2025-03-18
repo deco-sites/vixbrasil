@@ -23,13 +23,13 @@
       "__resolveType": "site/sections/Product/SearchResult.tsx",
       "page": {
         "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
-        "sort": "",
+        "sort": "OrderByReleaseDateDESC",
         "filters": "dynamic",
         "similars": false,
         "count": 24,
         "ignoreCaseSelected": false,
         "map": "productClusterIds",
-        "term": "282"
+        "term": "384"
       },
       "layout": {
         "pagination": "show-more"
