@@ -6,15 +6,15 @@
       "children": [
         {
           "title": "Baixe nosso APP",
-          "href": "#"
+          "href": "https://apps.apple.com/br/app/v-i-x-paulahermanny-brasil/id1626880100?mt=8"
         },
         {
           "title": "A Marca",
-          "href": "#"
+          "href": "/institucional/sobre-a-empresa-vix"
         },
         {
           "title": "Nosso compromisso",
-          "href": "#"
+          "href": "/nossocompromisso"
         },
         {
           "title": "Casa Vix",
@@ -22,10 +22,10 @@
         },
         {
           "title": "Trabalhe Conosco",
-          "href": "#"
+          "href": "https://vixbrasil.vagas.solides.com.br"
         }
       ],
-      "href": "#"
+      "href": "/casa-vix"
     },
     {
       "title": "Informações",
@@ -33,27 +33,23 @@
       "children": [
         {
           "title": "Políticas de devoluções",
-          "href": "#"
+          "href": "/institucional/politica-devolucao"
         },
         {
           "title": "Políticas de privacidade",
-          "href": "#"
+          "href": "/institucional/politica-privacidade"
         },
         {
           "title": "Dúvidas frequentes",
-          "href": "#"
-        },
-        {
-          "title": "Retire em casa",
-          "href": "#"
+          "href": "https://www.vixbrasil.com/institucional/duvidas-frequentes"
         },
         {
           "title": "Termos de uso",
-          "href": "#"
+          "href": "/institucional/termos-de-uso"
         },
         {
           "title": "Tabela de medidas",
-          "href": "#"
+          "href": "/institucional/tabela-medidas"
         }
       ]
     },
@@ -63,15 +59,11 @@
       "children": [
         {
           "title": "Fale com a Vix",
-          "href": "#"
+          "href": "/atendimento/e-store"
         },
         {
           "title": "Personal Shopper",
-          "href": "#"
-        },
-        {
-          "title": "ViX Club",
-          "href": "#"
+          "href": "/e-shoppers"
         }
       ]
     },
@@ -80,15 +72,15 @@
       "children": [
         {
           "title": "Confira nossos endereços",
-          "href": "#"
+          "href": "/institucional/lojas-vix"
         },
         {
           "title": "Internacional",
-          "href": "#"
+          "href": "https://www.vixpaulahermanny.com/"
         },
         {
           "title": "Multimarcas",
-          "href": "#"
+          "href": "/institucional/lojas-multimarcas"
         }
       ],
       "href": "#"
@@ -97,33 +89,32 @@
   "social": [
     {
       "alt": "Instagram",
-      "href": "#",
+      "href": "https://www.instagram.com/vixpaulahermannybrasil/",
       "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/icon-footer-instagram___c674dc98b28e8c89841e7522d051a1ec.svg"
     },
     {
       "alt": "Whatsapp",
-      "href": "#",
+      "href": "https://api.whatsapp.com/send?phone=5524992187896",
       "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.147/img/footer/icon-footer-whatsapp___4ef2cd618124749d57b83da10df912e3.svg"
     },
     {
       "alt": "Youtube",
-      "href": "#",
+      "href": "https://www.youtube.com/@vixpaulahermannybrasil",
       "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/icon-footer-youtube___d0c0e5ecc7888ece3f08eba40a591d21.svg"
     },
     {
       "alt": "Spotfy",
-      "href": "#",
+      "href": "https://open.spotify.com/user/netccg0mc2ifnj0srclaheulj",
       "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/icon-footer-spotify___7bd6c0748447a05e0fb8570c3ae25c21.svg"
     },
-
     {
       "alt": "Linkedin",
-      "href": "#",
+      "href": "https://br.linkedin.com/company/vix-paula-hermanny-brasil",
       "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.147/img/footer/icon-footer-linkedin___190868a2043148956b3d2d5eb12bdc40.svg"
     },
     {
       "alt": "Facebook",
-      "href": "#",
+      "href": " https://www.facebook.com/vixpaulahermannybrasil",
       "image": "https://vixbrasil.vtexassets.com/assets/vtex/assets-builder/vixbrasil.store/3.0.148/img/footer/icon-footer-facebook___456b1aa4d67c3ed8ee306475a2b8f4a2.svg"
     }
   ],
