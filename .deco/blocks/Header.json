@@ -147,23 +147,19 @@
             },
             {
               "name": "Bolsas",
-              "url": "/bolsas?order=OrderByReleaseDateDESC"
+              "url": "/acessorios/bolsas?order=OrderByReleaseDateDESC"
             },
             {
               "name": "Chapéus",
-              "url": "/chapeus?order=OrderByReleaseDateDESC"
+              "url": "/acessorios/chapeus?order=OrderByReleaseDateDESC"
             },
             {
               "name": "Sandálias",
-              "url": "/sandalias?order=OrderByReleaseDateDESC"
-            },
-            {
-              "name": "Brincos/colares",
-              "url": "/brincos/colares?_q=bijoux&map=ft"
+              "url": "/acessorios/sandalias?order=OrderByReleaseDateDESC"
             },
             {
               "name": "cintos",
-              "url": "/cintos?order=OrderByReleaseDateDESC"
+              "url": "/acessorios/cintos?order=OrderByReleaseDateDESC"
             },
             {
               "name": "ver todos",
@@ -448,29 +444,24 @@
               "children": []
             },
             {
-              "title": "Bolsa",
-              "url": "/bolsas?order=OrderByReleaseDateDESC",
+              "title": "Bolsas",
+              "url": "/acessorios/bolsas?order=OrderByReleaseDateDESC",
               "target": "_self"
             },
             {
               "title": "Chapéu",
-              "url": "/chapeus?order=OrderByReleaseDateDESC",
+              "url": "/acessorios/chapeus?order=OrderByReleaseDateDESC",
               "target": "_self"
             },
             {
               "title": "Sandálias",
-              "url": "/sandalias?order=OrderByReleaseDateDESC",
+              "url": "/acessorios/sandalias?order=OrderByReleaseDateDESC",
               "target": "_self"
             },
             {
-              "title": "Brincos/colares",
-              "url": "/brincos/colares?_q=bijoux&map=ft",
-              "target": "_self"
-            },
-            {
-              "target": "_self",
               "title": "Cintos",
-              "url": "/cintos?order=OrderByReleaseDateDESC"
+              "url": "/acessorios/cintos?order=OrderByReleaseDateDESC",
+              "target": "_self"
             }
           ]
         },
