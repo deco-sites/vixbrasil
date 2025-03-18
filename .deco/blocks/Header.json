@@ -36,18 +36,10 @@
       "name": "Shop",
       "children": [
         {
-          "children": [
-            {
-              "name": "Novidades",
-              "url": "/novidades",
-              "bold": true
-            },
-            {
-              "name": "Sale Verão 25",
-              "url": "/sale",
-              "bold": true
-            }
-          ]
+          "children": [],
+          "name": "Inverno 25",
+          "url": "/inverno25",
+          "bold": true
         },
         {
           "name": "Praia",
