@@ -178,7 +178,7 @@
               "url": "/care"
             },
             {
-              "name": "Ana Vilhanas",
+              "name": "AnaVilhanas",
               "url": "/anavilhanas"
             }
           ]
@@ -203,10 +203,6 @@
             {
               "name": "Beads",
               "url": "/beads"
-            },
-            {
-              "name": "Best Sellers",
-              "url": "/bestseller"
             },
             {
               "name": "Linho",
@@ -471,23 +467,13 @@
           "target": "_self",
           "children": [
             {
-              "title": "Bianca Brandolini",
-              "url": "/biancabrandolini",
-              "target": "_self"
-            },
-            {
               "title": "Care",
               "url": "/care",
               "target": "_self"
             },
             {
-              "title": "Ana Vilhanas",
+              "title": "AnaVilhanas",
               "url": "/anavilhanas",
-              "target": "_self"
-            },
-            {
-              "title": "Signature",
-              "url": "/signature",
               "target": "_self"
             }
           ]
@@ -508,23 +494,13 @@
               "target": "_self"
             },
             {
-              "title": "Best Sellers",
-              "url": "/bestseller",
-              "target": "_self"
-            },
-            {
-              "title": "All Black",
-              "url": "",
+              "title": "Laise",
+              "url": "/laise",
               "target": "_self"
             },
             {
               "title": "Beads",
               "url": "/beads",
-              "target": "_self"
-            },
-            {
-              "title": "Laise",
-              "url": "/laise",
               "target": "_self"
             },
             {
