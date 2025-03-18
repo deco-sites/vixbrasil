@@ -52,8 +52,16 @@
         },
         {
           "image": {
-            "desktop": "https://data.decoassets.com/vixbrasil/5c558908-0f3c-4efd-b1c7-7a643a0c77b8/tops-desktop.png",
+            "desktop": "https://data.decoassets.com/vixbrasil/483659c6-c7c1-4869-9b1c-69e1701a5996/roupas-desktop.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/70f8b726-3e17-425d-9b2a-620a7e71e6f7/roupas_mobile.png"
+          },
+          "matcher": "/roupas/camisas*",
+          "active": true
+        },
+        {
+          "image": {
             "mobile": "https://data.decoassets.com/vixbrasil/5472298f-a7dc-4fee-95ae-184e2f91f336/tops_mobile.png",
+            "desktop": "https://data.decoassets.com/vixbrasil/5c558908-0f3c-4efd-b1c7-7a643a0c77b8/tops-desktop.png",
             "alt": "Blusas"
           },
           "matcher": "/roupas/top*",
@@ -61,8 +69,8 @@
         },
         {
           "image": {
-            "mobile": "https://data.decoassets.com/vixbrasil/02f9db62-d243-4378-916e-582ac597e63a/vestidos_mobile.png",
             "desktop": "https://data.decoassets.com/vixbrasil/de6f0a73-2a82-4d6a-b8be-f624b2696af8/vestidos-desktop.png",
+            "mobile": "https://data.decoassets.com/vixbrasil/02f9db62-d243-4378-916e-582ac597e63a/vestidos_mobile.png",
             "alt": "Vestidos"
           },
           "matcher": "/roupas/vestidos*",
