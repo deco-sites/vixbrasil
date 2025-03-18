@@ -539,25 +539,25 @@
         },
         {
           "title": "Sale",
-          "url": "/sale",
+          "url": "/sale?order=OrderByReleaseDateDESC",
           "target": "_self",
           "children": [
             {
               "target": "_self",
               "children": [],
               "title": "Praia",
-              "url": "/sale/praia"
+              "url": "/sale/praia?order=OrderByReleaseDateDESC"
             },
             {
               "target": "_self",
               "children": [],
               "title": "Saídas de Praia",
-              "url": "/sale/saidas-de-praia"
+              "url": "/sale/saidas-de-praia?order=OrderByReleaseDateDESC"
             },
             {
               "target": "_self",
               "children": [],
-              "url": "/sale/roupas",
+              "url": "/sale/roupas?order=OrderByReleaseDateDESC",
               "title": "Roupas"
             }
           ],
