@@ -142,7 +142,7 @@
           "children": [
             {
               "name": "Brincos/Colares/Pulseiras",
-              "url": "/acessorios-colares-brincos-pulseiras?order=OrderByReleaseDateDESC",
+              "url": "/acessorios/colares-brincos-pulseiras?order=OrderByReleaseDateDESC",
               "children": []
             },
             {
@@ -439,7 +439,7 @@
           "children": [
             {
               "title": "Brincos/Colares/Pulseiras",
-              "url": "/acessorios-colares-brincos-pulseiras?order=OrderByReleaseDateDESC",
+              "url": "/acessorios/colares-brincos-pulseiras?order=OrderByReleaseDateDESC",
               "target": "_blank",
               "children": []
             },
