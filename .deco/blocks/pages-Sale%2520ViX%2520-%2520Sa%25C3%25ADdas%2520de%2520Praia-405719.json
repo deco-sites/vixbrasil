@@ -1,7 +1,7 @@
 {
   "__resolveType": "website/pages/Page.tsx",
-  "name": "Sale ViX Paula Hermanny",
-  "path": "/sale",
+  "name": "Sale ViX - Saídas de Praia",
+  "path": "/sale/saidas-de-praia",
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
@@ -14,11 +14,11 @@
       "banners": [
         {
           "image": {
-            "mobile": "https://data.decoassets.com/vixbrasil/e8b50b9a-8682-4c2b-b354-b0a8668b4233/WhatsApp-Image-2025-03-18-at-12.15.01.jpeg",
-            "desktop": "https://data.decoassets.com/vixbrasil/f65bd36a-836f-4d28-8ec4-dbc9788b74f9/WhatsApp-Image-2025-03-18-at-12.13.31.jpeg",
+            "mobile": "https://data.decoassets.com/vixbrasil/ed687b93-d33b-4d2f-965f-701a5dbcdaa1/WhatsApp-Image-2025-03-18-at-12.15.02-(1).jpeg",
+            "desktop": "https://data.decoassets.com/vixbrasil/8ace03ce-12b5-4eef-bbc5-cbed17f155b3/WhatsApp-Image-2025-03-18-at-12.13.32-(2).jpeg",
             "alt": "sale"
           },
-          "matcher": "/sale*",
+          "matcher": "/sale/saidas-de-praia*",
           "active": true
         }
       ]
@@ -33,7 +33,7 @@
         "count": 36,
         "ignoreCaseSelected": false,
         "map": "productClusterIds",
-        "term": "636"
+        "term": "439"
       },
       "layout": {
         "pagination": "show-more"

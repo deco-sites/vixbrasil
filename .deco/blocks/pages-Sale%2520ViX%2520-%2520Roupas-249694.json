@@ -1,7 +1,7 @@
 {
   "__resolveType": "website/pages/Page.tsx",
-  "name": "Sale ViX Paula Hermanny",
-  "path": "/sale",
+  "name": "Sale ViX - Roupas",
+  "path": "/sale/roupas",
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
@@ -14,11 +14,11 @@
       "banners": [
         {
           "image": {
-            "mobile": "https://data.decoassets.com/vixbrasil/e8b50b9a-8682-4c2b-b354-b0a8668b4233/WhatsApp-Image-2025-03-18-at-12.15.01.jpeg",
-            "desktop": "https://data.decoassets.com/vixbrasil/f65bd36a-836f-4d28-8ec4-dbc9788b74f9/WhatsApp-Image-2025-03-18-at-12.13.31.jpeg",
+            "mobile": "https://data.decoassets.com/vixbrasil/92dd2234-d155-4fcd-a638-99f3c911150e/WhatsApp-Image-2025-03-18-at-12.15.03.jpeg",
+            "desktop": "https://data.decoassets.com/vixbrasil/f621452b-11e9-438c-a8a0-e7d3ac527fef/WhatsApp-Image-2025-03-18-at-12.13.33.jpeg",
             "alt": "sale"
           },
-          "matcher": "/sale*",
+          "matcher": "/sale/roupas*",
           "active": true
         }
       ]
@@ -33,7 +33,7 @@
         "count": 36,
         "ignoreCaseSelected": false,
         "map": "productClusterIds",
-        "term": "636"
+        "term": "635"
       },
       "layout": {
         "pagination": "show-more"
