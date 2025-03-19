@@ -7176,6 +7176,11 @@ details.collapse summary::-webkit-details-marker {
   width: 2rem;
 }
 
+.disabled\:bg-\[\#bea669\]:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(190 166 105 / var(--tw-bg-opacity));
+}
+
 .disabled\:bg-base-100:disabled {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));

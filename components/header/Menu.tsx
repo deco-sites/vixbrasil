@@ -45,14 +45,13 @@ function SubMenuItem(subItem: MobileMenuItems) {
               </p>
               <ul>
                 {subItem.children?.map((node) => (
-                  node?.children?.length > 0
+                  node?.children?.length && node?.children?.length > 0
                     ? (
                       <li class="p-2">
                         <details class="dropdown group/submenu-mobile">
                           <summary class="list-none flex items-center gap-2 font-source-sans text-left text-sm tracking-[0.98px] uppercase font-light">
                             {node.title}
 
-                            
                             <span>
                               <Icon
                                 id="sm-arrow"
@@ -62,7 +61,7 @@ function SubMenuItem(subItem: MobileMenuItems) {
                             </span>
                           </summary>
                           <ul class="menu dropdown-content z-10 !relative">
-                            {node.children.map((item) => (
+                            {node?.children?.map((item) => (
                               <li class="p-2">
                                 <a
                                   href={item.url}

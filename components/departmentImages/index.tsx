@@ -71,6 +71,29 @@ export const DepartmentImages = (
         </svg>
       </Slider.NextButton>
 
+      <ul class="col-span-full row-start-4 z-10 carousel justify-center gap-3 w-full">
+        {items
+          .map((_, index) => {
+            if (index % 4 !== 0) {
+              return (
+                <li class="carousel-item hidden" key={index}>
+                  <Slider.Dot
+                    index={index}
+                    class="bg-black opacity-20 h-3 w-3 no-animation rounded-full disabled:bg-[#bea669] disabled:opacity-100 transition-[width] cursor-pointer"
+                  />
+                </li>
+              );
+            }
+            return (
+              <li class="carousel-item" key={index}>
+                <Slider.Dot
+                  index={index}
+                  class="bg-black opacity-20 h-3 w-3 no-animation rounded-full disabled:bg-[#bea669] disabled:opacity-100 transition-[width] cursor-pointer"
+                />
+              </li>
+            );
+          })}
+      </ul>
       <Slider.JS rootId={container} infinite />
     </div>
   );
