@@ -4,7 +4,13 @@
 import { AppContext } from "apps/vtex/mod.ts";
 import type { SimulationOrderForm, SKU, Sla } from "apps/vtex/utils/types.ts";
 import { formatPrice } from "../../sdk/format.ts";
-import { ComponentProps } from "../../sections/Component.tsx";
+// import { ComponentProps } from "site/sections/Component.tsx";
+import { type SectionProps } from "@deco/deco";
+
+type ComponentProps<LoaderFunc, ActionFunc = LoaderFunc> = SectionProps<
+  LoaderFunc,
+  ActionFunc
+>;
 
 export interface Props {
   items: SKU[];

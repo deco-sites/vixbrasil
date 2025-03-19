@@ -1,6 +1,6 @@
 import type { SKU } from "apps/vtex/utils/types.ts";
 import { useId } from "../../sdk/useId.ts";
-import { useComponent } from "../../sections/Component.tsx";
+import { useComponent } from "site/sections/Component.tsx";
 
 export interface Props {
   items: SKU[];
