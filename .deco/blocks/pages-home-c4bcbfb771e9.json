@@ -16,6 +16,14 @@
           "device": "mobile",
           "thumbnail": "https://assets.decocache.com/vixbrasil/d9e0a145-f6da-46fd-a9d2-7904cfa385ad/bannerhome_harbor_desktop_estatico.png",
           "thumbnailMobile": "https://assets.decocache.com/vixbrasil/3daa1d9b-0f65-4e17-8a93-e242c2e133a3/bannerhome_harbor_mobile.png"
+        },
+        {
+          "type": "image",
+          "target": "_self",
+          "src": "https://assets.decocache.com/vixbrasil/9e1987a1-4f47-40d7-b545-0a630fe191cb/bannerhome_colecao_desktop.png",
+          "mobileSrc": "https://assets.decocache.com/vixbrasil/c4a2a56b-5e42-4f3a-8cac-84c7772817ac/bannerhome_colecao_mobile.png",
+          "url": "/inverno25",
+          "alt": "Bohemian Spirit - Imagem"
         }
       ]
     },
