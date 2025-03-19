@@ -17,6 +17,7 @@ export const DepartmentImages = (
       id={container}
       class="w-[calc(100% - 8px)] lg:mt-8 mt-4 lg:mb-12 mb-8 relative max-w-[1660px] mx-auto"
     >
+
       <Slider class="carousel carousel-center col-span-full col-start-1 row-start-1 row-span-full h-full w-full gap-4 px-4">
         {items?.map((item, index) => {
           return (
@@ -35,10 +36,14 @@ export const DepartmentImages = (
                 target={item.target}
                 classes="hover:scale-[1.05] duration-200 lg:mx-0 mx-1.5 !object-contain"
               />
+
+
             </Slider.Item>
           );
         })}
       </Slider>
+      {items.length > 4 &&
+      <>
       <Slider.PrevButton
         class="shop-now__slider--arrow shop-now__slider--arrow--prev"
         disabled={false}
@@ -94,6 +99,8 @@ export const DepartmentImages = (
             );
           })}
       </ul>
+      </>
+      }
       <Slider.JS rootId={container} infinite />
     </div>
   );
