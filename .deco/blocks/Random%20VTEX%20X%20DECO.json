@@ -8,7 +8,7 @@
     },
     {
       "__resolveType": "website/matchers/random.ts",
-      "traffic": 0.9
+      "traffic": 0.7
     }
   ]
 }
