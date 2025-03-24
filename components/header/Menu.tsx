@@ -7,7 +7,7 @@ interface MobileMenu {
 }
 
 export interface MobileMenuItem {
-  /**  @title Mobile items */
+/** @titleBy title */
   item: MobileMenuItems[];
 }
 /** @titleBy title */
@@ -142,7 +142,7 @@ function MenuItem({ item }: MobileMenuItem) {
                     : ""
                 }`}
               >
-                {node.children ? <SubMenuItem {...node} /> : (
+                {node?.children?.length > 0 ? <SubMenuItem {...node} /> : (
                   <a
                     href={node.url}
                     class={`block mb-2 font-source-sans text-left text-sm font-medium tracking-[0.98px] uppercase ${

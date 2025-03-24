@@ -241,24 +241,27 @@
         {
           "children": [
             {
-              "children": [],
               "name": "Praia",
-              "url": "/sale/praia?order=OrderByReleaseDateDESC"
+              "url": "/sale/praia?order=OrderByReleaseDateDESC",
+              "children": []
             },
             {
-              "children": [],
               "name": "Saídas de Praia",
-              "url": "/sale/saidas-de-praia?order=OrderByReleaseDateDESC"
+              "url": "/sale/saidas-de-praia?order=OrderByReleaseDateDESC",
+              "children": []
             },
             {
-              "children": [],
               "name": "Roupas",
-              "url": "/sale/roupas?order=OrderByReleaseDateDESC"
+              "url": "/sale/roupas?order=OrderByReleaseDateDESC",
+              "children": []
             }
           ],
           "name": "Sale",
           "url": "/sale?order=OrderByReleaseDateDESC",
           "bold": true
+        },
+        {
+          "children": []
         }
       ]
     },
@@ -325,6 +328,13 @@
           "title": "Inverno 25",
           "url": "/inverno25",
           "target": "_self",
+          "bold": true
+        },
+        {
+          "title": "New In",
+          "url": "/novidades?order=OrderByReleaseDateDESC",
+          "target": "_self",
+          "children": [],
           "bold": true
         },
         {
@@ -521,25 +531,23 @@
           "target": "_self",
           "children": [
             {
+              "target": "_self",
               "title": "Cheeky",
-              "url": "/cheeky?order=OrderByReleaseDateDESC",
-              "target": "_self"
+              "url": "/cheeky?order=OrderByReleaseDateDESC"
             },
             {
+              "target": "_self",
               "title": "BR",
-              "url": "/praia/biquinis/calcinhas/br?order=OrderByReleaseDateDESC",
-              "target": "_self"
+              "url": "/praia/biquinis/calcinhas/br?order=OrderByReleaseDateDESC"
             },
             {
-              "title": "HOT PANTS",
+              "target": "_self",
               "url": "/hot-pant?order=OrderByReleaseDateDESC",
-              "target": "_self"
+              "title": "HOT PANTS"
             }
           ]
         },
         {
-          "title": "Sale",
-          "url": "/sale?order=OrderByReleaseDateDESC",
           "target": "_self",
           "children": [
             {
@@ -561,6 +569,8 @@
               "title": "Roupas"
             }
           ],
+          "title": "Sale",
+          "url": "/sale?order=OrderByReleaseDateDESC",
           "bold": true
         }
       ]
