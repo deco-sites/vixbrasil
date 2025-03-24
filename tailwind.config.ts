@@ -4,6 +4,12 @@ export default {
   plugins: [daisyui],
   daisyui: { themes: [], logs: false },
   content: ["./**/*.{tsx,jsx,js,ts,html}"],
+  variants: {
+    extend: {
+      backgroundColor: ['disabled'],
+      textColor: ['disabled'],
+    },
+  },
   theme: {
     container: { center: true },
     colors: {
@@ -12,6 +18,7 @@ export default {
       black: "#000",
       bronze: "#a18c60",
       brown: "#bea669",
+      "black-opacity": "rgba(0 0 0 0.20)",
       "light-brown": "#F7F4ED",
       "medium-brown": "#E9DFC9",
       "medium-brown-opacity": "#E9DFC980",
