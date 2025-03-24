@@ -16,5 +16,7 @@
     "pagination": "show-more"
   },
   "startingPage": 0,
-  "partial": "hideMore"
+  "partial": "hideMore",
+  "seo": [],
+  "breadcrumbManual": []
 }
