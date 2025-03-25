@@ -13,14 +13,13 @@
       "section": {
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
-          "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
-          "sort": "price:desc",
+          "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
+          "sort": "OrderByPriceDESC",
           "count": 36,
-          "fuzzy": "automatic",
-          "selectedFacets": [],
           "advancedConfigs": {
             "includeOriginalAttributes": []
-          }
+          },
+          "filters": "dynamic"
         },
         "layout": {
           "columns": {

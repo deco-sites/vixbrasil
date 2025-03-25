@@ -1,8 +1,19 @@
 {
   "data": {
     "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
-    "count": 12
+    "count": 12,
+    "sort": "price:desc",
+    "advancedConfigs": {
+      "includeOriginalAttributes": []
+    },
+    "fuzzy": "automatic",
+    "selectedFacets": []
   },
-  "extensions": [],
+  "extensions": [
+    {
+      "__resolveType": "vtex/loaders/product/extensions/listingPage.ts",
+      "kitItems": true
+    }
+  ],
   "__resolveType": "commerce/loaders/product/extensions/listingPage.ts"
 }

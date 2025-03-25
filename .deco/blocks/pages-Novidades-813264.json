@@ -22,16 +22,29 @@
     {
       "__resolveType": "site/sections/Product/SearchResult.tsx",
       "page": {
-        "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
-        "sort": "OrderByReleaseDateDESC",
-        "count": 32,
-        "advancedConfigs": {
-          "includeOriginalAttributes": []
+        "__resolveType": "commerce/loaders/product/extensions/listingPage.ts",
+        "data": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+          "count": 32,
+          "sort": "",
+          "fuzzy": "automatic",
+          "selectedFacets": [
+            {
+              "key": "productClusterIds",
+              "value": "384"
+            }
+          ],
+          "advancedConfigs": {
+            "includeOriginalAttributes": []
+          },
+          "hideUnavailableItems": true
         },
-        "filters": "dynamic",
-        "similars": false,
-        "term": "384",
-        "map": "productClusterIds"
+        "extensions": [
+          {
+            "__resolveType": "vtex/loaders/product/extensions/listingPage.ts",
+            "kitItems": true
+          }
+        ]
       },
       "layout": {
         "pagination": "show-more"
