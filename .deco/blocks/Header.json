@@ -229,7 +229,7 @@
             },
             {
               "name": "Hot Pant",
-              "url": "/hot-pant?order=OrderByReleaseDateDESC"
+              "url": "/praia/biquinis/calcinhas/hotpant?order=OrderByReleaseDateDESC"
             },
             {
               "name": "Ver todos",
