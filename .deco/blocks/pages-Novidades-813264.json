@@ -24,20 +24,15 @@
       "page": {
         "__resolveType": "commerce/loaders/product/extensions/listingPage.ts",
         "data": {
-          "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+          "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
           "count": 32,
           "sort": "",
-          "fuzzy": "automatic",
-          "selectedFacets": [
-            {
-              "key": "productClusterIds",
-              "value": "384"
-            }
-          ],
           "advancedConfigs": {
             "includeOriginalAttributes": []
           },
-          "hideUnavailableItems": true
+          "filters": "dynamic",
+          "term": "384",
+          "map": "productClusterIds"
         },
         "extensions": [
           {
