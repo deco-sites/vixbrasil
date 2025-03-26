@@ -533,7 +533,7 @@
             {
               "target": "_self",
               "title": "Cheeky",
-              "url": "/cheeky?order=OrderByReleaseDateDESC"
+              "url": "/praia/biquinis/calcinhas/cheeky?order=OrderByReleaseDateDESC"
             },
             {
               "target": "_self",
@@ -542,7 +542,7 @@
             },
             {
               "target": "_self",
-              "url": "/hot-pant?order=OrderByReleaseDateDESC",
+              "url": "/praia/biquinis/calcinhas/hot-pant?order=OrderByReleaseDateDESC",
               "title": "HOT PANTS"
             }
           ]
