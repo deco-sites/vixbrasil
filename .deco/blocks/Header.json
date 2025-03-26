@@ -36,7 +36,18 @@
       "name": "Shop",
       "children": [
         {
-          "children": [],
+          "children": [
+            {
+              "children": [],
+              "name": "Drop 1 - Bohemian Spirit",
+              "url": "/inverno25/bohemian"
+            },
+            {
+              "children": [],
+              "name": "Drop 2 - Beach Hours",
+              "url": "/inverno25/beachhours"
+            }
+          ],
           "name": "Inverno 25",
           "url": "/inverno25",
           "bold": true
