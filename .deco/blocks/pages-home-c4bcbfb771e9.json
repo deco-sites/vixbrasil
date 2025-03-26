@@ -10,19 +10,19 @@
           "type": "video",
           "target": "_self",
           "src": "1069572649",
-          "url": "/novidades",
           "device": "mobile",
           "thumbnail": "https://assets.decocache.com/vixbrasil/528af947-e8ad-4c5c-a6db-1b4b443fc4d4/bannerhome_2delivery_desktop_estatico.png",
           "thumbnailMobile": "https://assets.decocache.com/vixbrasil/3e4f7ee4-a020-452f-ba90-3cd0b96ab9d4/bannerhome_2delivery_mobile_estatico.png",
           "mobileSrc": "1069570668",
-          "alt": "Beach Hours"
+          "alt": "Beach Hours",
+          "url": "/inverno25"
         },
         {
           "type": "image",
           "target": "_self",
           "src": "https://assets.decocache.com/vixbrasil/f5bd5a1d-58b9-4a15-a269-3f261bdb8f41/bannerhome_novidades_desktop-(1).png",
           "mobileSrc": "https://assets.decocache.com/vixbrasil/7a6b3218-f73c-4b14-a838-d491086fa580/bannerhome_novidades_mobile.png",
-          "url": "/inverno25",
+          "url": "/novidades",
           "alt": "Beach Hours - Imagem"
         }
       ]
