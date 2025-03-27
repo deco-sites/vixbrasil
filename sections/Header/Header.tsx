@@ -53,7 +53,10 @@ export interface SectionProps {
 }
 type Props = Omit<SectionProps, "alert">;
 const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
-  <>
+  <div
+    class={`group/header backdrop-blur-xs w-full hover:bg-base-100 hover:backdrop-blur-none ease-in duration-200 z-50 fixed`}
+    id="vix-brasil-header"
+  >
     <div class="flex flex-col gap-4 max-w-full px-6">
       <div class="grid grid-cols-header place-items-center ">
         <div
@@ -107,10 +110,13 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
         </div>
       </div>
     </div>
-  </>
+  </div>
 );
 const Mobile = ({ logo, searchbar, mobileItems, loading }: Props) => (
-  <>
+  <div
+    class={`backdrop-blur-xs w-full ease-in duration-200 z-50 fixed`}
+    id="vix-brasil-header"
+  >
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       aside={
@@ -193,7 +199,7 @@ const Mobile = ({ logo, searchbar, mobileItems, loading }: Props) => (
         )
         : <Searchbar {...searchbar} />}
     </div>
-  </>
+  </div>
 );
 function Header({
   logo = {
@@ -241,15 +247,10 @@ function Header({
     >
       <CookieConsent />
 
-      <div
-        class={`group/header backdrop-blur-xs w-full hover:bg-base-100 hover:backdrop-blur-none ease-in duration-200 z-50 fixed`}
-        id="vix-brasil-header"
-      >
-        {/* {alerts.length > 0 && <Alert alerts={alerts} />} */}
         {device === "desktop"
           ? <Desktop logo={logo} {...props} />
           : <Mobile logo={logo} {...props} />}
-      </div>
+
       <script
         type="module"
         dangerouslySetInnerHTML={{ __html: scriptHeaderFunction }}

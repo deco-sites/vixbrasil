@@ -86,7 +86,6 @@ const Video = ({
               class={`${classes}`}
               style="width: 100%; height: 100%;"
             />
-            <h1>Teste</h1>
           </div>
         )}
     </div>

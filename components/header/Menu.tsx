@@ -167,7 +167,7 @@ function Menu({ mobileItems }: MobileMenu) {
       class="flex flex-col h-screen overflow-y-auto"
       style={{ minWidth: "90vw" }}
     >
-      <ul class="px-4 flex-grow flex flex-col divide-y divide-base-200 overflow-y-auto">
+      <ul class="px-4 pb-10 flex-grow flex flex-col divide-y divide-base-200 overflow-y-auto">
         {mobileItems?.map(({ item }) => (
           <li class="py-10 border-b border-[#cbb887]">
             <MenuItem item={item} />

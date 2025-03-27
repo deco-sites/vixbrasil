@@ -5679,6 +5679,10 @@ details.collapse summary::-webkit-details-marker {
   padding-bottom: 60px;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pb-12 {
   padding-bottom: 3rem;
 }
