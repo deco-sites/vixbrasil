@@ -336,17 +336,31 @@
     {
       "item": [
         {
-          "title": "Inverno 25",
-          "url": "/inverno25",
-          "target": "_self",
-          "bold": true
-        },
-        {
           "title": "New In",
           "url": "/novidades?order=OrderByReleaseDateDESC",
           "target": "_self",
-          "children": [],
-          "bold": true
+          "bold": true,
+          "children": []
+        },
+        {
+          "title": "Inverno 25",
+          "url": "/inverno25",
+          "target": "_self",
+          "bold": true,
+          "children": [
+            {
+              "target": "_blank",
+              "children": [],
+              "title": "Drop 1 - Bohemian Spirit",
+              "url": "/inverno25/bohemian"
+            },
+            {
+              "target": "_blank",
+              "children": [],
+              "title": "Drop 2 -  Beach Hours",
+              "url": "/inverno25/beachhours"
+            }
+          ]
         },
         {
           "title": "Praia",
