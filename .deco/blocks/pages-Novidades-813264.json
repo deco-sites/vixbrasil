@@ -31,8 +31,8 @@
             "includeOriginalAttributes": []
           },
           "filters": "dynamic",
-          "term": "384",
-          "map": "productClusterIds"
+          "map": "productClusterIds",
+          "term": "597"
         },
         "extensions": [
           {
