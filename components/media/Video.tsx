@@ -66,11 +66,13 @@ const Video = ({
           </div>
         )
         : (
+          <div class=" relative w-full h-full">
           <a
             href={url}
             target={target}
-            class=" relative before:w-full before:h-full before:absolute before:top-0 before:left-0 z-[1]"
+            class="w-full h-full absolute top-0 left-0 z-10"
           >
+          </a>
             <iframe
               src={`https://player.vimeo.com/video/${
                 globalThis.window.innerWidth > 1024 ? src : mobileSrc
@@ -84,7 +86,8 @@ const Video = ({
               class={`${classes}`}
               style="width: 100%; height: 100%;"
             />
-          </a>
+            <h1>Teste</h1>
+          </div>
         )}
     </div>
   );
