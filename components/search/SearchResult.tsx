@@ -31,12 +31,12 @@ export interface Layout {
   pagination?: "show-more" | "pagination";
 }
 /**
-* @titleBy name
-*/
+ * @titleBy name
+ */
 interface BreadcrumbManual {
-  name: string,
+  name: string;
   /** @title Link */
-  item: string
+  item: string;
 }
 export interface Props {
   /** @title Integration */
@@ -46,12 +46,10 @@ export interface Props {
   startingPage?: 0 | 1;
 
   seo: SeoTextProps[];
-  breadcrumbManual?: BreadcrumbManual[] 
+  breadcrumbManual?: BreadcrumbManual[];
   /** @hidden */
   partial?: "hideMore" | "hideLess";
 }
-
-
 
 const DEFAULT_PROPS = {
   seo: [
@@ -401,7 +399,10 @@ function Result(
         {partial ? <PageResult {...props} /> : (
           <>
             <div class="py-1 bg-[#f9f9f9] flex sm:justify-start justify-center">
-              <Breadcrumb itemListElement={breadcrumbManual ?? breadcrumb?.itemListElement} />
+              <Breadcrumb
+                itemListElement={breadcrumbManual ??
+                  breadcrumb?.itemListElement}
+              />
             </div>
             <div class="max-w-[1640px] mx-auto flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5">
               {device === "mobile" && (

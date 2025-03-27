@@ -2,7 +2,13 @@ import type { BreadcrumbList } from "apps/commerce/types.ts";
 import { relative } from "../../sdk/url.ts";
 
 interface Props {
-  itemListElement: BreadcrumbList["itemListElement"];
+  itemListElement: BreadcrumbList["itemListElement"] | BreadcrumbManual[];
+}
+
+interface BreadcrumbManual {
+  name: string;
+  /** @title Link */
+  item: string;
 }
 
 function Breadcrumb({ itemListElement = [] }: Props) {
@@ -14,7 +20,6 @@ function Breadcrumb({ itemListElement = [] }: Props) {
         {items
           .filter(({ name, item }) => name && item)
           .map(({ name, item }, index) => {
-            
             return (
               <li
                 class={`${

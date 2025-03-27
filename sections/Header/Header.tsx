@@ -247,9 +247,9 @@ function Header({
     >
       <CookieConsent />
 
-        {device === "desktop"
-          ? <Desktop logo={logo} {...props} />
-          : <Mobile logo={logo} {...props} />}
+      {device === "desktop"
+        ? <Desktop logo={logo} {...props} />
+        : <Mobile logo={logo} {...props} />}
 
       <script
         type="module"

@@ -104,19 +104,22 @@ export default function BannerVideoComponent(
                 </path>
               </svg>
             </Slider.NextButton>
-                  <ul style={{bottom: '50px' }} class="carousel justify-center gap-3 w-full absolute left-0 z-40">
-        {bannerVideo
-          .map((_, index) => {
-            return (
-              <li class="carousel-item" key={index}>
-                <Slider.Dot
-                  index={index}
-                  class="bg-brown opacity-20 disabled:opacity-100 focus:outline-none group h-3 w-3 no-animation rounded-full cursor-pointer border-transparent"
-                />
-              </li>
-            );
-          })}
-      </ul>
+            <ul
+              style={{ bottom: "50px" }}
+              class="carousel justify-center gap-3 w-full absolute left-0 z-40"
+            >
+              {bannerVideo
+                .map((_, index) => {
+                  return (
+                    <li class="carousel-item" key={index}>
+                      <Slider.Dot
+                        index={index}
+                        class="bg-black opacity-20 h-3 w-3 no-animation rounded-full disabled:bg-[#bea669] disabled:opacity-100 transition-[width] cursor-pointer"
+                      />
+                    </li>
+                  );
+                })}
+            </ul>
           </>
         )}
       </div>

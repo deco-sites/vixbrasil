@@ -135,6 +135,16 @@
   width: 5px;
 }
 
+
+.itemDotsDepartment:nth-child(4n+2) {
+  display: block;
+}
+
+
+.itemDotsShelf:nth-child(3n+1) {
+  display: block;
+}
+
 @media all and (max-width: 1024px) {
   .banner-video__slider--arrow--prev {
     left: 20px;

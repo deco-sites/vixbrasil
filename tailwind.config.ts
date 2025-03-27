@@ -6,8 +6,8 @@ export default {
   content: ["./**/*.{tsx,jsx,js,ts,html}"],
   variants: {
     extend: {
-      backgroundColor: ['disabled'],
-      textColor: ['disabled'],
+      backgroundColor: ["disabled"],
+      textColor: ["disabled"],
     },
   },
   theme: {

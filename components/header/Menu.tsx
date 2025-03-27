@@ -7,7 +7,7 @@ interface MobileMenu {
 }
 
 export interface MobileMenuItem {
-/** @titleBy title */
+  /** @titleBy title */
   item: MobileMenuItems[];
 }
 /** @titleBy title */
@@ -142,16 +142,18 @@ function MenuItem({ item }: MobileMenuItem) {
                     : ""
                 }`}
               >
-                {node?.children?.length > 0 ? <SubMenuItem {...node} /> : (
-                  <a
-                    href={node.url}
-                    class={`block mb-2 font-source-sans text-left text-sm font-medium tracking-[0.98px] uppercase ${
-                      node.bold ? "font-medium text-[#bea669]" : "font-medium"
-                    }`}
-                  >
-                    {node.title}
-                  </a>
-                )}
+                {node?.children?.length && node?.children?.length > 0
+                  ? <SubMenuItem {...node} />
+                  : (
+                    <a
+                      href={node.url}
+                      class={`block mb-2 font-source-sans text-left text-sm font-medium tracking-[0.98px] uppercase ${
+                        node.bold ? "font-medium text-[#bea669]" : "font-medium"
+                      }`}
+                    >
+                      {node.title}
+                    </a>
+                  )}
               </li>
             );
           })}

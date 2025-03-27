@@ -86,7 +86,8 @@ function NavItem({ item }: { item: NavItemProps }) {
                               "font-semibold"
                             } text-sm uppercase`}
                           >
-                            {leaf.name} {
+                            {leaf.name}{" "}
+                            {leaf?.children?.length &&
                               leaf?.children?.length > 0 && (
                               <span class="before:content-['+'] text-[25px] relative top-1 left-1 group-hover/navleaf:before:content-['-'] group-hover/navleaf:top-[2px] group-hover/navleaf:text-[30px]">
                               </span>
