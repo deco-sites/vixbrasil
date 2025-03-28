@@ -19,8 +19,8 @@ export const ImageZoom = (
   {
     src,
     alt,
-    width,
-    height,
+    width = 508,
+    height = 768,
     num,
     qtt,
     aspect,
@@ -38,6 +38,7 @@ export const ImageZoom = (
       )}
 
       <div
+        style={{ maxWidth: `${width}px`, maxHeight: `${height}px` }}
         class={`imageZoom--wrapper max-w-[${width}px] w-full max-h-[${height}px] h-full overflow-hidden relative`}
       >
         <img

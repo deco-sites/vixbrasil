@@ -4264,6 +4264,10 @@ details.collapse summary::-webkit-details-marker {
   height: 52px;
 }
 
+.h-\[768px\] {
+  height: 768px;
+}
+
 .h-\[84px\] {
   height: 84px;
 }
@@ -4717,6 +4721,10 @@ details.collapse summary::-webkit-details-marker {
 
 .max-w-\[480px\] {
   max-width: 480px;
+}
+
+.max-w-\[507px\] {
+  max-width: 507px;
 }
 
 .max-w-\[522px\] {

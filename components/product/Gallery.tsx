@@ -13,6 +13,8 @@ export interface Props {
 }
 const WIDTH = 508;
 const HEIGHT = 768;
+const WIDTH_MOBILE = 374;
+const HEIGHT_MOBILE = 565;
 const ASPECT_RATIO = `${WIDTH} / ${HEIGHT}`;
 /**
  * @title Product Image Slider
@@ -25,7 +27,9 @@ export default function GallerySlider(props: Props) {
   if (!props.page) {
     throw new Error("Missing Product Details Page Info");
   }
-  const { page: { product: { name, isVariantOf, image: pImages } } } = props;
+  const {
+    page: { product: { name, isVariantOf, image: pImages, video: pVideos } },
+  } = props;
   // Filter images when image's alt text matches product name
   // More info at: https://community.shopify.com/c/shopify-discussions/i-can-not-add-multiple-pictures-for-my-variants/m-p/2416533
   const groupImages = isVariantOf?.image ?? pImages ?? [];
@@ -36,6 +40,10 @@ export default function GallerySlider(props: Props) {
   const images = imagesFiltered.filter((item) => item.name !== "IMAGEM1");
 
   const device = useDevice();
+
+  const videos = pVideos?.map((item) => item.contentUrl).join("");
+  const match = videos?.match(/video\/(\d+)/);
+  const videoId = match ? match[1] : null;
   return (
     <>
       <div
@@ -47,15 +55,67 @@ export default function GallerySlider(props: Props) {
           <div class="relative h-min flex-grow">
             <Slider class="carousel carousel-center gap-6 w-full">
               {images.map((img, index) => {
+                if (index === 1 && videoId) {
+                  return (
+                    <>
+                      <Slider.Item index={index} class="carousel-item w-full">
+                        <div
+                          class="max-w-[507px] mx-auto relative h-[768px] flex justify-center"
+                          style={{
+                            maxWidth: `${
+                              device === "desktop" ? WIDTH : WIDTH_MOBILE
+                            }px`,
+                            maxHeight: `${
+                              device === "desktop" ? HEIGHT : HEIGHT_MOBILE
+                            }px`,
+                          }}
+                        >
+                          <span class="absolute w-full h-full z-10 top-0 left-0 cursor-pointer" />
+                          <iframe
+                            src={`https://player.vimeo.com/video/${videoId}?h=6fcbaad96d&title=0&byline=0&portrait=0&background=1&muted=1&controls=0&autoplay=1&playsinline=1`}
+                            width={device === "desktop" ? WIDTH : WIDTH_MOBILE}
+                            height={device === "desktop"
+                              ? HEIGHT
+                              : HEIGHT_MOBILE}
+                            frameborder="0"
+                            allow="autoplay; fullscreen; picture-in-picture; muted"
+                            title="VW252130_2549_1"
+                          >
+                          </iframe>
+                        </div>
+                      </Slider.Item>
+                      <Slider.Item
+                        index={index + 1}
+                        class="carousel-item w-full"
+                      >
+                        <ImageZoom
+                          classes="w-full h-full"
+                          aspect={ASPECT_RATIO}
+                          src={img.url!}
+                          alt={img.alternateName}
+                          width={device === "desktop" ? WIDTH : WIDTH_MOBILE}
+                          height={device === "desktop" ? HEIGHT : HEIGHT_MOBILE}
+                          preload={false}
+                          loading={"lazy"}
+                          num={index + 1}
+                          qtt={images.length}
+                        />
+                      </Slider.Item>
+                    </>
+                  );
+                }
                 return (
-                  <Slider.Item index={index} class="carousel-item w-full">
+                  <Slider.Item
+                    index={index !== 0 && videoId ? index + 1 : index}
+                    class="carousel-item w-full"
+                  >
                     <ImageZoom
                       classes="w-full h-full"
                       aspect={ASPECT_RATIO}
                       src={img.url!}
                       alt={img.alternateName}
-                      width={WIDTH}
-                      height={HEIGHT}
+                      width={device === "desktop" ? WIDTH : WIDTH_MOBILE}
+                      height={device === "desktop" ? HEIGHT : HEIGHT_MOBILE}
                       preload={index === 0}
                       loading={index === 0 ? "eager" : "lazy"}
                       num={index + 1}
@@ -105,10 +165,53 @@ export default function GallerySlider(props: Props) {
               )}
             >
               {images.map((img, index) => {
+                if (index === 1 && videoId) {
+                  return (
+                    <>
+                      <li class="carousel-item max-w-40 max-h-64 w-full h-full">
+                        <Slider.Dot
+                          index={index}
+                          class="border-[2px] border-transparent"
+                        >
+                          <div
+                            class="object-cover w-full h-full max-w-[133px] max-h-[171px] relative"
+                            style={{ aspectRatio: "133 / 171" }}
+                          >
+                            <span class="absolute w-full h-full z-10 top-0 left-0 cursor-pointer" />
+                            <iframe
+                              src={`https://player.vimeo.com/video/${videoId}?h=6fcbaad96d&title=0&byline=0&portrait=0&background=1&muted=1&controls=0&autoplay=1&playsinline=1`}
+                              width="133"
+                              height="171px"
+                              frameborder="0"
+                              allow="autoplay; fullscreen; picture-in-picture; muted"
+                              title="VW252130_2549_1"
+                            >
+                            </iframe>
+                          </div>
+                        </Slider.Dot>
+                      </li>
+                      <li class="carousel-item max-w-40 max-h-64 w-full h-full">
+                        <Slider.Dot
+                          index={index + 1}
+                          class="border-[2px] border-transparent"
+                        >
+                          <Image
+                            style={{ aspectRatio: "133 / 171" }}
+                            class="object-cover w-full h-full max-w-[133px] max-h-[171px]"
+                            width={133}
+                            height={171}
+                            src={img.url!}
+                            alt={img.alternateName}
+                          />
+                        </Slider.Dot>
+                      </li>
+                    </>
+                  );
+                }
                 return (
                   <li class="carousel-item max-w-40 max-h-64 w-full h-full">
                     <Slider.Dot
-                      index={index}
+                      index={index !== 0 && videoId ? index + 1 : index}
                       class="border-[2px] border-transparent"
                     >
                       <Image
