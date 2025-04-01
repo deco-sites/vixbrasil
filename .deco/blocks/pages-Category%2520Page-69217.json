@@ -153,6 +153,11 @@
           "active": true
         },
         {
+          "image": {},
+          "active": false,
+          "matcher": "/cores*"
+        },
+        {
           "image": {
             "desktop": "https://data.decoassets.com/vixbrasil/bc8ec6af-4802-4150-bec6-3300ec6d5b1b/roupas-desktop.png",
             "mobile": "https://data.decoassets.com/vixbrasil/70f8b726-3e17-425d-9b2a-620a7e71e6f7/roupas_mobile.png",
