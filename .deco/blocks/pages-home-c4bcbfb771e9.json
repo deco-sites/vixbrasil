@@ -7,23 +7,23 @@
       "__resolveType": "site/sections/Images/BannerVideo.tsx",
       "bannerVideo": [
         {
-          "type": "image",
-          "target": "_self",
-          "alt": "Novidades",
-          "url": "/novidades",
-          "src": "https://assets.decocache.com/vixbrasil/6bd9d0db-d5af-4978-b0c7-3465a431eb67/bannerhome_2delivery_novidades_desktop.png",
-          "mobileSrc": "https://assets.decocache.com/vixbrasil/e1fe66b3-e3cf-489a-bb06-e96712bd23f1/bannerhome_2delivery_novidades_mobile.png"
-        },
-        {
           "type": "video",
           "target": "_self",
+          "alt": "Beach Hours",
+          "url": "/inverno25",
           "src": "1071827128",
           "mobileSrc": "1071828429",
-          "url": "/inverno25",
-          "alt": "Beach Hours",
           "device": "mobile",
           "thumbnail": "https://assets.decocache.com/vixbrasil/3122e25f-c12b-4570-91ca-afddeaa34c17/bannerhome_2delivery_desktop_estatico.png",
           "thumbnailMobile": "https://assets.decocache.com/vixbrasil/f3d9e406-4972-44aa-a20b-01012c93a266/bannerhome_2delivery_mobile_estatico.png"
+        },
+        {
+          "type": "image",
+          "target": "_self",
+          "src": "https://assets.decocache.com/vixbrasil/6bd9d0db-d5af-4978-b0c7-3465a431eb67/bannerhome_2delivery_novidades_desktop.png",
+          "mobileSrc": "https://assets.decocache.com/vixbrasil/e1fe66b3-e3cf-489a-bb06-e96712bd23f1/bannerhome_2delivery_novidades_mobile.png",
+          "url": "/novidades",
+          "alt": "Novidades"
         }
       ]
     },
