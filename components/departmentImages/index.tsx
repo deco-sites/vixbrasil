@@ -76,7 +76,7 @@ export const DepartmentImages = (
               </svg>
             </Slider.NextButton>
 
-            <ul class="col-span-full row-start-4 z-10 carousel justify-center gap-3 w-full ">
+            <ul class="col-span-full row-start-4 z-10 carousel justify-center gap-3 w-full sm:inline-flex hidden">
               {items
                 .map((_, index) => {
                   return (
