@@ -58,11 +58,11 @@
           "bold": true,
           "children": [
             {
-              "name": "biquínis",
+              "name": "Biquínis",
               "url": "/praia/biquinis?order=OrderByReleaseDateDESC"
             },
             {
-              "name": "maiôs",
+              "name": "Maiôs",
               "url": "/praia/maios?order=OrderByReleaseDateDESC"
             },
             {
@@ -70,11 +70,11 @@
               "url": "/praia/saidas-de-praia?order=OrderByReleaseDateDESC"
             },
             {
-              "name": "cangas",
+              "name": "Cangas",
               "url": "/praia/cangas?order=OrderByReleaseDateDESC"
             },
             {
-              "name": "ver todos",
+              "name": "Ver todos",
               "url": "/praia?order=OrderByReleaseDateDESC",
               "bold": true
             }
@@ -86,7 +86,7 @@
           "bold": true,
           "children": [
             {
-              "name": "Vestido",
+              "name": "Vestidos",
               "url": "/roupas/vestidos",
               "children": [
                 {
@@ -108,7 +108,7 @@
               ]
             },
             {
-              "name": "Top",
+              "name": "Tops",
               "url": "/roupas/top?order=OrderByReleaseDateDESC"
             },
             {
@@ -132,7 +132,7 @@
               "url": "/roupas/macacoes?order=OrderByReleaseDateDESC"
             },
             {
-              "name": "Saia",
+              "name": "Saias",
               "url": "/roupas/saias?order=OrderByReleaseDateDESC"
             },
             {
@@ -140,7 +140,7 @@
               "url": "/roupas/shorts?order=OrderByReleaseDateDESC"
             },
             {
-              "name": "ver todos",
+              "name": "Ver todos",
               "url": "/roupas?order=OrderByReleaseDateDESC",
               "bold": true
             }
@@ -169,11 +169,11 @@
               "url": "/acessorios/sandalias?order=OrderByReleaseDateDESC"
             },
             {
-              "name": "cintos",
+              "name": "Cintos",
               "url": "/acessorios/cintos?order=OrderByReleaseDateDESC"
             },
             {
-              "name": "ver todos",
+              "name": "Ver todos",
               "url": "/acessorios?order=OrderByReleaseDateDESC",
               "bold": true
             }
