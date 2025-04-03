@@ -70,48 +70,54 @@ function NavItem({ item }: { item: NavItemProps }) {
                   </a>
 
                   <ul class="flex flex-col gap-1 mt-0">
-                    {node.children?.map((leaf) => (
-                      <li class="group/navleaf">
-                        <a
-                          class={`${
-                            leaf.bold
-                              ? "font-semibold hover:font-bold"
-                              : "font-light hover:font-normal"
-                          } font-source-sans duration-200`}
-                          href={leaf.url}
-                        >
-                          <span
+                    {node.children?.map((leaf) => {
+                      const leafChildren = leaf?.children?.length ?? 0;
+                      return (
+                        <li class="group/navleaf">
+                          <a
                             class={`${
-                              leaf.name?.toLocaleLowerCase() === "ver todos" &&
-                              "font-semibold"
-                            } text-sm uppercase`}
+                              leaf.bold
+                                ? "font-semibold hover:font-bold"
+                                : "font-light hover:font-normal"
+                            } font-source-sans duration-200`}
+                            href={leaf.url}
                           >
-                            {leaf.name} {
-                              leaf?.children?.length > 0 && (
-                              <span class="before:content-['+'] text-[25px] relative top-1 left-1 group-hover/navleaf:before:content-['-'] group-hover/navleaf:top-[2px] group-hover/navleaf:text-[30px]">
-                              </span>
-                            )}
-                          </span>
-                        </a>
+                            <span
+                              class={`${
+                                leaf.name?.toLocaleLowerCase() ===
+                                  "ver todos" &&
+                                "font-semibold"
+                              } text-sm uppercase`}
+                            >
+                              {leaf.name}{" "}
+                              {leafChildren > 0 && (
+                                <span class="before:content-['+'] text-[25px] relative top-1 left-1 group-hover/navleaf:before:content-['-'] group-hover/navleaf:top-[2px] group-hover/navleaf:text-[30px]">
+                                </span>
+                              )}
+                            </span>
+                          </a>
 
-                        <ul class="flex flex-col gap-1 mt-0 pl-2 overflow-hidden h-auto max-h-[0px]  group-hover/navleaf:max-h-[200px] duration-200">
-                          {leaf.children?.map((i) => (
-                            <li>
-                              <a
-                                class={`${
-                                  i.bold
-                                    ? "font-semibold hover:font-bold"
-                                    : "font-light hover:font-normal"
-                                } font-source-sans text-bronze duration-200`}
-                                href={i.url}
-                              >
-                                <span class="text-sm uppercase">{i.name}</span>
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                    ))}
+                          <ul class="flex flex-col gap-1 mt-0 pl-2 overflow-hidden h-auto max-h-[0px]  group-hover/navleaf:max-h-[200px] duration-200">
+                            {leaf.children?.map((i) => (
+                              <li>
+                                <a
+                                  class={`${
+                                    i.bold
+                                      ? "font-semibold hover:font-bold"
+                                      : "font-light hover:font-normal"
+                                  } font-source-sans text-bronze duration-200`}
+                                  href={i.url}
+                                >
+                                  <span class="text-sm uppercase">
+                                    {i.name}
+                                  </span>
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </li>
               ))}
