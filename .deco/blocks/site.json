@@ -25,7 +25,8 @@
       ]
     },
     {
-      "__resolveType": "analytics/sections/Analytics/DecoAnalytics.tsx"
+      "__resolveType": "analytics/sections/Analytics/DecoAnalytics.tsx",
+      "domain": "vixbrasil.deco.site"
     },
     {
       "__resolveType": "site/sections/Session.tsx",
