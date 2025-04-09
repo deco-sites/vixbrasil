@@ -134,8 +134,8 @@
       "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
         "type": "image",
-        "src": "https://assets.decocache.com/vixbrasil/ff0b7be8-9842-4a34-bef1-bdd2bab24092/miolo-app-desktop.png",
-        "mobileSrc": "https://assets.decocache.com/vixbrasil/3c6e27b5-3c11-4e50-bcaa-8fbc556b60ef/miolo-app-mobile.png",
+        "src": "https://assets.decocache.com/vixbrasil/60d55107-3ef1-4861-a13b-161728484855/miolo-app-desktop-(1).png",
+        "mobileSrc": "https://assets.decocache.com/vixbrasil/1fb393be-ad22-40d2-a331-07aaf4b413ee/miolo-app-mobile.png",
         "url": "https://linktr.ee/vixpaulahermannybr",
         "alt": "Baixe o App",
         "target": "_self"
