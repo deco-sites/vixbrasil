@@ -91,39 +91,35 @@
         "__resolveType": "site/sections/Shelfs/ShopNowShelf.tsx",
         "items": [
           {
-            "src": "https://assets.decocache.com/vixbrasil/b3a64a40-b9bf-4ed1-9ecb-77551998ec60/1-(1).png",
-            "products": [
-              "12214",
-              "12236"
-            ],
+            "src": "https://assets.decocache.com/vixbrasil/ea7ab2c7-9048-45cc-849e-6832bf2a63d9/1-(1).png",
+            "products": [],
             "alt": "Beach Hours"
           },
           {
-            "src": "https://assets.decocache.com/vixbrasil/5a26f3a7-afe0-48cc-b1dc-72a68c653706/catalogo-W25-mobile2_2nova.jpg",
+            "src": "https://assets.decocache.com/vixbrasil/ed197989-530b-4f2a-aa83-e7d6e2003813/2.png",
             "products": [
-              "12254"
+              "12397"
             ],
             "alt": "Inverno 25"
           },
           {
-            "src": "https://assets.decocache.com/vixbrasil/a2dbf476-aeff-4c32-8bbb-99f120dd5a55/3.png",
+            "src": "https://assets.decocache.com/vixbrasil/041be9ed-e6f4-471e-be09-891b67528f4f/3-(1).png",
             "alt": "Inverno 25",
-            "products": [
-              "12325"
-            ]
+            "products": []
           },
           {
             "alt": "Inverno 25",
-            "src": "https://assets.decocache.com/vixbrasil/acc17b90-10ae-4eba-879a-b8471839eab4/4.png",
+            "src": "https://assets.decocache.com/vixbrasil/0afdf5ec-34af-4d97-98cc-204e7790dd66/4.png",
             "products": [
-              "12175"
+              "12279",
+              "12293"
             ]
           },
           {
-            "src": "https://assets.decocache.com/vixbrasil/803e18bd-db32-49b4-a448-5e51bf73f718/catalogo-W25-mobile2_2nova.png",
+            "src": "https://assets.decocache.com/vixbrasil/cb32d107-e81c-49c6-acd6-f24912b0dcab/5.png",
             "alt": "Inverno 25",
             "products": [
-              "12301"
+              "12333"
             ]
           }
         ]
