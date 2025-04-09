@@ -33,40 +33,40 @@
           {
             "type": "image",
             "target": "_self",
-            "src": "https://assets.decocache.com/vixbrasil/3d547545-7a9f-4ee4-bcad-357625114830/1_biquinis.png",
-            "mobileSrc": "https://assets.decocache.com/vixbrasil/3d547545-7a9f-4ee4-bcad-357625114830/1_biquinis.png",
+            "src": "https://assets.decocache.com/vixbrasil/68a9ae3f-673f-4725-a7c1-54560f7a8634/1_biquinis.png",
+            "mobileSrc": "https://assets.decocache.com/vixbrasil/68a9ae3f-673f-4725-a7c1-54560f7a8634/1_biquinis.png",
             "url": "/praia/biquinis?order=OrderByReleaseDateDESC",
             "alt": "Biquínis"
           },
           {
             "type": "image",
             "target": "_self",
-            "src": "https://assets.decocache.com/vixbrasil/6fc3a205-ef3c-4701-a7f0-6f6899db72f7/3_roupas.png",
-            "mobileSrc": "https://assets.decocache.com/vixbrasil/6fc3a205-ef3c-4701-a7f0-6f6899db72f7/3_roupas.png",
+            "src": "https://assets.decocache.com/vixbrasil/4dda910c-56fa-41ec-b528-e26786bb4a8c/3_roupas.png",
+            "mobileSrc": "https://assets.decocache.com/vixbrasil/4dda910c-56fa-41ec-b528-e26786bb4a8c/3_roupas.png",
             "url": "/roupas?order=OrderByReleaseDateDESC",
             "alt": "Roupas"
           },
           {
             "type": "image",
             "target": "_blank",
-            "src": "https://assets.decocache.com/vixbrasil/ac136a25-1878-4adf-bc26-5278299402d9/2_maios.png",
-            "mobileSrc": "https://assets.decocache.com/vixbrasil/ac136a25-1878-4adf-bc26-5278299402d9/2_maios.png",
+            "src": "https://assets.decocache.com/vixbrasil/a61162d8-bc99-4b71-97c6-09c1edf323cc/2_maios.png",
+            "mobileSrc": "https://assets.decocache.com/vixbrasil/a61162d8-bc99-4b71-97c6-09c1edf323cc/2_maios.png",
             "url": "/praia/maios?order=OrderByReleaseDateDESC",
             "alt": "Maiôs"
           },
           {
             "type": "image",
             "target": "_self",
-            "src": "https://assets.decocache.com/vixbrasil/215a41a1-d266-4372-ae7c-6e31f8d9174a/5_saidas.png",
-            "mobileSrc": "https://assets.decocache.com/vixbrasil/215a41a1-d266-4372-ae7c-6e31f8d9174a/5_saidas.png",
+            "src": "https://assets.decocache.com/vixbrasil/9ac46171-efe3-40da-ba23-8c7c3649e8ef/5_saidas.png",
+            "mobileSrc": "https://assets.decocache.com/vixbrasil/9ac46171-efe3-40da-ba23-8c7c3649e8ef/5_saidas.png",
             "url": "/praia/saidas-de-praia?order=OrderByReleaseDateDESC",
             "alt": "Saídas de Praia"
           },
           {
             "type": "image",
             "target": "_self",
-            "src": "https://assets.decocache.com/vixbrasil/0d85fb38-ca29-4d51-a9aa-3deb28132f9e/4_acessorios.png",
-            "mobileSrc": "https://assets.decocache.com/vixbrasil/0d85fb38-ca29-4d51-a9aa-3deb28132f9e/4_acessorios.png",
+            "src": "https://assets.decocache.com/vixbrasil/5643032b-11f1-4bca-a7bc-1393780543d7/4_acessorios.png",
+            "mobileSrc": "https://assets.decocache.com/vixbrasil/5643032b-11f1-4bca-a7bc-1393780543d7/4_acessorios.png",
             "alt": "Acessórios",
             "url": "/acessorios?order=OrderByReleaseDateDESC"
           }
