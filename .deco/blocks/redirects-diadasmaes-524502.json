@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/diadasmaes",
+    "to": "/dia-das-maes",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}
