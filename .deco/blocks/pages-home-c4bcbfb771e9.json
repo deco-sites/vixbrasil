@@ -78,11 +78,11 @@
       "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
         "type": "image",
-        "src": "https://assets.decocache.com/vixbrasil/cadedd4b-852f-4507-97b7-3ada98f0ef28/bannermiolo_linho_desktop.png",
-        "mobileSrc": "https://assets.decocache.com/vixbrasil/d229bfb5-b873-4f4d-a26a-f654b7355262/bannermiolo_linho_mobile.png",
-        "url": "/colors",
+        "src": "https://assets.decocache.com/vixbrasil/0844a7b9-12f8-45b7-89c9-d2638beb89e6/bannermiolo_White_desktop.png",
+        "mobileSrc": "https://assets.decocache.com/vixbrasil/1977b27c-3bda-4719-99da-87178abdae5c/bannermiolo_White_mobile.png",
+        "url": "/white",
         "target": "_self",
-        "alt": "Colors"
+        "alt": "White"
       }
     },
     {
