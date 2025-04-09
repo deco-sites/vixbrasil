@@ -32,7 +32,7 @@
           },
           "filters": "dynamic",
           "map": "productClusterIds",
-          "term": "597"
+          "term": "384"
         },
         "extensions": [
           {
