@@ -7,20 +7,22 @@
       "__resolveType": "site/sections/Images/BannerVideo.tsx",
       "bannerVideo": [
         {
-          "type": "image",
+          "type": "video",
           "target": "_self",
           "alt": "Beach Hours",
           "url": "/inverno25",
-          "src": "https://assets.decocache.com/vixbrasil/465b26a5-fb96-4f54-87b8-731a7281f5c6/bannerhome_2delivery_desktop_estatico.png",
-          "mobileSrc": "https://assets.decocache.com/vixbrasil/d19f91c1-02bb-41d4-a700-07e113cc3506/bannerhome_2delivery_mobile_estatico.png"
+          "device": "mobile",
+          "mobileSrc": "1073908334",
+          "src": "1073907844"
         },
         {
-          "type": "image",
+          "type": "video",
           "target": "_self",
-          "src": "https://assets.decocache.com/vixbrasil/6bd9d0db-d5af-4978-b0c7-3465a431eb67/bannerhome_2delivery_novidades_desktop.png",
-          "mobileSrc": "https://assets.decocache.com/vixbrasil/e1fe66b3-e3cf-489a-bb06-e96712bd23f1/bannerhome_2delivery_novidades_mobile.png",
           "url": "/novidades",
-          "alt": "Novidades"
+          "alt": "Novidades",
+          "device": "mobile",
+          "src": "1073907844",
+          "mobileSrc": "1073908334"
         }
       ]
     },
