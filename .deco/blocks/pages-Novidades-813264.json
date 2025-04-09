@@ -10,8 +10,8 @@
       "banners": [
         {
           "image": {
-            "mobile": "https://assets.decocache.com/vixbrasil/9027a3d0-31ad-42a5-b709-b279b446fb3a/categoria-mobile.png",
-            "desktop": "https://assets.decocache.com/vixbrasil/be26983c-a744-4fe8-a5c3-b8162ee1c3b9/categoria-desktop.png",
+            "mobile": "https://assets.decocache.com/vixbrasil/7f395c58-620d-4e47-8817-27649d5962af/categoria-mobile-(2).png",
+            "desktop": "https://assets.decocache.com/vixbrasil/61f6b1e8-4b0e-4a79-abf6-76ae04ebe1f3/categoria-desktop.png",
             "alt": "Novidades"
           },
           "matcher": "/novidades",
