@@ -92,7 +92,9 @@
         "items": [
           {
             "src": "https://assets.decocache.com/vixbrasil/ea7ab2c7-9048-45cc-849e-6832bf2a63d9/1-(1).png",
-            "products": [],
+            "products": [
+              "11941"
+            ],
             "alt": "Beach Hours"
           },
           {
@@ -103,10 +105,10 @@
             "alt": "Inverno 25"
           },
           {
-            "src": "https://assets.decocache.com/vixbrasil/041be9ed-e6f4-471e-be09-891b67528f4f/3-(1).png",
+            "src": "https://assets.decocache.com/vixbrasil/5cc0c167-e0e6-4cc0-a9d8-e2659bd524ed/catalogo-W25-mobile2_2nova.jpg",
             "alt": "Inverno 25",
             "products": [
-              "12314"
+              "12254"
             ]
           },
           {
