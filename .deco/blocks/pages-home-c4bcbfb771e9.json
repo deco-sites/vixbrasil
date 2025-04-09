@@ -7,13 +7,12 @@
       "__resolveType": "site/sections/Images/BannerVideo.tsx",
       "bannerVideo": [
         {
-          "type": "video",
+          "type": "image",
           "target": "_self",
           "alt": "Beach Hours",
           "url": "/inverno25",
-          "device": "mobile",
-          "mobileSrc": "1073908334",
-          "src": "1073907844"
+          "src": "https://assets.decocache.com/vixbrasil/28612ba6-f101-4bf2-a54d-16b1ef42f148/bannerhome_2delivery_desktop_estatico.png",
+          "mobileSrc": "https://assets.decocache.com/vixbrasil/1779d5c3-9d40-4c0a-b562-bdae06d1e5ed/bannerhome_2delivery_mobile_estatico.png"
         },
         {
           "type": "video",
