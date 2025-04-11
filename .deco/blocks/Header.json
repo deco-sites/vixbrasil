@@ -265,6 +265,11 @@
               "name": "Roupas",
               "url": "/sale/roupas?order=OrderByReleaseDateDESC",
               "children": []
+            },
+            {
+              "children": [],
+              "name": "ver todos",
+              "url": "/sale?order=OrderByReleaseDateDESC"
             }
           ],
           "name": "Sale",
