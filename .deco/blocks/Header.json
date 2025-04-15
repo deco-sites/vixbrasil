@@ -180,21 +180,6 @@
           ]
         },
         {
-          "name": "Linhas",
-          "url": "#",
-          "bold": true,
-          "children": [
-            {
-              "name": "Care",
-              "url": "/care"
-            },
-            {
-              "name": "AnaVilhanas",
-              "url": "/anavilhanas"
-            }
-          ]
-        },
-        {
           "name": "Destaques",
           "url": "#",
           "bold": true,
@@ -222,6 +207,11 @@
             {
               "name": "Tricot",
               "url": "/tricot"
+            },
+            {
+              "children": [],
+              "name": "Care",
+              "url": "/care"
             }
           ]
         },
@@ -250,6 +240,9 @@
           ]
         },
         {
+          "name": "Sale",
+          "url": "/sale?order=OrderByReleaseDateDESC",
+          "bold": true,
           "children": [
             {
               "name": "Praia",
@@ -267,14 +260,11 @@
               "children": []
             },
             {
-              "children": [],
               "name": "ver todos",
-              "url": "/sale?order=OrderByReleaseDateDESC"
+              "url": "/sale?order=OrderByReleaseDateDESC",
+              "children": []
             }
-          ],
-          "name": "Sale",
-          "url": "/sale?order=OrderByReleaseDateDESC",
-          "bold": true
+          ]
         },
         {
           "children": []
