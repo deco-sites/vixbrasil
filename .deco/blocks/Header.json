@@ -153,8 +153,10 @@
           "children": [
             {
               "name": "Brincos/Colares/Pulseiras",
-              "url": "/acessorios-colares-brincos-pulseiras?order=OrderByReleaseDateDESC",
-              "children": []
+              "url": "/acessorios/colares/brincos/pulseiras?order=OrderByReleaseDateDESC",
+              "children": [
+                {}
+              ]
             },
             {
               "name": "Bolsas",
