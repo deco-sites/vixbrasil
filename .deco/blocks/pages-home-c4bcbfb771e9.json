@@ -33,24 +33,24 @@
           {
             "type": "image",
             "target": "_self",
-            "src": "https://assets.decocache.com/vixbrasil/68a9ae3f-673f-4725-a7c1-54560f7a8634/1_biquinis.png",
-            "mobileSrc": "https://assets.decocache.com/vixbrasil/68a9ae3f-673f-4725-a7c1-54560f7a8634/1_biquinis.png",
+            "src": "https://assets.decocache.com/vixbrasil/534a33dd-1ac4-4e0a-8692-e278434bcc6d/1_biquinis-(2).png",
+            "mobileSrc": "https://assets.decocache.com/vixbrasil/eb791990-9394-4c56-98e8-25d56cd6a594/1_biquinis-(2).png",
             "url": "/praia/biquinis?order=OrderByReleaseDateDESC",
             "alt": "Biquínis"
           },
           {
             "type": "image",
             "target": "_self",
-            "src": "https://assets.decocache.com/vixbrasil/4dda910c-56fa-41ec-b528-e26786bb4a8c/3_roupas.png",
-            "mobileSrc": "https://assets.decocache.com/vixbrasil/4dda910c-56fa-41ec-b528-e26786bb4a8c/3_roupas.png",
+            "src": "https://assets.decocache.com/vixbrasil/a879c0af-ba0b-4616-a5b6-2ee945d48ce5/3_roupas.png",
+            "mobileSrc": "https://assets.decocache.com/vixbrasil/ac14058b-5968-4b12-a5ad-315bdfac65f5/3_roupas.png",
             "url": "/roupas?order=OrderByReleaseDateDESC",
             "alt": "Roupas"
           },
           {
             "type": "image",
             "target": "_blank",
-            "src": "https://assets.decocache.com/vixbrasil/a61162d8-bc99-4b71-97c6-09c1edf323cc/2_maios.png",
-            "mobileSrc": "https://assets.decocache.com/vixbrasil/a61162d8-bc99-4b71-97c6-09c1edf323cc/2_maios.png",
+            "src": "https://assets.decocache.com/vixbrasil/28dbb090-1df1-45f5-9737-2be3f3ec8f79/2_maios.png",
+            "mobileSrc": "https://assets.decocache.com/vixbrasil/88f063e7-0625-4fee-97b5-c3a57a6d6d6b/2_maios.png",
             "url": "/praia/maios?order=OrderByReleaseDateDESC",
             "alt": "Maiôs"
           },
