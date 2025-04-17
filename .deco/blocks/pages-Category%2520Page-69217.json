@@ -10,8 +10,8 @@
       "banners": [
         {
           "image": {
-            "mobile": "https://data.decoassets.com/vixbrasil/e54c5fc3-ff0a-4282-914e-452969d05228/acessorios_mobile.png",
-            "desktop": "https://data.decoassets.com/vixbrasil/7be4c879-9e83-4e6d-9f8c-eff55877cb42/acessorios-desktop.png"
+            "mobile": "https://assets.decocache.com/vixbrasil/1722bfd7-5803-410e-b824-21373af4b616/categoriaacessorio-mobile-(4).png",
+            "desktop": "https://assets.decocache.com/vixbrasil/90574f96-73f3-4588-8bf8-e61dd0b260a8/categoria-acessoriodesktop-(4).png"
           },
           "matcher": "/acessorios*",
           "active": true
